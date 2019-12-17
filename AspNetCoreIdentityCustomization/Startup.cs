@@ -13,6 +13,8 @@ using AspNetCoreIdentityCustomization.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AspNetCoreIdentityCustomization.Models;
+using Serilog;
+using Serilog.Events;
 
 namespace AspNetCoreIdentityCustomization
 {
@@ -39,10 +41,10 @@ namespace AspNetCoreIdentityCustomization
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<ApplicationUser, ApplicationRole>(
-    options => options.Stores.MaxLengthForKeys = 128)
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultUI()
-    .AddDefaultTokenProviders();
+                options => options.Stores.MaxLengthForKeys = 128)
+                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddDefaultUI()
+                    .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -52,7 +54,7 @@ namespace AspNetCoreIdentityCustomization
                     IHostingEnvironment env,
                     ApplicationDbContext context,
                     RoleManager<ApplicationRole> roleManager,
-                    UserManager<ApplicationUser> userManager)
+                    UserManager<ApplicationUser> userManager, IConfiguration config)
         {
             if (env.IsDevelopment())
             {
@@ -77,6 +79,14 @@ namespace AspNetCoreIdentityCustomization
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            string path= config.GetValue<string>("WriteTo:Name:Args:path");
+            Log.Logger = new LoggerConfiguration()
+     .WriteTo.Console()
+     .WriteTo.File(path, rollingInterval: RollingInterval.Day)
+     //.WriteTo.File()
+     .CreateLogger();
+            //Adding Dummy data in the database
+            Log.Information("Starting DummyData");
             DummyData.Initialize(context, userManager, roleManager).Wait();
         }
     }
