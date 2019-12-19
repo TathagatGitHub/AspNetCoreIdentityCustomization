@@ -1,0 +1,32 @@
+2019-12-17 21:16:25.295 -08:00 [INF] Hello, world!
+2019-12-17 21:16:26.614 -08:00 [INF] Starting DummyData
+2019-12-17 21:27:54.858 -08:00 [INF] Hello, world!
+2019-12-17 21:27:54.938 -08:00 [INF] Starting DummyData
+2019-12-17 21:37:22.397 -08:00 [INF] Hello, world!
+2019-12-17 21:37:22.435 -08:00 [INF] Starting DummyData
+2019-12-17 21:38:46.240 -08:00 [INF] Hello, world!
+2019-12-17 21:38:46.278 -08:00 [INF] Starting DummyData
+2019-12-17 21:42:52.716 -08:00 [INF] Hello, world!
+2019-12-17 21:42:52.771 -08:00 [INF] Starting DummyData
+2019-12-17 21:48:22.306 -08:00 [INF] Starting up
+2019-12-17 21:48:23.728 -08:00 [INF] Hello, world!
+2019-12-17 21:48:23.738 -08:00 [INF] Starting DummyData
+2019-12-17 21:58:07.849 -08:00 [INF] Starting up
+2019-12-17 21:58:09.173 -08:00 [INF] Hello, world!
+2019-12-17 21:58:09.183 -08:00 [INF] Starting DummyData
+2019-12-17 21:58:09.738 -08:00 [WRN] User 1ac68939-dd73-49c6-acdd-fd9812a7c786 validation failed: DuplicateUserName.
+2019-12-17 21:58:09.758 -08:00 [WRN] User 8e03044a-225e-4284-94cb-64c655bb1fd4 validation failed: DuplicateUserName.
+2019-12-17 21:58:09.766 -08:00 [WRN] User 3a7a6e2d-2df7-48cb-bfdf-7de390b35952 validation failed: DuplicateUserName.
+2019-12-17 21:58:09.773 -08:00 [WRN] User b0fee623-a470-46b3-abed-530516c0bbd4 validation failed: DuplicateUserName.
+2019-12-17 21:58:14.888 -08:00 [INF] Hello, {Name}!
+2019-12-17 22:03:05.901 -08:00 [INF] Starting up
+2019-12-17 22:03:07.332 -08:00 [INF] Hello, world!
+2019-12-17 22:03:07.340 -08:00 [INF] Starting DummyData
+2019-12-17 22:04:02.882 -08:00 [INF] Starting up
+2019-12-17 22:04:04.501 -08:00 [INF] Hello, world!
+2019-12-17 22:04:04.510 -08:00 [INF] Starting DummyData
+2019-12-17 22:04:05.088 -08:00 [WRN] User 0f14ef9c-e70e-475f-93d4-59bff2f03a65 validation failed: DuplicateUserName.
+2019-12-17 22:04:05.112 -08:00 [WRN] User c1772ab1-7cec-4774-9a33-bb0be549b61a validation failed: DuplicateUserName.
+2019-12-17 22:04:05.120 -08:00 [WRN] User e020df35-4aed-4d8b-a3d7-98409b3148cd validation failed: DuplicateUserName.
+2019-12-17 22:04:05.127 -08:00 [WRN] User f08a35b5-4534-4f4f-bd0f-4b4551299206 validation failed: DuplicateUserName.
+2019-12-17 22:04:08.082 -08:00 [INF] Hello, {Name}!

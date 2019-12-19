@@ -11,10 +11,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AspNetCoreIdentityCustomization.Data;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration.Json;
 using AspNetCoreIdentityCustomization.Models;
 using Serilog;
-using Serilog.Events;
+
+
+
+//using Serilog.Events;
 
 namespace AspNetCoreIdentityCustomization
 {
@@ -30,6 +35,9 @@ namespace AspNetCoreIdentityCustomization
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
+            services.AddLogging(logBuilder => logBuilder.AddSerilog(dispose: true));
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -54,7 +62,7 @@ namespace AspNetCoreIdentityCustomization
                     IHostingEnvironment env,
                     ApplicationDbContext context,
                     RoleManager<ApplicationRole> roleManager,
-                    UserManager<ApplicationUser> userManager, IConfiguration config)
+                    UserManager<ApplicationUser> userManager)
         {
             if (env.IsDevelopment())
             {
@@ -79,14 +87,19 @@ namespace AspNetCoreIdentityCustomization
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            string path= config.GetValue<string>("WriteTo:Name:Args:path");
-            Log.Logger = new LoggerConfiguration()
-     .WriteTo.Console()
-     .WriteTo.File(path, rollingInterval: RollingInterval.Day)
-     //.WriteTo.File()
-     .CreateLogger();
-            //Adding Dummy data in the database
-            Log.Information("Starting DummyData");
+
+
+            var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+            var logger = new LoggerConfiguration()
+                .ReadFrom.Configuration(configuration)
+                .CreateLogger();
+
+            logger.Information("Hello, world!");
+
+            logger.Information("Starting DummyData");
             DummyData.Initialize(context, userManager, roleManager).Wait();
         }
     }
