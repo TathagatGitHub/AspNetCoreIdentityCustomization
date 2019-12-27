@@ -16,3 +16,25 @@
 2019-12-26 22:53:46.674 -08:00 [WRN] User 802285cf-f403-49bb-ab80-1c27071c83ce validation failed: DuplicateUserName.
 2019-12-26 22:53:53.692 -08:00 [INF] Hello, {Name}!
 2019-12-26 22:53:59.536 -08:00 [INF] GetPostLog - { PostLogId}
+2019-12-26 22:59:09.975 -08:00 [INF] Starting up
+2019-12-26 22:59:11.553 -08:00 [INF] Hello, world!
+2019-12-26 22:59:11.565 -08:00 [INF] Starting DummyData
+2019-12-26 22:59:12.474 -08:00 [WRN] User 4e003d1f-2d64-4bf1-ad55-32b68aeed5d4 validation failed: DuplicateUserName.
+2019-12-26 22:59:12.494 -08:00 [WRN] User 66775fd7-3a71-4fb6-9c36-d8354122a812 validation failed: DuplicateUserName.
+2019-12-26 22:59:12.502 -08:00 [WRN] User 3572b187-8034-4065-a58d-3ecf52f2cda7 validation failed: DuplicateUserName.
+2019-12-26 22:59:12.510 -08:00 [WRN] User 8ff84892-355c-449b-8664-025913ae34a7 validation failed: DuplicateUserName.
+2019-12-26 22:59:17.871 -08:00 [INF] Hello, {Name}!
+2019-12-26 22:59:17.997 -08:00 [INF] GetPostLog - {PostLogId}
+2019-12-26 22:59:39.242 -08:00 [INF] User tahagat.dwivedi@gmail.com logged in.
+2019-12-26 22:59:47.254 -08:00 [INF] Hello, {Name}!
+2019-12-26 22:59:47.265 -08:00 [INF] GetPostLog - {PostLogId}
+2019-12-26 23:01:17.912 -08:00 [INF] Starting up
+2019-12-26 23:01:19.390 -08:00 [INF] Hello, world!
+2019-12-26 23:01:19.402 -08:00 [INF] Starting DummyData
+2019-12-26 23:01:20.256 -08:00 [WRN] User 92bf4875-5969-4b9f-9903-a1e4b066daca validation failed: DuplicateUserName.
+2019-12-26 23:01:20.277 -08:00 [WRN] User 9e2c67a3-3575-4cf7-9f32-3a1f7b672620 validation failed: DuplicateUserName.
+2019-12-26 23:01:20.283 -08:00 [WRN] User d31b943e-a57d-4f6b-ad10-6a7b5a4f437b validation failed: DuplicateUserName.
+2019-12-26 23:01:20.290 -08:00 [WRN] User 9340493a-3684-41e3-a133-1e911d6bd3d7 validation failed: DuplicateUserName.
+2019-12-26 23:01:23.737 -08:00 [INF] Hello, {Name}!
+2019-12-26 23:01:23.863 -08:00 [INF] GetPostLog - {PostLogId}
+2019-12-26 23:01:26.074 -08:00 [INF] PostLog-Sched1    

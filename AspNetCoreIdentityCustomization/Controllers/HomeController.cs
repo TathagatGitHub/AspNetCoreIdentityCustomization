@@ -27,6 +27,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
            // PostLogRepository postlog =new PostLogRepository (); 
             PostLog logs;
             logs= _postlogrepository.GetPostLog(1);
+            _logger.LogInformation("PostLog-"+ logs.ScheduleName);
             return View();
         }
 

@@ -20,7 +20,7 @@ namespace AspNetCoreIdentityCustomization.Data
 
         public PostLog GetPostLog (int PostLogId)
         {
-            _logger.LogInformation("GetPostLog - { PostLogId}" );
+            _logger.LogInformation("GetPostLog - {PostLogId}" );
             PostLog logs;
             using (var connection = new SqlConnection(this.connection))
             {
