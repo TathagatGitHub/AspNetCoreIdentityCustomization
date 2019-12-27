@@ -7,21 +7,26 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetCoreIdentityCustomization.Models;
 using Microsoft.Extensions.Logging;
 using AspNetCoreIdentityCustomization.Data;
+using AspNetCoreIdentityCustomization.Core;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private PostLogRepository _postlogrepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository)
         {
             _logger = logger;
+            _postlogrepository = postLogRepository;
         }
         public IActionResult Index()
         {
             _logger.LogInformation("Hello, {Name}!");
-         
+           // PostLogRepository postlog =new PostLogRepository (); 
+            PostLog logs;
+            logs= _postlogrepository.GetPostLog(1);
             return View();
         }
 

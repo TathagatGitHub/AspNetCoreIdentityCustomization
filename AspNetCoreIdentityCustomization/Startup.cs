@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration.Json;
 using AspNetCoreIdentityCustomization.Models;
 using Serilog;
+using System.Configuration;
 
 
 
@@ -55,7 +56,10 @@ namespace AspNetCoreIdentityCustomization
                     .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        //    services.Configure<Appsettings>(Configuration);
+            //    services.Configure<Appsettings>(Configuration);
+            services.AddTransient<PostLogRepository>();
+          
+            services.AddTransient<Configuration>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
