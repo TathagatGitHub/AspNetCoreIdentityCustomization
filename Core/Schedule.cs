@@ -4,9 +4,9 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Core
+namespace AspNetCoreIdentityCustomization.Core
 {
-    class Schedule
+    public class Schedule
     {
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AspNetCoreIdentityCustomization.Models;
 using Microsoft.Extensions.Logging;
+using AspNetCoreIdentityCustomization.Data;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -20,6 +21,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
         public IActionResult Index()
         {
             _logger.LogInformation("Hello, {Name}!");
+         
             return View();
         }
 

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization", "AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.csproj", "{0545FF0F-6CF7-47DA-9726-9A2E706EB87F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4BE4E839-58E6-443B-A5A3-2F4CC983E54B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.Core", "Core\AspNetCoreIdentityCustomization.Core.csproj", "{4BE4E839-58E6-443B-A5A3-2F4CC983E54B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{0322F3D0-4CEE-452F-94E8-0C3AD2AA9870}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.Data", "Data\AspNetCoreIdentityCustomization.Data.csproj", "{0322F3D0-4CEE-452F-94E8-0C3AD2AA9870}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

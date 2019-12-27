@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using Dapper;
 using System.Text;
 
-namespace Data
+namespace AspNetCoreIdentityCustomization.Data
 {
     public class ConnectionFactory
     {
