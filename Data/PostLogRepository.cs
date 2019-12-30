@@ -22,6 +22,7 @@ namespace AspNetCoreIdentityCustomization.Data
         {
             _logger.LogInformation("GetPostLog - {PostLogId}" );
             PostLog logs;
+            IEnumerable<PostLog> postLogs;
             using (var connection = new SqlConnection(this.connection))
             {
                 var p = new DynamicParameters();
@@ -30,12 +31,14 @@ namespace AspNetCoreIdentityCustomization.Data
                 string sql = "select * from dbo.PostLog where PostLogId = @PostLogId";
 
                 logs = connection.QuerySingle<PostLog>(sql, p);
+                //  postLogs = connection.Query<PostLog>(sql, p);
+                postLogs = connection.Query<PostLog>(sql);
                 //foreach (var person in logs)
                 //{
                 //    Console.WriteLine($"{ person.PostLogId } { person.SchedId }");
                 //}
 
-                
+
             }
 
             return logs;
