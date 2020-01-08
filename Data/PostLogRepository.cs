@@ -8,19 +8,24 @@ using System.Text;
 using Microsoft.Extensions.Logging;
 namespace AspNetCoreIdentityCustomization.Data
 {
-    public class PostLogRepository
+    public class PostLogRepository: IPosLogRepository
     {
         private readonly string connection;
         private readonly ILogger<PostLogRepository> _logger;
+        private readonly IConfiguration _config;
         public PostLogRepository(IConfiguration configuration, ILogger<PostLogRepository> logger)
         {
             connection = configuration.GetConnectionString("DefaultConnection");
+            _config = configuration;
+
             _logger = logger;
         }
 
         public PostLog GetPostLog (int PostLogId)
         {
             _logger.LogInformation("GetPostLog - {PostLogId}" );
+            String _loglvel = _config["Logging:LogLevel:Default"];
+
             PostLog logs;
             IEnumerable<PostLog> postLogs;
             using (var connection = new SqlConnection(this.connection))

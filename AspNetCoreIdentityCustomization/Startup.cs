@@ -58,8 +58,8 @@ namespace AspNetCoreIdentityCustomization
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //    services.Configure<Appsettings>(Configuration);
             services.AddTransient<PostLogRepository>();
-          
-          //  services.AddTransient<Configuration>();
+          //  services.AddSingleton(Configuration);
+            //  services.AddTransient<Configuration>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
