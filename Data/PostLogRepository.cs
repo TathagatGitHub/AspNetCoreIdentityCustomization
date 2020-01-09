@@ -37,7 +37,7 @@ namespace AspNetCoreIdentityCustomization.Data
 
                 logs = connection.QuerySingle<PostLog>(sql, p);
                 //  postLogs = connection.Query<PostLog>(sql, p);
-                postLogs = connection.Query<PostLog>(sql);
+                postLogs = connection.Query<PostLog>(sql,p);
                 //foreach (var person in logs)
                 //{
                 //    Console.WriteLine($"{ person.PostLogId } { person.SchedId }");

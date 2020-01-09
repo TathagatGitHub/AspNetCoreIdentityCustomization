@@ -1,0 +1,72 @@
+2020-01-08 21:13:23.474 -08:00 [INF] Starting up
+2020-01-08 21:13:26.617 -08:00 [INF] Hello, world!
+2020-01-08 21:13:26.627 -08:00 [INF] Starting DummyData
+2020-01-08 21:13:27.653 -08:00 [WRN] User 878dff34-d73a-4719-8c5e-c43a21558fa5 validation failed: DuplicateUserName.
+2020-01-08 21:13:27.677 -08:00 [WRN] User b45f420b-275e-4ebc-929a-2a5e3ea1adbe validation failed: DuplicateUserName.
+2020-01-08 21:13:27.684 -08:00 [WRN] User 447b48a6-5b22-4698-a7e3-1e001d5181fc validation failed: DuplicateUserName.
+2020-01-08 21:13:27.692 -08:00 [WRN] User 3f77b240-a4cd-47cc-aa0c-2db5a179192a validation failed: DuplicateUserName.
+2020-01-08 21:13:34.840 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:13:34.993 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:15:24.491 -08:00 [INF] Starting up
+2020-01-08 21:15:26.169 -08:00 [INF] Hello, world!
+2020-01-08 21:15:26.179 -08:00 [INF] Starting DummyData
+2020-01-08 21:15:27.153 -08:00 [WRN] User de911f55-32b9-4d7e-b2a9-20a7a8c7195f validation failed: DuplicateUserName.
+2020-01-08 21:15:27.175 -08:00 [WRN] User 104b6ef2-6465-41b0-a9fc-ec76b117223a validation failed: DuplicateUserName.
+2020-01-08 21:15:27.183 -08:00 [WRN] User 755ced60-c1e1-4599-bf7a-938fb7abe79b validation failed: DuplicateUserName.
+2020-01-08 21:15:27.190 -08:00 [WRN] User 52415a9d-9e5d-4d24-a809-9a587fabb4d3 validation failed: DuplicateUserName.
+2020-01-08 21:15:31.106 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:15:31.233 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:15:33.841 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@PostLogId".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Dapper.SqlMapper.ExecuteReaderWithFlagsFallback(IDbCommand cmd, Boolean wasClosed, CommandBehavior behavior) in C:\projects\dapper\Dapper\SqlMapper.cs:line 1051
+   at Dapper.SqlMapper.QueryImpl[T](IDbConnection cnn, CommandDefinition command, Type effectiveType)+MoveNext() in C:\projects\dapper\Dapper\SqlMapper.cs:line 1079
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) in C:\projects\dapper\Dapper\SqlMapper.cs:line 721
+   at AspNetCoreIdentityCustomization.Data.PostLogRepository.GetPostLog(Int32 PostLogId) in C:\Users\tathagat.dwivedi\source\repos\AspNetCoreIdentityCustomization\Data\PostLogRepository.cs:line 40
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.Index() in C:\Users\tathagat.dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 29
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:65a88b38-9510-4d65-8137-176022d2ee16
+Error Number:137,State:2,Class:15
+2020-01-08 21:16:08.535 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:16:08.538 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:17:59.053 -08:00 [INF] Starting up
+2020-01-08 21:18:00.726 -08:00 [INF] Hello, world!
+2020-01-08 21:18:00.734 -08:00 [INF] Starting DummyData
+2020-01-08 21:18:01.579 -08:00 [WRN] User a9405ae3-32a9-49ac-9935-b3e60ec08302 validation failed: DuplicateUserName.
+2020-01-08 21:18:01.599 -08:00 [WRN] User a877eb29-bfd4-4ba7-885c-b8641fca3238 validation failed: DuplicateUserName.
+2020-01-08 21:18:01.606 -08:00 [WRN] User 78e2f812-1eb0-401d-b95d-a7427a007383 validation failed: DuplicateUserName.
+2020-01-08 21:18:01.614 -08:00 [WRN] User 881a0f14-6a87-4ef4-9e8c-fe985141ddde validation failed: DuplicateUserName.
+2020-01-08 21:18:04.797 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:18:04.925 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:18:06.796 -08:00 [INF] PostLog-Sched1    
+2020-01-08 21:18:18.586 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:18:18.589 -08:00 [INF] GetPostLog - {PostLogId}
