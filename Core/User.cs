@@ -12,5 +12,7 @@ namespace AspNetCoreIdentityCustomization.Core
         public int UserId { get; set; }
         [Required]
         public String UserName { get; set; }
+
+       
     }
 }
