@@ -70,3 +70,13 @@ Error Number:137,State:2,Class:15
 2020-01-08 21:18:06.796 -08:00 [INF] PostLog-Sched1    
 2020-01-08 21:18:18.586 -08:00 [INF] Hello, {Name}!
 2020-01-08 21:18:18.589 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:49:42.998 -08:00 [INF] Starting up
+2020-01-08 21:49:46.364 -08:00 [INF] Hello, world!
+2020-01-08 21:49:46.379 -08:00 [INF] Starting DummyData
+2020-01-08 21:49:47.859 -08:00 [WRN] User d545370f-b6f7-4d2b-a833-d359c0538617 validation failed: DuplicateUserName.
+2020-01-08 21:49:47.888 -08:00 [WRN] User 506bc0ee-7fa7-4502-bbc3-c785b3378fbc validation failed: DuplicateUserName.
+2020-01-08 21:49:47.898 -08:00 [WRN] User 879aea69-b4f5-4923-8391-927ea74095ee validation failed: DuplicateUserName.
+2020-01-08 21:49:47.905 -08:00 [WRN] User 21e6cdb2-de67-4bf9-959a-174dec349919 validation failed: DuplicateUserName.
+2020-01-08 21:49:58.140 -08:00 [INF] Hello, {Name}!
+2020-01-08 21:49:58.259 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-08 21:50:04.014 -08:00 [INF] PostLog-Sched1    
