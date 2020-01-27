@@ -7,23 +7,37 @@ using RestSharp.Authenticators;
 namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
 
-    
+
     public class RestSharpWebApiClient
     {
-        private string getUrl = "https://prepostlogwebapi.oceanmediainc.com";
+        private string _getUrl = "https://prepostlogwebapi.oceanmediainc.com";
+        private string _country = "US";
+        private string _networktype = "National Cable";
+        private string _logType = "Postlog";
+        private string _clientId = "b4d153b5-960a-42f8-9397-a893b343a983";
 
+    
+        public RestSharpWebApiClient(string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)
+        {
+            _getUrl= APIUrl;
+            _country = Country;
+            _networktype = NetworkType;
+            _logType = Postlog;
+            _clientId = ClientId;
+        }
         public async void  RestClientGetMethod()
         {
-            IRestClient restClient = new RestClient();
-            IRestRequest restRequest = new RestRequest(getUrl,Method.GET);
+            IRestClient restClient = new RestClient(_getUrl);
+            IRestRequest restRequest = new RestRequest(Method.POST);
+           //restClient.BaseUrl = System.Uri(_getUrl);
 
             restRequest.AddHeader("Content-Type", "application/json");
-            restRequest.AddHeader("ClientID", "b4d153b5-960a-42f8-9397-a893b343a983");
+            restRequest.AddHeader("ClientID", _clientId);
 
-            restRequest.AddParameter("country", "US", ParameterType.RequestBody);
-            restRequest.AddParameter("networktype", "National Cable", ParameterType.RequestBody);
+            restRequest.AddParameter("country", _country, ParameterType.RequestBody);
+            restRequest.AddParameter("networktype", _networktype, ParameterType.RequestBody);
 
-            restRequest.AddParameter("LogType", "Postlog", ParameterType.RequestBody);
+            restRequest.AddParameter("LogType", _logType, ParameterType.RequestBody);
 
             var cancellationTokenSource = new CancellationTokenSource();
 

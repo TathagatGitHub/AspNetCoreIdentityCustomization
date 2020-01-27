@@ -1,0 +1,50 @@
+2020-01-26 21:04:00.961 -08:00 [INF] Starting up
+2020-01-26 21:04:04.559 -08:00 [INF] Hello, world!
+2020-01-26 21:04:04.573 -08:00 [INF] Starting DummyData
+2020-01-26 21:04:05.876 -08:00 [WRN] User eefcd526-df70-4d33-84a9-525aa16fc386 validation failed: DuplicateUserName.
+2020-01-26 21:04:05.903 -08:00 [WRN] User c2aee7d9-0b3c-459e-b7c9-341f101d899d validation failed: DuplicateUserName.
+2020-01-26 21:04:05.912 -08:00 [WRN] User ee456257-09c0-443b-875f-c3fcbdf4539b validation failed: DuplicateUserName.
+2020-01-26 21:04:05.920 -08:00 [WRN] User dfe8b4d6-869b-4c86-833d-c871d8e2aed6 validation failed: DuplicateUserName.
+2020-01-26 21:04:48.772 -08:00 [INF] Hello, {Name}!
+2020-01-26 21:04:48.978 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-26 21:05:43.947 -08:00 [INF] PostLog-Sched1    
+2020-01-26 21:06:52.406 -08:00 [INF] Starting up
+2020-01-26 21:06:54.047 -08:00 [INF] Hello, world!
+2020-01-26 21:06:54.056 -08:00 [INF] Starting DummyData
+2020-01-26 21:06:54.967 -08:00 [WRN] User ec752e00-6b4d-4908-8e42-00b4b569c18b validation failed: DuplicateUserName.
+2020-01-26 21:06:54.987 -08:00 [WRN] User 51b4c325-9aea-483d-ad04-f67b63f2a400 validation failed: DuplicateUserName.
+2020-01-26 21:06:54.996 -08:00 [WRN] User 14c93450-4111-4fce-b502-1a436f56c596 validation failed: DuplicateUserName.
+2020-01-26 21:06:55.004 -08:00 [WRN] User 12eaf9e6-ea0f-4b55-aae3-bd39f8b5e7eb validation failed: DuplicateUserName.
+2020-01-26 21:06:57.642 -08:00 [INF] Hello, {Name}!
+2020-01-26 21:06:57.798 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-26 21:06:59.873 -08:00 [INF] PostLog-Sched1    
+2020-01-26 21:10:45.833 -08:00 [INF] Starting up
+2020-01-26 21:10:47.373 -08:00 [INF] Hello, world!
+2020-01-26 21:10:47.382 -08:00 [INF] Starting DummyData
+2020-01-26 21:10:48.262 -08:00 [WRN] User 208717d6-80e5-4a68-9ca6-af2b992af37a validation failed: DuplicateUserName.
+2020-01-26 21:10:48.282 -08:00 [WRN] User c3f9833a-e9d9-4832-990a-8aa4b18ccbaa validation failed: DuplicateUserName.
+2020-01-26 21:10:48.290 -08:00 [WRN] User 36ef3781-9e20-42b3-96db-d2a63a94c713 validation failed: DuplicateUserName.
+2020-01-26 21:10:48.298 -08:00 [WRN] User a96d5b4b-6dfb-4ba4-b4ed-3f4bbbebdd8a validation failed: DuplicateUserName.
+2020-01-26 21:10:51.407 -08:00 [INF] Hello, {Name}!
+2020-01-26 21:10:51.544 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-26 21:10:52.555 -08:00 [INF] PostLog-Sched1    
+2020-01-26 21:16:30.092 -08:00 [INF] Starting up
+2020-01-26 21:16:31.683 -08:00 [INF] Hello, world!
+2020-01-26 21:16:31.695 -08:00 [INF] Starting DummyData
+2020-01-26 21:16:32.589 -08:00 [WRN] User e11c0dfc-5906-471c-aa93-53eeafbc1af4 validation failed: DuplicateUserName.
+2020-01-26 21:16:32.610 -08:00 [WRN] User 962c255a-2a7f-4490-8c31-fb2f6b95b7fb validation failed: DuplicateUserName.
+2020-01-26 21:16:32.617 -08:00 [WRN] User a23fc067-e921-41f8-a514-593715d98210 validation failed: DuplicateUserName.
+2020-01-26 21:16:32.625 -08:00 [WRN] User 9146c230-a56c-40c1-86eb-f274454740de validation failed: DuplicateUserName.
+2020-01-26 21:16:37.350 -08:00 [INF] Hello, {Name}!
+2020-01-26 21:16:37.481 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-26 21:16:39.099 -08:00 [INF] PostLog-Sched1    
+2020-01-26 21:18:14.062 -08:00 [INF] Starting up
+2020-01-26 21:18:15.788 -08:00 [INF] Hello, world!
+2020-01-26 21:18:15.796 -08:00 [INF] Starting DummyData
+2020-01-26 21:18:16.736 -08:00 [WRN] User b1a82ca2-bc02-4629-afc2-4c7aa2d16f0f validation failed: DuplicateUserName.
+2020-01-26 21:18:16.757 -08:00 [WRN] User e1cbc3df-237a-436c-b856-4708e53ded49 validation failed: DuplicateUserName.
+2020-01-26 21:18:16.766 -08:00 [WRN] User e3bc3e12-220d-44ae-b969-73846d16ab2e validation failed: DuplicateUserName.
+2020-01-26 21:18:16.774 -08:00 [WRN] User 9b628c86-429f-4adf-ba21-9dbbe936dece validation failed: DuplicateUserName.
+2020-01-26 21:18:23.886 -08:00 [INF] Hello, {Name}!
+2020-01-26 21:18:24.016 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-26 21:18:26.111 -08:00 [INF] PostLog-Sched1    

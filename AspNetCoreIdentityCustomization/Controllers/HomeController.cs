@@ -8,6 +8,8 @@ using AspNetCoreIdentityCustomization.Models;
 using Microsoft.Extensions.Logging;
 using AspNetCoreIdentityCustomization.Data;
 using AspNetCoreIdentityCustomization.Core;
+using AspNetCoreIdentityCustomization.WebApi;
+using AspNetCoreIdentityCustomization.WebApi.Client;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -55,6 +57,13 @@ namespace AspNetCoreIdentityCustomization.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult TestRestSharpClient()
+        {
+            RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient("https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "b4d153b5-960a-42f8-9397-a893b343a983");
+            restSharpWebApiClient.RestClientGetMethod();
+            return View();
         }
     }
 }
