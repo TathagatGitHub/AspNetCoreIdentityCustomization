@@ -32,15 +32,19 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
            //restClient.BaseUrl = System.Uri(_getUrl);
 
             restRequest.AddHeader("Content-Type", "application/json");
-            restRequest.AddHeader("ClientID", _clientId);
+            restRequest.AddHeader("ClientKey", _clientId);
 
-            restRequest.AddParameter("country", _country, ParameterType.RequestBody);
-            restRequest.AddParameter("networktype", _networktype, ParameterType.RequestBody);
+            //restRequest.AddParameter("country", _country, ParameterType.RequestBody);
+            //restRequest.AddParameter("networktype", _networktype, ParameterType.RequestBody);
 
-            restRequest.AddParameter("LogType", _logType, ParameterType.RequestBody);
+            //restRequest.AddParameter("LogType", _logType, ParameterType.RequestBody);
 
             var cancellationTokenSource = new CancellationTokenSource();
-
+            string jsonBody = "{"+
+                                "\"country\":\"US\","+
+                                "\"networktype\":\"National Cable\","+
+                                "\"LogType\":\"Postlog\"  }";
+            restRequest.AddJsonBody(jsonBody);
             restClient.ExecuteAsync(restRequest, response =>
             {
                 Console.WriteLine(response.StatusCode);
