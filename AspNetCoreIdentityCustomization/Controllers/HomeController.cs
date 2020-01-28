@@ -61,7 +61,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
         public IActionResult TestRestSharpClient()
         {
-            RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient("https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "b4d153b5-960a-42f8-9397-a893b343a983");
+            RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
             restSharpWebApiClient.RestClientGetMethod();
             return View();
         }

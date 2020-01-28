@@ -17,6 +17,7 @@ using Microsoft.Extensions.Configuration.Json;
 using AspNetCoreIdentityCustomization.Models;
 using Serilog;
 using System.Configuration;
+using AspNetCoreIdentityCustomization.WebApi.Client;
 
 
 
@@ -58,7 +59,9 @@ namespace AspNetCoreIdentityCustomization
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //    services.Configure<Appsettings>(Configuration);
             services.AddTransient<PostLogRepository>();
-          //  services.AddSingleton(Configuration);
+          
+
+            //  services.AddSingleton(Configuration);
             //  services.AddTransient<Configuration>();
         }
 

@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Authenticators;
-
+using Microsoft.Extensions.Logging;
 namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
 
@@ -14,19 +14,21 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         private string _country = "US";
         private string _networktype = "National Cable";
         private string _logType = "Postlog";
-        private string _clientId = "b4d153b5-960a-42f8-9397-a893b343a983";
+        private string _clientId = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
+        private readonly ILogger _logger;
 
-    
-        public RestSharpWebApiClient(string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)
+        public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)
         {
             _getUrl= APIUrl;
             _country = Country;
             _networktype = NetworkType;
             _logType = Postlog;
             _clientId = ClientId;
+            _logger = logger;
         }
         public async void  RestClientGetMethod()
         {
+            _logger.LogInformation("Inside the RestClientMethod!");
             IRestClient restClient = new RestClient(_getUrl);
             IRestRequest restRequest = new RestRequest(Method.POST);
            //restClient.BaseUrl = System.Uri(_getUrl);
@@ -40,16 +42,24 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             //restRequest.AddParameter("LogType", _logType, ParameterType.RequestBody);
 
             var cancellationTokenSource = new CancellationTokenSource();
-            string jsonBody = "{"+
-                                "\"country\":\"US\","+
-                                "\"networktype\":\"National Cable\","+
-                                "\"LogType\":\"Postlog\"  }";
-            restRequest.AddJsonBody(jsonBody);
+            //string jsonBody = "{"+
+            //                    "\"country\":\"US\","+
+            //                    "\"networktype\":\"National Cable\","+
+            //                    "\"LogType\":\"Postlog\"  }";
+            string jsonBody1 = "{" +
+                                "\"country\":\"US\"," +
+                                "\"networktype\":\"National Cable\"," +
+                                "\"LogType\":\"Prelog\"}";
+
+            restRequest.AddJsonBody(jsonBody1);
             restClient.ExecuteAsync(restRequest, response =>
             {
                 Console.WriteLine(response.StatusCode);
                 Console.WriteLine(response.ContentLength);
                 Console.WriteLine(response.Content);
+                _logger.LogInformation("StatusCode:" + response.StatusCode);
+                _logger.LogInformation("ContentLength:" + response.ContentLength);
+                _logger.LogInformation("Content:" + response.Content);
             });
 
            // Will output the HTML contents of the requested page
