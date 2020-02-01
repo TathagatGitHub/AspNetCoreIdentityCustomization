@@ -1,0 +1,146 @@
+2020-01-31 17:12:40.497 -08:00 [INF] Starting up
+2020-01-31 17:12:43.259 -08:00 [INF] Hello, world!
+2020-01-31 17:12:43.268 -08:00 [INF] Starting DummyData
+2020-01-31 17:12:44.222 -08:00 [WRN] User d5d6734f-5163-4e2e-87f1-c6fbb028426b validation failed: DuplicateUserName.
+2020-01-31 17:12:44.244 -08:00 [WRN] User 9a1ad3f6-f958-43b4-b07b-8cc82b0322ea validation failed: DuplicateUserName.
+2020-01-31 17:12:44.251 -08:00 [WRN] User 4f242b98-bef7-437e-9d40-ef3fe4925948 validation failed: DuplicateUserName.
+2020-01-31 17:12:44.257 -08:00 [WRN] User 3347062c-e663-4e2a-b94c-e18d5c201a21 validation failed: DuplicateUserName.
+2020-01-31 17:12:48.127 -08:00 [INF] Hello, {Name}!
+2020-01-31 17:12:48.291 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-31 17:12:50.329 -08:00 [INF] PostLog-Sched1    
+2020-01-31 17:14:06.077 -08:00 [INF] Starting up
+2020-01-31 17:14:07.416 -08:00 [INF] Hello, world!
+2020-01-31 17:14:07.423 -08:00 [INF] Starting DummyData
+2020-01-31 17:14:08.351 -08:00 [WRN] User 6138ced3-3c3d-42aa-a961-6c77bb75b771 validation failed: DuplicateUserName.
+2020-01-31 17:14:08.381 -08:00 [WRN] User 438e280d-03c1-490a-b892-8ae8c7887811 validation failed: DuplicateUserName.
+2020-01-31 17:14:08.390 -08:00 [WRN] User 6d63be80-9672-4152-acc1-d1772457810f validation failed: DuplicateUserName.
+2020-01-31 17:14:08.398 -08:00 [WRN] User 706b2d3b-264b-4d40-a0e4-f63fcd92a430 validation failed: DuplicateUserName.
+2020-01-31 17:14:11.120 -08:00 [INF] Hello, {Name}!
+2020-01-31 17:14:11.237 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-31 17:14:12.523 -08:00 [INF] PostLog-Sched1    
+2020-01-31 17:14:36.500 -08:00 [INF] Inside the RestClientGAReportPostMethod!
+2020-01-31 17:16:24.589 -08:00 [INF] Starting up
+2020-01-31 17:16:25.891 -08:00 [INF] Hello, world!
+2020-01-31 17:16:25.899 -08:00 [INF] Starting DummyData
+2020-01-31 17:16:26.732 -08:00 [WRN] User 31e2144c-f15b-4edc-a11e-03bc5cceb2fd validation failed: DuplicateUserName.
+2020-01-31 17:16:26.753 -08:00 [WRN] User a39ebbe9-da78-4316-96da-d073f3c91060 validation failed: DuplicateUserName.
+2020-01-31 17:16:26.759 -08:00 [WRN] User 78b464e1-253d-4193-a63f-4de37882433d validation failed: DuplicateUserName.
+2020-01-31 17:16:26.766 -08:00 [WRN] User 2e98594b-607c-4d63-889d-d729626162b5 validation failed: DuplicateUserName.
+2020-01-31 17:16:33.826 -08:00 [INF] Hello, {Name}!
+2020-01-31 17:16:33.945 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-31 17:16:35.017 -08:00 [INF] PostLog-Sched1    
+2020-01-31 17:16:40.848 -08:00 [INF] Inside the RestClientGAReportPostMethod!
+2020-01-31 17:17:13.478 -08:00 [INF] Inside the RestClientMethod!
+2020-01-31 17:17:23.726 -08:00 [INF] StatusCode:NotFound
+2020-01-31 17:17:27.008 -08:00 [INF] ContentLength:4894
+2020-01-31 17:17:31.231 -08:00 [INF] Content:<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title>IIS 10.0 Detailed Error - 404.0 - Not Found</title> 
+<style type="text/css"> 
+<!-- 
+body{margin:0;font-size:.7em;font-family:Verdana,Arial,Helvetica,sans-serif;} 
+code{margin:0;color:#006600;font-size:1.1em;font-weight:bold;} 
+.config_source code{font-size:.8em;color:#000000;} 
+pre{margin:0;font-size:1.4em;word-wrap:break-word;} 
+ul,ol{margin:10px 0 10px 5px;} 
+ul.first,ol.first{margin-top:5px;} 
+fieldset{padding:0 15px 10px 15px;word-break:break-all;} 
+.summary-container fieldset{padding-bottom:5px;margin-top:4px;} 
+legend.no-expand-all{padding:2px 15px 4px 10px;margin:0 0 0 -12px;} 
+legend{color:#333333;;margin:4px 0 8px -12px;_margin-top:0px; 
+font-weight:bold;font-size:1em;} 
+a:link,a:visited{color:#007EFF;font-weight:bold;} 
+a:hover{text-decoration:none;} 
+h1{font-size:2.4em;margin:0;color:#FFF;} 
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.4em;margin:10px 0 0 0;color:#CC0000;} 
+h4{font-size:1.2em;margin:10px 0 5px 0; 
+}#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS",Verdana,sans-serif; 
+ color:#FFF;background-color:#5C87B2; 
+}#content{margin:0 0 0 2%;position:relative;} 
+.summary-container,.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;} 
+.content-container p{margin:0 0 10px 0; 
+}#details-left{width:35%;float:left;margin-right:2%; 
+}#details-right{width:63%;float:left;overflow:hidden; 
+}#server_version{width:96%;_height:1px;min-height:1px;margin:0 0 5px 0;padding:11px 2% 8px 2%;color:#FFFFFF; 
+ background-color:#5A7FA5;border-bottom:1px solid #C1CFDD;border-top:1px solid #4A6C8E;font-weight:normal; 
+ font-size:1em;color:#FFF;text-align:right; 
+}#server_version p{margin:5px 0;} 
+table{margin:4px 0 4px 0;width:100%;border:none;} 
+td,th{vertical-align:top;padding:3px 0;text-align:left;font-weight:normal;border:none;} 
+th{width:30%;text-align:right;padding-right:2%;font-weight:bold;} 
+thead th{background-color:#ebebeb;width:25%; 
+}#details-right th{width:20%;} 
+table tr.alt td,table tr.alt th{} 
+.highlight-code{color:#CC0000;font-weight:bold;font-style:italic;} 
+.clear{clear:both;} 
+.preferred{padding:0 5px 2px 5px;font-weight:normal;background:#006633;color:#FFF;font-size:.8em;} 
+--> 
+</style> 
+ 
+</head> 
+<body> 
+<div id="content"> 
+<div class="content-container"> 
+  <h3>HTTP Error 404.0 - Not Found</h3> 
+  <h4>The resource you are looking for has been removed, had its name changed, or is temporarily unavailable.</h4> 
+</div> 
+<div class="content-container"> 
+ <fieldset><h4>Most likely causes:</h4> 
+  <ul> 	<li>The directory or file specified does not exist on the Web server.</li> 	<li>The URL contains a typographical error.</li> 	<li>A custom filter or module, such as URLScan, restricts access to the file.</li> </ul> 
+ </fieldset> 
+</div> 
+<div class="content-container"> 
+ <fieldset><h4>Things you can try:</h4> 
+  <ul> 	<li>Create the content on the Web server.</li> 	<li>Review the browser URL.</li> 	<li>Create a tracing rule to track failed requests for this HTTP status code and see which module is calling SetStatus. For more information about creating a tracing rule for failed requests, click <a href="http://go.microsoft.com/fwlink/?LinkID=66439">here</a>. </li> </ul> 
+ </fieldset> 
+</div> 
+ 
+<div class="content-container"> 
+ <fieldset><h4>Detailed Error Information:</h4> 
+  <div id="details-left"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>Module</th><td>&nbsp;&nbsp;&nbsp;IIS Web Core</td></tr> 
+    <tr><th>Notification</th><td>&nbsp;&nbsp;&nbsp;MapRequestHandler</td></tr> 
+    <tr class="alt"><th>Handler</th><td>&nbsp;&nbsp;&nbsp;StaticFile</td></tr> 
+    <tr><th>Error Code</th><td>&nbsp;&nbsp;&nbsp;0x80070002</td></tr> 
+     
+   </table> 
+  </div> 
+  <div id="details-right"> 
+   <table border="0" cellpadding="0" cellspacing="0"> 
+    <tr class="alt"><th>Requested URL</th><td>&nbsp;&nbsp;&nbsp;http://localhost:80/TestGAReportAPIProjet/WeatherForecast</td></tr> 
+    <tr><th>Physical Path</th><td>&nbsp;&nbsp;&nbsp;C:\inetpub\wwwroot\TestGAReportAPIProjet\WeatherForecast</td></tr> 
+    <tr class="alt"><th>Logon Method</th><td>&nbsp;&nbsp;&nbsp;Anonymous</td></tr> 
+    <tr><th>Logon User</th><td>&nbsp;&nbsp;&nbsp;Anonymous</td></tr> 
+     
+   </table> 
+   <div class="clear"></div> 
+  </div> 
+ </fieldset> 
+</div> 
+ 
+<div class="content-container"> 
+ <fieldset><h4>More Information:</h4> 
+  This error means that the file or directory does not exist on the server. Create the file or directory and try the request again. 
+  <p><a href="https://go.microsoft.com/fwlink/?LinkID=62293&amp;IIS70Error=404,0,0x80070002,17134">View more information &raquo;</a></p> 
+   
+ </fieldset> 
+</div> 
+</div> 
+</body> 
+</html> 
+
+2020-01-31 17:22:08.128 -08:00 [INF] Starting up
+2020-01-31 17:22:09.205 -08:00 [INF] Hello, world!
+2020-01-31 17:22:09.212 -08:00 [INF] Starting DummyData
+2020-01-31 17:22:10.118 -08:00 [WRN] User cf7afc52-e249-4ebd-9d54-4efa4af85969 validation failed: DuplicateUserName.
+2020-01-31 17:22:10.135 -08:00 [WRN] User 21b0fb85-7991-4df0-b272-3e0b2534f766 validation failed: DuplicateUserName.
+2020-01-31 17:22:10.142 -08:00 [WRN] User bdc9207f-d48e-4a87-9571-f1e94653fee8 validation failed: DuplicateUserName.
+2020-01-31 17:22:10.149 -08:00 [WRN] User 81364eec-d1cf-43b9-b7c3-9dda804f8ee3 validation failed: DuplicateUserName.
+2020-01-31 17:22:12.788 -08:00 [INF] Hello, {Name}!
+2020-01-31 17:22:12.904 -08:00 [INF] GetPostLog - {PostLogId}
+2020-01-31 17:22:14.242 -08:00 [INF] PostLog-Sched1    
+2020-01-31 17:22:25.926 -08:00 [INF] Inside the RestClientGAReportPostMethod!
+2020-01-31 17:22:42.366 -08:00 [INF] Inside the RestClientMethod!

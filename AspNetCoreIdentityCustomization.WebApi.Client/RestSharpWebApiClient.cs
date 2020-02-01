@@ -26,6 +26,13 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _clientId = ClientId;
             _logger = logger;
         }
+
+        public RestSharpWebApiClient(ILogger logger, string APIUrl)
+        {
+            _getUrl = APIUrl;
+            _logger = logger;
+
+        }
         public async void  RestClientGetMethod()
         {
             _logger.LogInformation("Inside the RestClientMethod!");
@@ -63,6 +70,33 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             });
 
            // Will output the HTML contents of the requested page
+            //return restResponse;
+        }
+
+
+        public async void RestClientGAReportPostMethod()
+        {
+            _logger.LogInformation("Inside the RestClientGAReportPostMethod!");
+            IRestClient restClient = new RestClient(_getUrl);
+            IRestRequest restRequest = new RestRequest(Method.POST);
+            //restClient.BaseUrl = System.Uri(_getUrl);
+
+            restRequest.AddHeader("Content-Type", "application/json");
+          
+
+            var cancellationTokenSource = new CancellationTokenSource();
+         
+            restClient.ExecuteAsync(restRequest, response =>
+            {
+                Console.WriteLine(response.StatusCode);
+                Console.WriteLine(response.ContentLength);
+                Console.WriteLine(response.Content);
+                _logger.LogInformation("StatusCode:" + response.StatusCode);
+                _logger.LogInformation("ContentLength:" + response.ContentLength);
+                _logger.LogInformation("Content:" + response.Content);
+            });
+
+            // Will output the HTML contents of the requested page
             //return restResponse;
         }
     }
