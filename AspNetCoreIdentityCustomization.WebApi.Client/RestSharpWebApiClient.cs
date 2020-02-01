@@ -78,7 +78,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         {
             _logger.LogInformation("Inside the RestClientGAReportPostMethod!");
             IRestClient restClient = new RestClient(_getUrl);
-            IRestRequest restRequest = new RestRequest(Method.POST);
+            IRestRequest restRequest = new RestRequest(Method.GET);
             //restClient.BaseUrl = System.Uri(_getUrl);
 
             restRequest.AddHeader("Content-Type", "application/json");
