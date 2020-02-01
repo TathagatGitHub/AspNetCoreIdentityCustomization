@@ -64,15 +64,24 @@ namespace AspNetCoreIdentityCustomization.Controllers
         public IActionResult TestRestSharpClient()
         {
 
+            
+            // Pre-PostLog API Test
+            RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
+            restSharpWebApiClient.RestClientGetMethod();
+            return View();
+        }
+
+        // GAReports Test Client
+        public IActionResult GAReportRestSharpClient()
+        {
+
             // GAReport API Test
 
             RestSharpWebApiClient restSharpWebApiClientGaReport = new RestSharpWebApiClient(_logger,
                 "http://localhost:62575/WeatherForecast");
 
             restSharpWebApiClientGaReport.RestClientGAReportPostMethod();
-            // Pre-PostLog API Test
-            //RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
-            //restSharpWebApiClient.RestClientGetMethod();
+            
             return View();
         }
     }
