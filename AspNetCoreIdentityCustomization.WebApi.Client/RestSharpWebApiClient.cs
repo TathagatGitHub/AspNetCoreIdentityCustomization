@@ -33,9 +33,11 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _logger = logger;
 
         }
+
+        // Pre-PostLog 
         public async void  RestClientGetMethod()
         {
-            _logger.LogInformation("Inside the RestClientMethod!");
+            _logger.LogInformation("Inside the Pre-postlog Controler Method!");
             IRestClient restClient = new RestClient(_getUrl);
             IRestRequest restRequest = new RestRequest(Method.POST);
            //restClient.BaseUrl = System.Uri(_getUrl);
@@ -73,7 +75,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             //return restResponse;
         }
 
-
+        //GAReport Client
         public async void RestClientGAReportPostMethod()
         {
             _logger.LogInformation("Inside the RestClientGAReportPostMethod!");
@@ -82,8 +84,8 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             //restClient.BaseUrl = System.Uri(_getUrl);
 
             restRequest.AddHeader("Content-Type", "application/json");
-          
 
+            restRequest.AddParameter("CallingMethod", "RestSharp API Client Localhost", ParameterType.RequestBody);
             var cancellationTokenSource = new CancellationTokenSource();
          
             restClient.ExecuteAsync(restRequest, response =>

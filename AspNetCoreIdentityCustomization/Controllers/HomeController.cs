@@ -76,9 +76,18 @@ namespace AspNetCoreIdentityCustomization.Controllers
         {
 
             // GAReport API Test
+            //    string APIUrl = "http://localhost:62575/WeatherForecast";
+            //  string APIUrl = "http://localhost:62575/WeatherForecast";
+         //   string APIUrl = "http://localhost:62575/WeatherForecast/TestAPIClient";
+            
+            string APIUrl = "http://localhost:62575/WeatherForecast/TestGAReportAPIRequest";
+
+
 
             RestSharpWebApiClient restSharpWebApiClientGaReport = new RestSharpWebApiClient(_logger,
-                "http://localhost:62575/WeatherForecast");
+                APIUrl);
+
+            
 
             restSharpWebApiClientGaReport.RestClientGAReportPostMethod();
             
