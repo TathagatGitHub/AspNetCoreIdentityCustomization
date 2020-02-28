@@ -1,0 +1,130 @@
+2020-02-27 15:54:44.798 -08:00 [INF] Starting up
+2020-02-27 15:55:00.047 -08:00 [FTL] Application startup exception
+System.InvalidOperationException: Endpoint Routing does not support 'IApplicationBuilder.UseMvc(...)'. To use 'IApplicationBuilder.UseMvc' set 'MvcOptions.EnableEndpointRouting = false' inside 'ConfigureServices(...).
+   at Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions.UseMvc(IApplicationBuilder app, Action`1 configureRoutes)
+   at AspNetCoreIdentityCustomization.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ApplicationDbContext context, RoleManager`1 roleManager, UserManager`1 userManager) in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Startup.cs:line 94
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-02-27 15:55:00.075 -08:00 [FTL] Application start-up failed
+System.InvalidOperationException: Endpoint Routing does not support 'IApplicationBuilder.UseMvc(...)'. To use 'IApplicationBuilder.UseMvc' set 'MvcOptions.EnableEndpointRouting = false' inside 'ConfigureServices(...).
+   at Microsoft.AspNetCore.Builder.MvcApplicationBuilderExtensions.UseMvc(IApplicationBuilder app, Action`1 configureRoutes)
+   at AspNetCoreIdentityCustomization.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, ApplicationDbContext context, RoleManager`1 roleManager, UserManager`1 userManager) in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Startup.cs:line 94
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at AspNetCoreIdentityCustomization.Program.Main(String[] args) in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Program.cs:line 32
+2020-02-27 21:00:09.484 -08:00 [INF] Starting up
+2020-02-27 21:00:16.849 -08:00 [INF] Hello, world!
+2020-02-27 21:00:16.863 -08:00 [INF] Starting DummyData
+2020-02-27 21:02:07.490 -08:00 [INF] Starting up
+2020-02-27 21:02:14.135 -08:00 [INF] Hello, world!
+2020-02-27 21:02:14.147 -08:00 [INF] Starting DummyData
+2020-02-27 21:02:17.558 -08:00 [WRN] User 4990221c-3f9d-4039-bb0e-3b3463aecf4b validation failed: DuplicateUserName.
+2020-02-27 21:02:17.649 -08:00 [WRN] User 5a7b2ebb-17cb-424a-8923-9be70fd208cc validation failed: DuplicateUserName.
+2020-02-27 21:02:17.716 -08:00 [WRN] User dfb8ff1e-c4ae-46b5-ad68-b9ebc51b759b validation failed: DuplicateUserName.
+2020-02-27 21:02:17.773 -08:00 [WRN] User a2bef334-eec2-4bbf-820c-f0fe5e5b0fa7 validation failed: DuplicateUserName.
+2020-02-27 21:04:03.590 -08:00 [INF] Starting up
+2020-02-27 21:04:05.505 -08:00 [INF] Hello, world!
+2020-02-27 21:04:05.523 -08:00 [INF] Starting DummyData
+2020-02-27 21:04:08.519 -08:00 [WRN] User 44417740-b562-4a45-8938-2ee2ae0c1dec validation failed: DuplicateUserName.
+2020-02-27 21:04:08.579 -08:00 [WRN] User bb57ed67-05fc-42bf-84d4-084321a79d32 validation failed: DuplicateUserName.
+2020-02-27 21:04:08.614 -08:00 [WRN] User f82da6ad-f070-42cd-a29a-5ab2cc48b840 validation failed: DuplicateUserName.
+2020-02-27 21:04:08.649 -08:00 [WRN] User 7fac09eb-2179-4524-8f30-fd367dfbdaaa validation failed: DuplicateUserName.
+2020-02-27 21:05:48.594 -08:00 [INF] Starting up
+2020-02-27 21:05:50.973 -08:00 [INF] Hello, world!
+2020-02-27 21:05:50.991 -08:00 [INF] Starting DummyData
+2020-02-27 21:05:54.062 -08:00 [WRN] User eb8464b4-6111-4221-98ec-7d6a65a1d916 validation failed: DuplicateUserName.
+2020-02-27 21:05:54.123 -08:00 [WRN] User 6e1fd6c8-5758-4eb9-89b5-4bea59ece3b1 validation failed: DuplicateUserName.
+2020-02-27 21:05:54.181 -08:00 [WRN] User f19e6c46-0e50-4ecd-ae42-7b057d133f4f validation failed: DuplicateUserName.
+2020-02-27 21:05:54.236 -08:00 [WRN] User 64a1afff-2324-4aea-8aef-1d8bbf0cb44c validation failed: DuplicateUserName.
+2020-02-27 21:07:48.903 -08:00 [INF] Starting up
+2020-02-27 21:07:50.709 -08:00 [INF] Hello, world!
+2020-02-27 21:07:50.725 -08:00 [INF] Starting DummyData
+2020-02-27 21:07:53.839 -08:00 [WRN] User e5593c09-06d5-47d2-a0bf-4e1c989c774c validation failed: DuplicateUserName.
+2020-02-27 21:07:53.905 -08:00 [WRN] User 18fa7485-d944-4460-97aa-fbcd2ee939bd validation failed: DuplicateUserName.
+2020-02-27 21:07:53.952 -08:00 [WRN] User 222c1d39-b815-4226-90a5-1addf7a15a80 validation failed: DuplicateUserName.
+2020-02-27 21:07:53.993 -08:00 [WRN] User da0dd8b0-7785-488e-87e5-081f365117ca validation failed: DuplicateUserName.
+2020-02-27 21:13:28.769 -08:00 [INF] Starting up
+2020-02-27 21:13:33.355 -08:00 [INF] Hello, world!
+2020-02-27 21:13:34.572 -08:00 [INF] Starting DummyData
+2020-02-27 21:13:39.975 -08:00 [WRN] User b973b3a8-4fd9-4086-bde6-b296381b3816 validation failed: DuplicateUserName.
+2020-02-27 21:13:40.034 -08:00 [WRN] User 368b7bdc-2832-4999-b151-93c8361c287c validation failed: DuplicateUserName.
+2020-02-27 21:13:40.071 -08:00 [WRN] User ffb86a93-28b7-4502-bead-ffb809cf7977 validation failed: DuplicateUserName.
+2020-02-27 21:13:40.114 -08:00 [WRN] User ec9619dd-9536-4bb0-80ff-ba84b972cb71 validation failed: DuplicateUserName.
+2020-02-27 21:39:23.280 -08:00 [INF] Starting up
+2020-02-27 21:39:28.657 -08:00 [INF] Hello, world!
+2020-02-27 21:39:29.360 -08:00 [INF] Starting DummyData
+2020-02-27 21:39:33.349 -08:00 [WRN] User bb094dd7-d4fd-4406-9321-b0382e4756ea validation failed: DuplicateUserName.
+2020-02-27 21:39:33.410 -08:00 [WRN] User d59f86a8-ca2c-4129-8ef7-8199b417e4a7 validation failed: DuplicateUserName.
+2020-02-27 21:39:33.444 -08:00 [WRN] User a9240bf3-369a-49fb-930f-bed604b5db85 validation failed: DuplicateUserName.
+2020-02-27 21:39:33.477 -08:00 [WRN] User 56c94c9c-f29c-4b17-8650-1127cda2570d validation failed: DuplicateUserName.
+2020-02-27 21:43:56.795 -08:00 [INF] Starting up
+2020-02-27 21:44:22.101 -08:00 [INF] Starting up
+2020-02-27 21:44:26.529 -08:00 [INF] Hello, world!
+2020-02-27 21:44:26.542 -08:00 [INF] Starting DummyData
+2020-02-27 21:44:29.403 -08:00 [WRN] User ff111bf7-45d0-4e1c-8528-ac854496b1ab validation failed: DuplicateUserName.
+2020-02-27 21:44:29.465 -08:00 [WRN] User 8057fecc-508b-43ec-a92c-27a001c20af8 validation failed: DuplicateUserName.
+2020-02-27 21:44:29.505 -08:00 [WRN] User 6b2da654-5883-415d-b0d9-b62ee6018525 validation failed: DuplicateUserName.
+2020-02-27 21:44:29.534 -08:00 [WRN] User d96b1ca9-b9a7-4d65-b14a-77224edc6186 validation failed: DuplicateUserName.
+2020-02-27 21:49:21.013 -08:00 [INF] Starting up
+2020-02-27 21:49:28.074 -08:00 [INF] Hello, world!
+2020-02-27 21:49:28.092 -08:00 [INF] Starting DummyData
+2020-02-27 21:49:30.634 -08:00 [WRN] User 866ecdb4-fba2-43b1-8308-5e958cba35f0 validation failed: DuplicateUserName.
+2020-02-27 21:49:30.685 -08:00 [WRN] User d108a2a8-fd29-49a1-84f5-d1551ff5c820 validation failed: DuplicateUserName.
+2020-02-27 21:49:30.722 -08:00 [WRN] User 37404ab0-d391-40ed-b8a7-b8f71e695b20 validation failed: DuplicateUserName.
+2020-02-27 21:49:30.762 -08:00 [WRN] User 39eebff1-8bf2-46a3-a41d-7909cbcf6dc3 validation failed: DuplicateUserName.
+2020-02-27 21:49:34.202 -08:00 [INF] Hello, {Name}!
+2020-02-27 21:49:34.522 -08:00 [INF] GetPostLog - {PostLogId}
+2020-02-27 21:49:35.364 -08:00 [INF] PostLog-Sched1    
+2020-02-27 21:49:52.827 -08:00 [INF] Inside the RestClientGAReportPostMethod!
+2020-02-27 21:49:53.230 -08:00 [ERR] The view 'GAReportRestSharpClient' was not found. Searched locations: ["/Views/Home/GAReportRestSharpClient.cshtml","/Views/Shared/GAReportRestSharpClient.cshtml","/Pages/Shared/GAReportRestSharpClient.cshtml"]
+2020-02-27 21:49:53.267 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'GAReportRestSharpClient' was not found. The following locations were searched:
+/Views/Home/GAReportRestSharpClient.cshtml
+/Views/Shared/GAReportRestSharpClient.cshtml
+/Pages/Shared/GAReportRestSharpClient.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-02-27 21:49:57.245 -08:00 [INF] StatusCode:0
+2020-02-27 21:49:57.249 -08:00 [INF] ContentLength:0
+2020-02-27 21:49:57.253 -08:00 [INF] Content:
+2020-02-27 21:50:03.070 -08:00 [INF] Inside the Pre-postlog Controler Method!
+2020-02-27 21:50:11.068 -08:00 [INF] Hello, {Name}!
+2020-02-27 21:50:11.071 -08:00 [INF] GetPostLog - {PostLogId}
+2020-02-27 21:50:11.105 -08:00 [INF] PostLog-Sched1    
