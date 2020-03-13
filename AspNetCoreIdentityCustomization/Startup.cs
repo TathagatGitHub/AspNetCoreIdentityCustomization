@@ -64,6 +64,7 @@ namespace AspNetCoreIdentityCustomization
             services.AddTransient<PostLogRepository>();
 
             services.AddRazorPages();
+            services.AddServerSideBlazor();
 
             //  services.AddSingleton(Configuration);
             //  services.AddTransient<Configuration>();
@@ -127,6 +128,7 @@ namespace AspNetCoreIdentityCustomization
                     name: "areas",
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapBlazorHub();
             });
 
 

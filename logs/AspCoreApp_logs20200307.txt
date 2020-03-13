@@ -1,0 +1,259 @@
+2020-03-07 16:05:23.619 -08:00 [INF] Starting up
+2020-03-07 16:05:25.218 -08:00 [INF] Hello, world!
+2020-03-07 16:05:25.229 -08:00 [INF] Starting DummyData
+2020-03-07 16:05:27.971 -08:00 [WRN] User 4c5a7e7a-42f5-4a6d-9610-6b328417642b validation failed: DuplicateUserName.
+2020-03-07 16:05:28.016 -08:00 [WRN] User 244c6c17-7b59-4784-8b98-43fe349febca validation failed: DuplicateUserName.
+2020-03-07 16:05:28.070 -08:00 [WRN] User 5a600db0-0888-4139-9472-fbfd43b133de validation failed: DuplicateUserName.
+2020-03-07 16:05:28.095 -08:00 [WRN] User 93e8cd46-a1a3-4a4c-b03b-23a987d81374 validation failed: DuplicateUserName.
+2020-03-07 16:15:08.193 -08:00 [INF] Hello, {Name}!
+2020-03-07 16:15:08.350 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 16:15:08.621 -08:00 [INF] PostLog-Sched1    
+2020-03-07 16:20:55.972 -08:00 [INF] Starting up
+2020-03-07 16:20:56.987 -08:00 [INF] Hello, world!
+2020-03-07 16:20:56.995 -08:00 [INF] Starting DummyData
+2020-03-07 16:20:58.787 -08:00 [WRN] User 957a087f-d347-4bbd-ac99-37fd4cd5d9bc validation failed: DuplicateUserName.
+2020-03-07 16:20:58.825 -08:00 [WRN] User 4bdb5f5a-cbcf-405d-991e-a6e97da5a46e validation failed: DuplicateUserName.
+2020-03-07 16:20:58.856 -08:00 [WRN] User 6250892d-22f3-42fe-adb7-b2a21c75feba validation failed: DuplicateUserName.
+2020-03-07 16:20:58.882 -08:00 [WRN] User 84dceb74-9a46-4aa7-a347-225f7e906122 validation failed: DuplicateUserName.
+2020-03-07 16:21:01.638 -08:00 [INF] Hello, {Name}!
+2020-03-07 16:21:01.764 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 16:21:02.032 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:20:56.073 -08:00 [INF] Starting up
+2020-03-07 18:20:58.742 -08:00 [INF] Hello, world!
+2020-03-07 18:20:58.755 -08:00 [INF] Starting DummyData
+2020-03-07 18:21:52.850 -08:00 [INF] Starting up
+2020-03-07 18:21:55.030 -08:00 [INF] Hello, world!
+2020-03-07 18:21:55.046 -08:00 [INF] Starting DummyData
+2020-03-07 18:21:59.360 -08:00 [WRN] User f1ca13ad-fdea-4e0f-ae5b-dde8aea9875f validation failed: DuplicateUserName.
+2020-03-07 18:21:59.415 -08:00 [WRN] User e40187f9-e319-46ae-aedd-2784c1e7249c validation failed: DuplicateUserName.
+2020-03-07 18:21:59.452 -08:00 [WRN] User 68e13f27-c8fe-4a3c-b7da-8995809651fa validation failed: DuplicateUserName.
+2020-03-07 18:21:59.480 -08:00 [WRN] User d105e868-68a5-486c-81bc-b1da9d1cd733 validation failed: DuplicateUserName.
+2020-03-07 18:22:02.911 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:22:03.169 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:22:03.688 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:25:26.030 -08:00 [INF] Starting up
+2020-03-07 18:25:28.116 -08:00 [INF] Hello, world!
+2020-03-07 18:25:28.136 -08:00 [INF] Starting DummyData
+2020-03-07 18:25:31.378 -08:00 [WRN] User 6cd73a61-1e00-4ecc-be47-27ec3e3c0bbd validation failed: DuplicateUserName.
+2020-03-07 18:25:31.424 -08:00 [WRN] User 82f091a7-9a9a-458e-985c-ead4a66ab468 validation failed: DuplicateUserName.
+2020-03-07 18:25:31.484 -08:00 [WRN] User 29c8160e-4071-453b-a82b-7a8a1026b938 validation failed: DuplicateUserName.
+2020-03-07 18:25:31.510 -08:00 [WRN] User 5d92c22d-7918-41ed-b03b-e2689b6c2f94 validation failed: DuplicateUserName.
+2020-03-07 18:26:31.049 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:26:31.323 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:26:32.080 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:31:02.630 -08:00 [INF] Starting up
+2020-03-07 18:31:04.536 -08:00 [INF] Hello, world!
+2020-03-07 18:31:04.550 -08:00 [INF] Starting DummyData
+2020-03-07 18:31:08.968 -08:00 [WRN] User 8d5851f6-6e14-47b4-a581-210e5a0887a5 validation failed: DuplicateUserName.
+2020-03-07 18:31:09.070 -08:00 [WRN] User 4ffc18e4-be80-445b-9098-73107461856d validation failed: DuplicateUserName.
+2020-03-07 18:31:09.099 -08:00 [WRN] User 18abfe20-7745-4400-bfe2-53b4b2615651 validation failed: DuplicateUserName.
+2020-03-07 18:31:09.125 -08:00 [WRN] User 6e08114a-340f-44eb-a95f-cc1850d4025a validation failed: DuplicateUserName.
+2020-03-07 18:31:12.113 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:31:12.365 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:31:12.923 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:40:21.461 -08:00 [INF] Starting up
+2020-03-07 18:40:23.879 -08:00 [INF] Hello, world!
+2020-03-07 18:40:23.899 -08:00 [INF] Starting DummyData
+2020-03-07 18:40:27.796 -08:00 [WRN] User 49e5dd10-d55d-4d0d-a98b-173f25c5490f validation failed: DuplicateUserName.
+2020-03-07 18:40:27.845 -08:00 [WRN] User 3ddac729-7174-4c89-aac0-0963b735817c validation failed: DuplicateUserName.
+2020-03-07 18:40:27.872 -08:00 [WRN] User 778ad462-164e-4aa9-8ce8-6648fd20ea17 validation failed: DuplicateUserName.
+2020-03-07 18:40:27.896 -08:00 [WRN] User 32a5836f-6202-4e94-a6f3-bbe58a723789 validation failed: DuplicateUserName.
+2020-03-07 18:40:30.842 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:40:31.128 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:40:31.642 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:41:19.920 -08:00 [INF] Starting up
+2020-03-07 18:41:21.915 -08:00 [INF] Hello, world!
+2020-03-07 18:41:21.927 -08:00 [INF] Starting DummyData
+2020-03-07 18:41:26.191 -08:00 [WRN] User 0e23dda8-e6a9-4a0e-add8-cd1a9c20307a validation failed: DuplicateUserName.
+2020-03-07 18:41:26.270 -08:00 [WRN] User ed8718a8-7758-42dc-9005-8ded2bb9751e validation failed: DuplicateUserName.
+2020-03-07 18:41:26.315 -08:00 [WRN] User 41ef19cd-424b-4807-a670-5a1710181af5 validation failed: DuplicateUserName.
+2020-03-07 18:41:26.351 -08:00 [WRN] User 425179d9-9205-40d8-ba38-c5fc296f5dcd validation failed: DuplicateUserName.
+2020-03-07 18:41:30.110 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:41:30.379 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:41:30.914 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:42:27.155 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:42:27.178 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:42:32.796 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:42:32.805 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:42:32.833 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:42:32.892 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:43:34.383 -08:00 [INF] Starting up
+2020-03-07 18:43:36.923 -08:00 [INF] Hello, world!
+2020-03-07 18:43:36.937 -08:00 [INF] Starting DummyData
+2020-03-07 18:43:41.020 -08:00 [WRN] User 4d995551-67ae-4c0c-939a-99cf3dc5cd0b validation failed: DuplicateUserName.
+2020-03-07 18:43:41.075 -08:00 [WRN] User 433c8dca-b0b4-4ba6-8411-3bd322acd9cd validation failed: DuplicateUserName.
+2020-03-07 18:43:41.114 -08:00 [WRN] User e96d612e-f834-4214-bdc6-11244a3db61c validation failed: DuplicateUserName.
+2020-03-07 18:43:41.149 -08:00 [WRN] User 6454acd9-76bf-47a9-beaa-9c0deaab7a16 validation failed: DuplicateUserName.
+2020-03-07 18:43:43.996 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:43:44.271 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:43:45.130 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:47:15.435 -08:00 [INF] Starting up
+2020-03-07 18:47:18.374 -08:00 [INF] Hello, world!
+2020-03-07 18:47:18.391 -08:00 [INF] Starting DummyData
+2020-03-07 18:47:21.535 -08:00 [WRN] User da10b06f-3839-4c40-bb30-394bc0d3d2de validation failed: DuplicateUserName.
+2020-03-07 18:47:21.582 -08:00 [WRN] User 0bc2be7f-10e2-4747-b2d6-fbb3743f9578 validation failed: DuplicateUserName.
+2020-03-07 18:47:21.619 -08:00 [WRN] User f6c6da03-2179-411a-a128-3f678f24fc2f validation failed: DuplicateUserName.
+2020-03-07 18:47:21.646 -08:00 [WRN] User 5effe723-36de-4533-b824-1ecf74874ebe validation failed: DuplicateUserName.
+2020-03-07 18:49:02.487 -08:00 [INF] Starting up
+2020-03-07 18:49:04.287 -08:00 [INF] Hello, world!
+2020-03-07 18:49:04.304 -08:00 [INF] Starting DummyData
+2020-03-07 18:49:08.474 -08:00 [WRN] User ad787244-b85a-44f0-9633-38aaf7c746c4 validation failed: DuplicateUserName.
+2020-03-07 18:49:08.523 -08:00 [WRN] User bcea7d9d-c926-4555-893a-818b3104cdfb validation failed: DuplicateUserName.
+2020-03-07 18:49:08.558 -08:00 [WRN] User c32c6a7b-8b12-49c8-9070-a702f08e1476 validation failed: DuplicateUserName.
+2020-03-07 18:49:08.587 -08:00 [WRN] User 6fa1d5fe-bdff-4acf-9930-0dd68a12d3c4 validation failed: DuplicateUserName.
+2020-03-07 18:49:13.454 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:49:13.932 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:49:14.447 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:55:04.421 -08:00 [INF] Starting up
+2020-03-07 18:55:06.407 -08:00 [INF] Hello, world!
+2020-03-07 18:55:06.421 -08:00 [INF] Starting DummyData
+2020-03-07 18:55:11.935 -08:00 [WRN] User bfe85180-57ff-493d-8e69-63bcc09c1ece validation failed: DuplicateUserName.
+2020-03-07 18:55:12.044 -08:00 [WRN] User 2ca55661-903f-4779-b50c-854cd98186e6 validation failed: DuplicateUserName.
+2020-03-07 18:55:12.088 -08:00 [WRN] User c4feb1ad-ac62-4423-bc7d-e6e8e124e2e8 validation failed: DuplicateUserName.
+2020-03-07 18:55:12.124 -08:00 [WRN] User 810b72a2-7295-4b85-9cae-a7fb90021aa9 validation failed: DuplicateUserName.
+2020-03-07 18:55:19.335 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:55:19.920 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:55:20.697 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:55:20.859 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-07 18:55:47.687 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:55:47.690 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:55:47.716 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:55:47.779 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-07 18:56:13.641 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:56:13.645 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:56:13.677 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:56:13.739 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-07 18:56:35.463 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:56:35.466 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:56:35.496 -08:00 [INF] PostLog-Sched1    
+2020-03-07 18:56:35.573 -08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_Index.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Home\Index.cshtml:line 4
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-07 18:56:58.892 -08:00 [INF] Starting up
+2020-03-07 18:57:01.508 -08:00 [INF] Hello, world!
+2020-03-07 18:57:01.527 -08:00 [INF] Starting DummyData
+2020-03-07 18:57:05.418 -08:00 [WRN] User 34cb20d7-1f63-4fe5-a71d-3a2cff438c56 validation failed: DuplicateUserName.
+2020-03-07 18:57:05.465 -08:00 [WRN] User 76fd3c50-8b29-44b6-8f61-96def605d8ed validation failed: DuplicateUserName.
+2020-03-07 18:57:05.496 -08:00 [WRN] User 11407eb4-c550-42b9-94db-2cc58dc787bd validation failed: DuplicateUserName.
+2020-03-07 18:57:05.521 -08:00 [WRN] User 5051b05f-4b53-43a3-8f40-c3d5a24c7a4e validation failed: DuplicateUserName.
+2020-03-07 18:57:08.575 -08:00 [INF] Hello, {Name}!
+2020-03-07 18:57:08.945 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 18:57:09.510 -08:00 [INF] PostLog-Sched1    
+2020-03-07 19:03:49.474 -08:00 [INF] Starting up
+2020-03-07 19:03:52.568 -08:00 [INF] Hello, world!
+2020-03-07 19:03:52.606 -08:00 [INF] Starting DummyData
+2020-03-07 19:03:55.886 -08:00 [WRN] User 8249a9bd-3d25-401f-be26-84cc8c988803 validation failed: DuplicateUserName.
+2020-03-07 19:03:55.960 -08:00 [WRN] User ba6c1b50-2ea9-420c-bcd1-c0150818ad43 validation failed: DuplicateUserName.
+2020-03-07 19:03:55.996 -08:00 [WRN] User f2ef3a76-c8f8-460a-8aa1-08b5005dd506 validation failed: DuplicateUserName.
+2020-03-07 19:03:56.040 -08:00 [WRN] User 9c610657-e04b-4f64-bee2-79eb8a1a822c validation failed: DuplicateUserName.
+2020-03-07 19:04:00.805 -08:00 [INF] Hello, {Name}!
+2020-03-07 19:04:01.193 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 19:04:01.776 -08:00 [INF] PostLog-Sched1    
+2020-03-07 19:04:52.537 -08:00 [INF] Hello, {Name}!
+2020-03-07 19:04:52.540 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 19:04:52.569 -08:00 [INF] PostLog-Sched1    
+2020-03-07 19:05:49.437 -08:00 [INF] Hello, {Name}!
+2020-03-07 19:05:49.442 -08:00 [INF] GetPostLog - {PostLogId}
+2020-03-07 19:05:49.472 -08:00 [INF] PostLog-Sched1    

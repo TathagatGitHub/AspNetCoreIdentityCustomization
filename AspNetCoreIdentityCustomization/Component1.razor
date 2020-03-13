@@ -1,0 +1,9 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<h3>Component1</h3>
+
+<input @bind="message" @bind:event="oninput"/>
+<p> Message: @message</p>
+@code {
+    string message;
+}

@@ -25,7 +25,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
         public IActionResult Index()
         {
-            _logger.LogInformation("Hello, {Name}!");
+                _logger.LogInformation("Hello, {Name}!");
            // PostLogRepository postlog =new PostLogRepository (); 
             PostLog logs;
             logs= _postlogrepository.GetPostLog(1);

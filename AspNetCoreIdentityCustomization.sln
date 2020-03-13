@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomiza
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.Data", "Data\AspNetCoreIdentityCustomization.Data.csproj", "{0322F3D0-4CEE-452F-94E8-0C3AD2AA9870}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreIdentityCustomization.WebApi.Client", "AspNetCoreIdentityCustomization.WebApi.Client\AspNetCoreIdentityCustomization.WebApi.Client.csproj", "{0F569EAD-24F1-4A8A-9428-BE96498E14D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.WebApi.Client", "AspNetCoreIdentityCustomization.WebApi.Client\AspNetCoreIdentityCustomization.WebApi.Client.csproj", "{0F569EAD-24F1-4A8A-9428-BE96498E14D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

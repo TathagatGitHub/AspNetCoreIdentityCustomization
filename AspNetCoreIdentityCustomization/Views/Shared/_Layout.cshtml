@@ -32,10 +32,10 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                     <li><a asp-area="" asp-controller="Home" asp-action="TestRestSharpClient">Pre-PostLog - RestSharp Client</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="GAReportRestSharpClient">GAReports - RestSharp Client</a></li>
-                
+
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -51,13 +51,15 @@
             <p>&copy; 2019 - AspNetCoreIdentityCustomization</p>
         </footer>
     </div>
-
+    <script src="~/_framework/blazor.server.js"></script>
     <environment include="Development">
+       
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
+        
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
