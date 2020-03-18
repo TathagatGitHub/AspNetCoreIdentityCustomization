@@ -7,7 +7,7 @@ namespace AspNetCoreIdentityCustomization.Data
 {
     interface IPosLogRepository
     {
-        PostLog GetPostLog(int PostLogId);
+        IEnumerable<PostLog> GetPostLog(int PostLogId);
         //PostLog AddPostLog(PostLog postLog);
         //IEnumerable<PostLog> GetListPostLog();
         //PostLog UpdatePostLog(PostLog postlog);

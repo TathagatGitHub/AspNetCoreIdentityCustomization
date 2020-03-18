@@ -25,12 +25,22 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
         public IActionResult Index()
         {
-                _logger.LogInformation("Hello, {Name}!");
+                _logger.LogInformation("Inside the Index view");
            // PostLogRepository postlog =new PostLogRepository (); 
-            PostLog logs;
-            logs= _postlogrepository.GetPostLog(1);
-            _logger.LogInformation("PostLog-"+ logs.ScheduleName);
+            //PostLog logs;
+            //logs= _postlogrepository.GetPostLog(1);
+            //_logger.LogInformation("PostLog-"+ logs.ScheduleName);
             return View();
+        }
+
+        public IActionResult PostLogList()
+        {
+            _logger.LogInformation("Inside the PostLogView");
+            // PostLogRepository postlog =new PostLogRepository (); 
+            IEnumerable<PostLog> logs;
+            logs = _postlogrepository.GetPostLog(1);
+            _logger.LogInformation("PostLog-" + logs.ToList());
+            return View(logs);
         }
 
         public IActionResult About()

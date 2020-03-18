@@ -21,7 +21,7 @@ namespace AspNetCoreIdentityCustomization.Data
             _logger = logger;
         }
 
-        public PostLog GetPostLog (int PostLogId)
+        public IEnumerable<PostLog> GetPostLog (int PostLogId)
         {
             _logger.LogInformation("GetPostLog - {PostLogId}" );
             String _loglvel = _config["Logging:LogLevel:Default"];
@@ -45,8 +45,8 @@ namespace AspNetCoreIdentityCustomization.Data
 
 
             }
-
-            return logs;
+            //return logs; // only object
+            return postLogs; // list of obejctst
 
 
 

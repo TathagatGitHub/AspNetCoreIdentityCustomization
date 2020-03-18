@@ -1,0 +1,113 @@
+2020-03-18 15:36:31.329 -07:00 [INF] Starting up
+2020-03-18 15:36:32.509 -07:00 [INF] Hello, world!
+2020-03-18 15:36:32.516 -07:00 [INF] Starting DummyData
+2020-03-18 15:36:34.178 -07:00 [WRN] User c0529609-82af-4a11-b1a6-7320d8d64515 validation failed: DuplicateUserName.
+2020-03-18 15:36:34.206 -07:00 [WRN] User 5b5ce187-f047-4dec-80f3-165b0ba0f049 validation failed: DuplicateUserName.
+2020-03-18 15:36:34.222 -07:00 [WRN] User ded830d1-42ed-41ae-a123-2b38997fc3f1 validation failed: DuplicateUserName.
+2020-03-18 15:36:34.237 -07:00 [WRN] User 3c104fd7-8d9a-4f2f-9bc3-699d656e488b validation failed: DuplicateUserName.
+2020-03-18 15:36:37.365 -07:00 [INF] Hello, {Name}!
+2020-03-18 15:36:37.532 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-18 15:36:37.804 -07:00 [INF] PostLog-Sched1    
+2020-03-18 15:36:56.905 -07:00 [INF] Hello, {Name}!
+2020-03-18 15:37:03.075 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-18 15:37:23.624 -07:00 [INF] PostLog-Sched1    
+2020-03-18 15:56:57.445 -07:00 [INF] Starting up
+2020-03-18 15:56:58.493 -07:00 [INF] Hello, world!
+2020-03-18 15:56:58.501 -07:00 [INF] Starting DummyData
+2020-03-18 15:57:00.599 -07:00 [WRN] User cd7c81de-ec53-44a6-8dcf-5616a2e090ec validation failed: DuplicateUserName.
+2020-03-18 15:57:00.634 -07:00 [WRN] User ce55c889-9d1f-4b3f-a6c1-3ac222cb3617 validation failed: DuplicateUserName.
+2020-03-18 15:57:00.655 -07:00 [WRN] User 29471eac-cd57-4783-ac24-b30d7f0c1dd1 validation failed: DuplicateUserName.
+2020-03-18 15:57:00.681 -07:00 [WRN] User 3d4013a7-b5d8-48a0-aa93-2aba2ab58b9d validation failed: DuplicateUserName.
+2020-03-18 15:57:28.290 -07:00 [INF] Starting up
+2020-03-18 15:57:29.996 -07:00 [INF] Hello, world!
+2020-03-18 15:57:30.006 -07:00 [INF] Starting DummyData
+2020-03-18 15:57:32.037 -07:00 [WRN] User 5b79fa4b-ece6-413e-8859-427f860a7de2 validation failed: DuplicateUserName.
+2020-03-18 15:57:32.073 -07:00 [WRN] User 034b4609-cf08-4fc6-9f8f-80da9d1348c7 validation failed: DuplicateUserName.
+2020-03-18 15:57:32.115 -07:00 [WRN] User f5d69a84-b5c6-4076-b4dd-2cf741d55742 validation failed: DuplicateUserName.
+2020-03-18 15:57:32.148 -07:00 [WRN] User 17e4cf27-f0a5-49fb-82b2-d516b307ec10 validation failed: DuplicateUserName.
+2020-03-18 15:58:51.182 -07:00 [INF] Starting up
+2020-03-18 15:58:53.106 -07:00 [INF] Hello, world!
+2020-03-18 15:58:53.117 -07:00 [INF] Starting DummyData
+2020-03-18 15:58:55.292 -07:00 [WRN] User 384560d5-72c7-4863-8f57-56bfdb6417d2 validation failed: DuplicateUserName.
+2020-03-18 15:58:55.325 -07:00 [WRN] User d4673451-c88d-4b96-b2db-869658ea27e3 validation failed: DuplicateUserName.
+2020-03-18 15:58:55.346 -07:00 [WRN] User a2b5cd15-d55c-464c-abda-b1d4b940dc87 validation failed: DuplicateUserName.
+2020-03-18 15:58:55.367 -07:00 [WRN] User 64b77a58-0bf7-4adb-92bf-4a7b1a175523 validation failed: DuplicateUserName.
+2020-03-18 16:00:44.549 -07:00 [INF] Starting up
+2020-03-18 16:00:45.648 -07:00 [INF] Hello, world!
+2020-03-18 16:00:45.655 -07:00 [INF] Starting DummyData
+2020-03-18 16:00:47.256 -07:00 [WRN] User d0a72fca-c013-4b26-b494-1ea96e6d55e9 validation failed: DuplicateUserName.
+2020-03-18 16:00:47.284 -07:00 [WRN] User 34b6922a-ffe6-4572-9299-1a951059ceb5 validation failed: DuplicateUserName.
+2020-03-18 16:00:47.301 -07:00 [WRN] User 49ff649a-2867-4275-9c4f-689edac43e05 validation failed: DuplicateUserName.
+2020-03-18 16:00:47.328 -07:00 [WRN] User cfc802e6-b8f7-4a74-9b72-4a65859fd985 validation failed: DuplicateUserName.
+2020-03-18 16:01:22.553 -07:00 [INF] Starting up
+2020-03-18 16:01:23.691 -07:00 [INF] Hello, world!
+2020-03-18 16:01:23.699 -07:00 [INF] Starting DummyData
+2020-03-18 16:01:25.210 -07:00 [WRN] User 897315a9-0cf3-4020-b8d8-b2f2052f078e validation failed: DuplicateUserName.
+2020-03-18 16:01:25.240 -07:00 [WRN] User 6606bc66-2426-4a59-a7e6-6e902311188c validation failed: DuplicateUserName.
+2020-03-18 16:01:25.257 -07:00 [WRN] User 09d6262d-5963-495b-b295-6a5091a6967c validation failed: DuplicateUserName.
+2020-03-18 16:01:25.275 -07:00 [WRN] User aa2a1d53-cd5a-4825-8af8-26a22f77f8be validation failed: DuplicateUserName.
+2020-03-18 16:03:12.129 -07:00 [INF] Starting up
+2020-03-18 16:03:13.192 -07:00 [INF] Hello, world!
+2020-03-18 16:03:13.199 -07:00 [INF] Starting DummyData
+2020-03-18 16:03:14.735 -07:00 [WRN] User 340c4074-c920-4c17-b669-4f423bfe9ec5 validation failed: DuplicateUserName.
+2020-03-18 16:03:14.765 -07:00 [WRN] User 1730fd4c-3712-4dcb-a823-3733427fe1a2 validation failed: DuplicateUserName.
+2020-03-18 16:03:14.783 -07:00 [WRN] User 85eccb1d-d931-487b-95c5-bdf9a610f54a validation failed: DuplicateUserName.
+2020-03-18 16:03:14.806 -07:00 [WRN] User 15bd54be-76f4-417f-8a02-359c483e99cc validation failed: DuplicateUserName.
+2020-03-18 16:03:19.822 -07:00 [INF] Inside the Index view
+2020-03-18 16:03:32.320 -07:00 [INF] Inside the PostLogView
+2020-03-18 16:03:32.492 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-18 16:03:32.863 -07:00 [INF] PostLog-Sched1    
+2020-03-18 16:05:48.102 -07:00 [INF] Starting up
+2020-03-18 16:05:49.183 -07:00 [INF] Hello, world!
+2020-03-18 16:05:49.192 -07:00 [INF] Starting DummyData
+2020-03-18 16:05:51.759 -07:00 [WRN] User 8bd29234-d7f9-4896-a395-81122e023aac validation failed: DuplicateUserName.
+2020-03-18 16:05:51.798 -07:00 [WRN] User f9812528-7bf8-4c95-aced-b31566c49696 validation failed: DuplicateUserName.
+2020-03-18 16:05:51.820 -07:00 [WRN] User 00a58d5b-0e65-478d-82bd-3275dfd8b7a1 validation failed: DuplicateUserName.
+2020-03-18 16:05:51.836 -07:00 [WRN] User 01b57156-e08d-4828-8953-17a7882b674a validation failed: DuplicateUserName.
+2020-03-18 16:05:54.960 -07:00 [INF] Inside the Index view
+2020-03-18 16:06:01.504 -07:00 [INF] Inside the PostLogView
+2020-03-18 16:06:01.718 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-18 16:06:02.139 -07:00 [INF] PostLog-Sched1    
+2020-03-18 16:06:02.168 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'AspNetCoreIdentityCustomization.Core.PostLog', but this ViewDataDictionary instance requires a model item of type 'System.Collections.Generic.IEnumerable`1[AspNetCoreIdentityCustomization.Core.PostLog]'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.CreateViewDataDictionary(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-18 16:20:13.282 -07:00 [INF] Starting up
+2020-03-18 16:20:14.287 -07:00 [INF] Hello, world!
+2020-03-18 16:20:14.294 -07:00 [INF] Starting DummyData
+2020-03-18 16:20:16.524 -07:00 [WRN] User 58250943-90cf-4aec-8721-6454c1b8dd65 validation failed: DuplicateUserName.
+2020-03-18 16:20:16.557 -07:00 [WRN] User 99012563-78c6-4755-8bce-3cee3b7e887c validation failed: DuplicateUserName.
+2020-03-18 16:20:16.585 -07:00 [WRN] User e2a02c58-90a4-4522-be2b-3e5dac25627d validation failed: DuplicateUserName.
+2020-03-18 16:20:16.604 -07:00 [WRN] User 49c3f690-96b1-439d-8c53-cabc4c379f58 validation failed: DuplicateUserName.
+2020-03-18 16:20:23.088 -07:00 [INF] Inside the Index view
+2020-03-18 16:20:27.751 -07:00 [INF] Inside the PostLogView
+2020-03-18 16:20:27.897 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-18 16:20:28.176 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]

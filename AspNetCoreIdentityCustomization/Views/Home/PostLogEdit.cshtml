@@ -1,0 +1,64 @@
+﻿@model AspNetCoreIdentityCustomization.Core.PostLog
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View</h2>
+
+<h4>PostLog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="View">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PostLogId" class="control-label"></label>
+                <input asp-for="PostLogId" class="form-control" />
+                <span asp-validation-for="PostLogId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchedId" class="control-label"></label>
+                <input asp-for="SchedId" class="form-control" />
+                <span asp-validation-for="SchedId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ScheduleName" class="control-label"></label>
+                <input asp-for="ScheduleName" class="form-control" />
+                <span asp-validation-for="ScheduleName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeekNbr" class="control-label"></label>
+                <input asp-for="WeekNbr" class="form-control" />
+                <span asp-validation-for="WeekNbr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeekDate" class="control-label"></label>
+                <input asp-for="WeekDate" class="form-control" />
+                <span asp-validation-for="WeekDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreateDt" class="control-label"></label>
+                <input asp-for="CreateDt" class="form-control" />
+                <span asp-validation-for="CreateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpdateDt" class="control-label"></label>
+                <input asp-for="UpdateDt" class="form-control" />
+                <span asp-validation-for="UpdateDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

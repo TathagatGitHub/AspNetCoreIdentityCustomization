@@ -1,0 +1,72 @@
+﻿@model IEnumerable<AspNetCoreIdentityCustomization.Core.PostLog>
+
+@{
+    ViewData["Title"] = "PostLogList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PostLogList</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PostLogId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchedId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScheduleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeekNbr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeekDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateDt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostLogId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SchedId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScheduleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekNbr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

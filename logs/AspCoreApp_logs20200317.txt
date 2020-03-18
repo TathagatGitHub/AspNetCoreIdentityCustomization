@@ -1,0 +1,48 @@
+2020-03-17 21:36:57.426 -07:00 [INF] Starting up
+2020-03-17 21:37:00.034 -07:00 [INF] Hello, world!
+2020-03-17 21:37:00.071 -07:00 [INF] Starting DummyData
+2020-03-17 21:37:04.089 -07:00 [WRN] User 3d3f0414-73ec-4f89-ac57-dbfe3a1a0702 validation failed: DuplicateUserName.
+2020-03-17 21:37:04.196 -07:00 [WRN] User 3ff85b4f-dc17-4c07-9557-1744e6ec3e3c validation failed: DuplicateUserName.
+2020-03-17 21:37:04.239 -07:00 [WRN] User a6ee4e31-b2eb-4cdf-8eeb-ff509922b0df validation failed: DuplicateUserName.
+2020-03-17 21:37:04.275 -07:00 [WRN] User 52ccb2c9-ab81-4568-bed4-8987052b6852 validation failed: DuplicateUserName.
+2020-03-17 21:37:09.469 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:37:09.829 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:37:10.401 -07:00 [INF] PostLog-Sched1    
+2020-03-17 21:37:22.840 -07:00 [INF] User tathagat.dwivedi@gmail.com logged in.
+2020-03-17 21:37:25.892 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:37:25.900 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:37:25.934 -07:00 [INF] PostLog-Sched1    
+2020-03-17 21:38:10.382 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint /Account/Logout contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-17 21:38:31.633 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:38:31.650 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:38:31.686 -07:00 [INF] PostLog-Sched1    
+2020-03-17 21:38:37.892 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Endpoint /Account/Manage/Index contains authorization metadata, but a middleware was not found that supports authorization.
+Configure your application startup by adding app.UseAuthorization() inside the call to Configure(..) in the application startup code. The call to app.UseAuthorization() must appear between app.UseRouting() and app.UseEndpoints(...).
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.ThrowMissingAuthMiddlewareException(Endpoint endpoint)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-17 21:38:44.183 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:38:44.197 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:38:44.242 -07:00 [INF] PostLog-Sched1    
+2020-03-17 21:38:51.043 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:38:51.047 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:38:51.084 -07:00 [INF] PostLog-Sched1    
+2020-03-17 21:38:56.973 -07:00 [INF] Hello, {Name}!
+2020-03-17 21:38:56.982 -07:00 [INF] GetPostLog - {PostLogId}
+2020-03-17 21:38:57.023 -07:00 [INF] PostLog-Sched1    

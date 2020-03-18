@@ -95,8 +95,6 @@ namespace AspNetCoreIdentityCustomization
 
             app.UseAuthentication();
 
-
-
             //app.UseMvc(routes =>
             //{
             //    routes.MapRoute(
