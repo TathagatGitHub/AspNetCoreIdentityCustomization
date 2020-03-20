@@ -25,7 +25,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
         public IActionResult Index()
         {
-                _logger.LogInformation("Inside the Index view");
+           //throw new Exception("Error from Index");  
+            _logger.LogInformation("Inside the Index view");
            // PostLogRepository postlog =new PostLogRepository (); 
             //PostLog logs;
             //logs= _postlogrepository.GetPostLog(1);
@@ -35,6 +36,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
         public IActionResult PostLogList()
         {
+            throw new Exception();
             _logger.LogInformation("Inside the PostLogView");
             // PostLogRepository postlog =new PostLogRepository (); 
             IEnumerable<PostLog> logs;
