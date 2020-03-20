@@ -51,5 +51,42 @@ namespace AspNetCoreIdentityCustomization.Data
 
 
         }
+
+        public IEnumerable<PostLog> GetPostLogList()
+        {
+            _logger.LogInformation("GetPostLogList");
+                  
+            IEnumerable<PostLog> postLogs;
+            using (var connection = new SqlConnection(this.connection))
+            {
+                string sql = "select * from dbo.PostLog";
+                                 
+                postLogs = connection.Query<PostLog>(sql);
+                
+            }
+            //return logs; // only object
+            return postLogs; // list of obejctst
+        }
+
+        public PostLog GetOnePostLog(int PostLogId)
+        {
+            _logger.LogInformation("GetOnePostLog");
+            
+            PostLog log;
+            
+            using (var connection = new SqlConnection(this.connection))
+            {
+                var p = new DynamicParameters();
+                p.Add("@PostLogId", PostLogId);
+
+                string sql = "select * from dbo.PostLog where PostLogId = @PostLogId";
+
+                log = connection.QuerySingle<PostLog>(sql, p);
+            
+            }
+            return log; // only object
+            
+        }
+
     }
 }

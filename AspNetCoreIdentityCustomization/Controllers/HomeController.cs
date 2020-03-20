@@ -38,7 +38,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _logger.LogInformation("Inside the PostLogView");
             // PostLogRepository postlog =new PostLogRepository (); 
             IEnumerable<PostLog> logs;
-            logs = _postlogrepository.GetPostLog(1);
+            //logs = _postlogrepository.GetPostLog(1);
+            logs = _postlogrepository.GetPostLogList();
             _logger.LogInformation("PostLog-" + logs.ToList());
             return View(logs);
         }

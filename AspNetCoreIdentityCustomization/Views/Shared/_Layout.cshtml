@@ -8,12 +8,14 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/Custom/Submenu.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        
     </environment>
 </head>
 <body>
@@ -30,9 +32,36 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog View <span class="caret"></span></a>
+                        @*<a class="dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PostLog View <span class="caret"></span>
+                        </a>*@
+                        <ul class="dropdown-menu HeaderMenuAlign collapse">
+
+                            <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List2</a></li>
+                            <li class="dropdown dropdown-submenu">
+                                @*<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    PostLog Sub View
+                                </a>*@
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog Sub View <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List3</a></li>
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-controller="Products" asp-action="Cloud">Cloud</a></li>
+                        </ul>
+                    </li>
                     @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
+        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                     <li><a asp-area="" asp-controller="Home" asp-action="TestRestSharpClient">Pre-PostLog - RestSharp Client</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="GAReportRestSharpClient">GAReports - RestSharp Client</a></li>
 
@@ -53,10 +82,11 @@
     </div>
     <script src="~/_framework/blazor.server.js"></script>
     <environment include="Development">
-       
+
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/Custom/Submenu.js"></script>
     </environment>
     <environment exclude="Development">
         
