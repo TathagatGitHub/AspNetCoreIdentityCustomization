@@ -10,6 +10,7 @@ using AspNetCoreIdentityCustomization.Data;
 using AspNetCoreIdentityCustomization.Core;
 using AspNetCoreIdentityCustomization.WebApi;
 using AspNetCoreIdentityCustomization.WebApi.Client;
+using AspNetCoreIdentityCustomization.Filters;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -36,7 +37,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
         public IActionResult PostLogList()
         {
-            throw new Exception();
+           // throw new Exception();
             _logger.LogInformation("Inside the PostLogView");
             // PostLogRepository postlog =new PostLogRepository (); 
             IEnumerable<PostLog> logs;
@@ -44,6 +45,20 @@ namespace AspNetCoreIdentityCustomization.Controllers
             logs = _postlogrepository.GetPostLogList();
             _logger.LogInformation("PostLog-" + logs.ToList());
             return View(logs);
+        }
+
+        public IActionResult GlobalExceptionMethod()
+        {
+            throw new Exception();
+       
+            
+        }
+
+        [TypeFilter(typeof(ExceptionFilter))]
+        public IActionResult ExceptionFilterMethod()
+        {
+            _logger.LogInformation("Inside the ExceptionFilterMethod");
+            throw new NotImplementedException();
         }
 
         public IActionResult About()

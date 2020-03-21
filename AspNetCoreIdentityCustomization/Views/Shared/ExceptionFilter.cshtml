@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "GlobalError";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GlobalError</h2>
+
+<div class="alert alert-danger">
+    <h5> Exception:</h5> <hr/>
+     <p>@ViewData["Exception"]</p>
+
+</div>
+<div class="alert alert-danger">
+    <h5> Type:</h5> <hr />
+    <p>@ViewData["ExceptionType"]</p>
+
+</div>
+<div class="alert alert-danger">
+    <h5> StackTrace:</h5> <hr />
+    <p>@ViewBag.ExceptionStackTrace</p>
+
+</div>

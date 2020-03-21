@@ -8,15 +8,16 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link href="~/css/Custom/Submenu.css" rel="stylesheet" />
+        @*<link href="~/css/Custom/Submenu.css" rel="stylesheet" />*@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        
+
     </environment>
+    <link href="~/css/Custom/Submenu.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -35,17 +36,18 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog View <span class="caret"></span></a>
                         @*<a class="dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PostLog View <span class="caret"></span>
-                        </a>*@
+                                PostLog View <span class="caret"></span>
+                            </a>*@
                         <ul class="dropdown-menu HeaderMenuAlign collapse">
 
-                            <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Global">Global Exception</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="ExceptionFilterMethod">Exception Filter</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="GlobalExceptionMethod">Global Exception</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="StatusCode">Status Code Exception</a></li>
                             <li class="dropdown dropdown-submenu">
                                 @*<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    PostLog Sub View
-                                </a>*@
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog Sub View <span class="caret"></span></a>
+                                        PostLog Sub View
+                                    </a>*@
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog List <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List3</a></li>
                                 </ul>
@@ -61,7 +63,7 @@
                         </ul>
                     </li>
                     @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
                     <li><a asp-area="" asp-controller="Home" asp-action="TestRestSharpClient">Pre-PostLog - RestSharp Client</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="GAReportRestSharpClient">GAReports - RestSharp Client</a></li>
 
@@ -81,15 +83,16 @@
         </footer>
     </div>
     <script src="~/_framework/blazor.server.js"></script>
+
     <environment include="Development">
 
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="~/js/Custom/Submenu.js"></script>
+
     </environment>
     <environment exclude="Development">
-        
+
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
@@ -103,8 +106,11 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+
     </environment>
 
+    @*// For all Environment*@
+    <script src="~/js/Custom/Submenu.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
