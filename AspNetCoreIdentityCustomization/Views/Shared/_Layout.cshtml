@@ -34,39 +34,36 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog View <span class="caret"></span></a>
-                        @*<a class="dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PostLog View <span class="caret"></span>
-                            </a>*@
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exception Handling <span class="caret"></span></a>
+                     
+           
                         <ul class="dropdown-menu HeaderMenuAlign collapse">
 
                             <li><a asp-area="" asp-controller="Home" asp-action="ExceptionFilterMethod">Exception Filter</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="GlobalExceptionMethod">Global Exception</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="StatusCode">Status Code Exception</a></li>
-                            <li class="dropdown dropdown-submenu">
-                                @*<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        PostLog Sub View
-                                    </a>*@
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog List <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List3</a></li>
-                                </ul>
-
-                            </li>
-
+                        
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a asp-controller="Products" asp-action="Cloud">Cloud</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="TestRestSharpClient">Pre-PostLog - RestSharp Client</a></li>
+                            <li><a asp-area="" asp-controller="Home" asp-action="GAReportRestSharpClient">GAReports - RestSharp Client</a></li>
+                            <li class="dropdown dropdown-submenu">
+                
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PostLog List <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a asp-area="" asp-controller="Home" asp-action="PostLogList">PostLog List3</a></li>
+                                </ul>
+
+                            </li>
                         </ul>
                     </li>
-                    @*<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>*@
-                    <li><a asp-area="" asp-controller="Home" asp-action="TestRestSharpClient">Pre-PostLog - RestSharp Client</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="GAReportRestSharpClient">GAReports - RestSharp Client</a></li>
 
+                   
+                   
                 </ul>
                 <partial name="_LoginPartial" />
             </div>

@@ -1,0 +1,54 @@
+2020-03-22 13:36:57.634 -07:00 [INF] Starting up
+2020-03-22 13:36:59.665 -07:00 [INF] Hello, world!
+2020-03-22 13:36:59.683 -07:00 [INF] Starting DummyData
+2020-03-22 13:37:05.055 -07:00 [WRN] User cf82981b-8ae8-4dd6-995f-2ff6434d6c17 validation failed: DuplicateUserName.
+2020-03-22 13:37:05.118 -07:00 [WRN] User 9772e33c-6223-4748-9931-789c80fd7772 validation failed: DuplicateUserName.
+2020-03-22 13:37:05.154 -07:00 [WRN] User 6208bd3d-2d06-44e4-952d-ba257825f6c3 validation failed: DuplicateUserName.
+2020-03-22 13:37:05.188 -07:00 [WRN] User e7071d0b-5359-4296-8dbd-760b77b578c7 validation failed: DuplicateUserName.
+2020-03-22 13:37:06.707 -07:00 [INF] Inside the Index view
+2020-03-22 13:37:33.196 -07:00 [INF] Inside the PostLogView
+2020-03-22 13:37:33.428 -07:00 [INF] GetPostLogList
+2020-03-22 13:37:33.989 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-22 13:39:28.153 -07:00 [INF] Starting up
+2020-03-22 13:39:29.977 -07:00 [INF] Hello, world!
+2020-03-22 13:39:30.000 -07:00 [INF] Starting DummyData
+2020-03-22 13:39:34.599 -07:00 [WRN] User d54afb9e-6dce-49d9-95ab-86e92449e1d9 validation failed: DuplicateUserName.
+2020-03-22 13:39:34.781 -07:00 [WRN] User 4aa69d3d-a886-4d34-b504-f5cdaa4eca6d validation failed: DuplicateUserName.
+2020-03-22 13:39:34.909 -07:00 [WRN] User 0f27b9a7-e279-47b7-94df-2ee929aef80d validation failed: DuplicateUserName.
+2020-03-22 13:39:34.998 -07:00 [WRN] User bce1ae30-4110-4254-abb1-bba2c16b0a55 validation failed: DuplicateUserName.
+2020-03-22 13:39:36.537 -07:00 [INF] Inside the Index view
+2020-03-22 13:49:34.950 -07:00 [INF] Starting up
+2020-03-22 13:49:38.251 -07:00 [INF] Hello, world!
+2020-03-22 13:49:38.268 -07:00 [INF] Starting DummyData
+2020-03-22 13:49:43.028 -07:00 [WRN] User 45066549-1bfa-4511-8cb5-606198828ea9 validation failed: DuplicateUserName.
+2020-03-22 13:49:43.128 -07:00 [WRN] User 8c23effd-358f-4dbb-a4b2-b3575845d9ff validation failed: DuplicateUserName.
+2020-03-22 13:49:43.175 -07:00 [WRN] User 1127f47a-bc55-45cd-9f54-14232d44d4c7 validation failed: DuplicateUserName.
+2020-03-22 13:49:43.208 -07:00 [WRN] User 34c2abde-29a8-4109-a645-e5c1d4d7df05 validation failed: DuplicateUserName.
+2020-03-22 13:49:44.817 -07:00 [INF] Inside the Index view
+2020-03-22 13:50:05.775 -07:00 [INF] Inside the PostLogView
+2020-03-22 13:50:06.011 -07:00 [INF] GetPostLogList
+2020-03-22 13:50:10.019 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-22 13:53:22.671 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.GlobalExceptionMethod() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 52
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
