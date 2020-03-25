@@ -41,6 +41,7 @@
     <ProjectReference Include="..\AspNetCoreIdentityCustomization.WebApi.Client\AspNetCoreIdentityCustomization.WebApi.Client.csproj" />
     <ProjectReference Include="..\Core\AspNetCoreIdentityCustomization.Core.csproj" />
     <ProjectReference Include="..\Data\AspNetCoreIdentityCustomization.Data.csproj" />
+    <ProjectReference Include="..\RESPApiProject\AspNetCoreIdentityCustomization.RESPApiProject.csproj" />
   </ItemGroup>
 
 </Project>

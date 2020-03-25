@@ -11,6 +11,8 @@ using AspNetCoreIdentityCustomization.Core;
 using AspNetCoreIdentityCustomization.WebApi;
 using AspNetCoreIdentityCustomization.WebApi.Client;
 using AspNetCoreIdentityCustomization.Filters;
+using RESPApiProject.Controllers;
+using RESPApiProject;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -18,11 +20,12 @@ namespace AspNetCoreIdentityCustomization.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private PostLogRepository _postlogrepository;
-
-        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository)
+        private WeatherForecastController _weatherForecastController;
+        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository, WeatherForecastController weatherForecastController)
         {
             _logger = logger;
             _postlogrepository = postLogRepository;
+            _weatherForecastController = weatherForecastController;
         }
         public IActionResult Index()
         {
@@ -61,25 +64,31 @@ namespace AspNetCoreIdentityCustomization.Controllers
             throw new NotImplementedException();
         }
 
-        public IActionResult About()
+        public void RequestRestApiProjectweatherAPI()
         {
-            _logger.LogInformation("Hello, {about}!");
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            IEnumerable<WeatherForecast> weatherForecasts;
+            weatherForecasts = _weatherForecastController.GetweatherList();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+        //public IActionResult About()
+        //{
+        //    _logger.LogInformation("Hello, {about}!");
+        //    ViewData["Message"] = "Your application description page.";
 
-            return View();
-        }
+        //    return View();
+        //}
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        //public IActionResult Contact()
+        //{
+        //    ViewData["Message"] = "Your contact page.";
+
+        //    return View();
+        //}
+
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

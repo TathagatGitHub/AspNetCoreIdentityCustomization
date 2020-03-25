@@ -19,6 +19,7 @@ using Serilog;
 using Microsoft.Extensions.Hosting;
 using System.Configuration;
 using AspNetCoreIdentityCustomization.WebApi.Client;
+using RESPApiProject.Controllers;
 
 
 
@@ -62,6 +63,7 @@ namespace AspNetCoreIdentityCustomization
             //    services.Configure<Appsettings>(Configuration);
            
             services.AddTransient<PostLogRepository>();
+            services.AddTransient<WeatherForecastController>();
 
             services.AddRazorPages();
             services.AddServerSideBlazor();

@@ -4,6 +4,11 @@ using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Authenticators;
 using Microsoft.Extensions.Logging;
+using RESPApiProject.Controllers;
+
+using System.Collections.Generic;
+using RESPApiProject;
+
 namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
 
@@ -17,7 +22,9 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         private string _clientId = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
         private readonly ILogger _logger;
 
-        public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)
+       
+
+        public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)//, WeatherForecastController weatherForecastController )
         {
             _getUrl= APIUrl;
             _country = Country;
@@ -25,6 +32,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _logType = Postlog;
             _clientId = ClientId;
             _logger = logger;
+            //_weatherForecastController = weatherForecastController;
         }
 
         public RestSharpWebApiClient(ILogger logger, string APIUrl)
@@ -33,6 +41,18 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _logger = logger;
 
         }
+
+    //    //Weather Forcast API from this Solution
+    //    public void CallRESTAPIProjectAPI()
+    //    {
+    //        _logger.LogInformation("Inside the Pre-postlog Controler Method!");
+    //        IEnumerable<WeatherForecast> weatherForecast;
+    //        weatherForecast = _weatherForecastController.GetweatherList();
+
+
+
+
+    //}
 
         // Pre-PostLog 
         public async void  RestClientGetMethod()

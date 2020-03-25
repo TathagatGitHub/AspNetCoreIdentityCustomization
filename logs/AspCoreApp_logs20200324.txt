@@ -1,0 +1,5 @@
+2020-03-24 21:29:30.319 -07:00 [WRN] User 776ab9c3-cf75-486d-92c2-eb747759df79 validation failed: DuplicateUserName.
+2020-03-24 21:29:30.639 -07:00 [WRN] User ca6d66ec-355a-41d5-8110-555d54ddf681 validation failed: DuplicateUserName.
+2020-03-24 21:29:30.677 -07:00 [WRN] User ef7643f6-829f-47d4-bc10-47d2bd4687d5 validation failed: DuplicateUserName.
+2020-03-24 21:29:30.742 -07:00 [WRN] User beadc7bb-42ee-4742-b63b-20e6ba565c9c validation failed: DuplicateUserName.
+2020-03-24 21:29:32.440 -07:00 [INF] Inside the Index view
