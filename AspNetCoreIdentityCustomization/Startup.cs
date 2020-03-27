@@ -20,6 +20,7 @@ using Microsoft.Extensions.Hosting;
 using System.Configuration;
 using AspNetCoreIdentityCustomization.WebApi.Client;
 using RESPApiProject.Controllers;
+using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
 
 
 
@@ -114,6 +115,7 @@ namespace AspNetCoreIdentityCustomization
             logger.Information("Starting DummyData");
             DummyData.Initialize(context, userManager, roleManager).Wait();
             app.UseRouting();
+            //app.UseMiddleware<AuthenticationFilter>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

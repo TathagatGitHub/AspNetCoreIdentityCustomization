@@ -1,0 +1,29 @@
+2020-03-27 16:26:21.527 -07:00 [WRN] User 11b084ef-44ec-4745-ae23-90f5b36f6b9e validation failed: DuplicateUserName.
+2020-03-27 16:26:21.674 -07:00 [WRN] User 4cfdc367-f442-4a4a-9ae3-0e9ad140304b validation failed: DuplicateUserName.
+2020-03-27 16:26:21.712 -07:00 [WRN] User 646b8ac8-fd7f-4624-86c7-7850b4b7db67 validation failed: DuplicateUserName.
+2020-03-27 16:26:21.752 -07:00 [WRN] User 52314646-145c-4e4d-94cf-74f6cf5412bc validation failed: DuplicateUserName.
+2020-03-27 16:26:22.664 -07:00 [INF] Inside the Index view
+2020-03-27 16:27:14.237 -07:00 [INF] Inside the Index view
+2020-03-27 16:28:59.032 -07:00 [WRN] User 5ab0363e-f389-49b9-b42f-0443c42d48b2 validation failed: DuplicateUserName.
+2020-03-27 16:28:59.200 -07:00 [WRN] User aaea338e-c41e-46bd-acbe-2d98d718ef7d validation failed: DuplicateUserName.
+2020-03-27 16:28:59.262 -07:00 [WRN] User 304b09d4-88d4-4391-a44a-f1d6f7bde8dd validation failed: DuplicateUserName.
+2020-03-27 16:28:59.303 -07:00 [WRN] User 846855ed-de5c-4498-92e5-2a1ef4af4535 validation failed: DuplicateUserName.
+2020-03-27 16:29:00.343 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.RESPApiProject.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 16:32:49.214 -07:00 [WRN] User 855aac51-4b82-43ff-8731-ce0741eed6e5 validation failed: DuplicateUserName.
+2020-03-27 16:32:49.379 -07:00 [WRN] User d3b15f4b-a425-4143-b46e-ac607304accc validation failed: DuplicateUserName.
+2020-03-27 16:32:49.416 -07:00 [WRN] User e92ff789-924d-4bcd-b81e-070af71a27e2 validation failed: DuplicateUserName.
+2020-03-27 16:32:49.456 -07:00 [WRN] User 4a99a4d7-8ad1-4f3c-9d10-05ae19245357 validation failed: DuplicateUserName.
+2020-03-27 16:32:50.984 -07:00 [INF] Inside the Index view
+2020-03-27 16:44:36.556 -07:00 [INF] Starting up
+2020-03-27 16:44:39.359 -07:00 [INF] Hello, world!
+2020-03-27 16:44:39.379 -07:00 [INF] Starting DummyData
+2020-03-27 16:44:44.426 -07:00 [WRN] User aa02162e-2187-4f33-8218-11b9aeca71ad validation failed: DuplicateUserName.
+2020-03-27 16:44:44.494 -07:00 [WRN] User ef025cd0-3b6b-4ebc-b897-d84c751a3bba validation failed: DuplicateUserName.
+2020-03-27 16:44:44.528 -07:00 [WRN] User 8a5dd450-0976-4471-b3e9-c97ff05b7887 validation failed: DuplicateUserName.
+2020-03-27 16:44:44.564 -07:00 [WRN] User f8ce0853-7cba-4721-a344-0a0da281fd9c validation failed: DuplicateUserName.
+2020-03-27 16:44:45.177 -07:00 [INF] Inside the Index view
