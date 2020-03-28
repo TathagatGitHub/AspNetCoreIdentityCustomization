@@ -20,7 +20,8 @@ using Microsoft.Extensions.Hosting;
 using System.Configuration;
 using AspNetCoreIdentityCustomization.WebApi.Client;
 using RESPApiProject.Controllers;
-using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
+using AspNetCoreIdentityCustomization.Filters;
+//using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
 
 
 
@@ -81,6 +82,7 @@ namespace AspNetCoreIdentityCustomization
                     RoleManager<ApplicationRole> roleManager,
                     UserManager<ApplicationUser> userManager)
         {
+         
             if (env.IsDevelopment())
             {
 
@@ -94,13 +96,14 @@ namespace AspNetCoreIdentityCustomization
                       //  app.UseStatusCodePages();
                 app.UseHsts();
             }
+         //   app.UseMiddleware<AuthenticationFilter>();
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
             app.UseAuthentication();
-
+           
 
             var configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json")
@@ -115,7 +118,7 @@ namespace AspNetCoreIdentityCustomization
             logger.Information("Starting DummyData");
             DummyData.Initialize(context, userManager, roleManager).Wait();
             app.UseRouting();
-            //app.UseMiddleware<AuthenticationFilter>();
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

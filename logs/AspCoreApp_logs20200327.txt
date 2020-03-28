@@ -27,3 +27,86 @@ System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIde
 2020-03-27 16:44:44.528 -07:00 [WRN] User 8a5dd450-0976-4471-b3e9-c97ff05b7887 validation failed: DuplicateUserName.
 2020-03-27 16:44:44.564 -07:00 [WRN] User f8ce0853-7cba-4721-a344-0a0da281fd9c validation failed: DuplicateUserName.
 2020-03-27 16:44:45.177 -07:00 [INF] Inside the Index view
+2020-03-27 17:28:13.248 -07:00 [WRN] User 24ace456-bc0b-4ea6-8b01-824b4de44363 validation failed: DuplicateUserName.
+2020-03-27 17:28:13.411 -07:00 [WRN] User 4dfe480f-581f-40b1-9ec6-cb3d9ed801d9 validation failed: DuplicateUserName.
+2020-03-27 17:28:13.443 -07:00 [WRN] User 3ac5dcb0-f401-45be-813f-b1d190989af8 validation failed: DuplicateUserName.
+2020-03-27 17:28:13.476 -07:00 [WRN] User 835455e4-96bd-413a-82a1-94fbc7dd2faa validation failed: DuplicateUserName.
+2020-03-27 17:28:14.679 -07:00 [INF] Inside the Index view
+2020-03-27 17:29:42.054 -07:00 [WRN] User 879584d0-fd5c-450d-b432-45b68bd27fd0 validation failed: DuplicateUserName.
+2020-03-27 17:29:42.217 -07:00 [WRN] User cf7f6cf1-bceb-4c71-9abf-e7def1b624a8 validation failed: DuplicateUserName.
+2020-03-27 17:29:42.263 -07:00 [WRN] User 9ea177df-1b11-4df8-83ec-1910154a76ec validation failed: DuplicateUserName.
+2020-03-27 17:29:42.297 -07:00 [WRN] User 09a227e2-c48a-4550-b4fc-b6673729aa38 validation failed: DuplicateUserName.
+2020-03-27 17:29:43.120 -07:00 [INF] Inside the Index view
+2020-03-27 17:34:25.842 -07:00 [WRN] User 408be267-f0b1-4863-9971-3e04be0abacd validation failed: DuplicateUserName.
+2020-03-27 17:34:25.993 -07:00 [WRN] User ad4f5956-9674-4c20-ad34-27eb96f5ffd1 validation failed: DuplicateUserName.
+2020-03-27 17:34:26.035 -07:00 [WRN] User 59de2e7b-205c-4b78-8518-4263f3c022b3 validation failed: DuplicateUserName.
+2020-03-27 17:34:26.066 -07:00 [WRN] User 44622ac4-8b71-48fd-b53e-95724c6ea047 validation failed: DuplicateUserName.
+2020-03-27 17:34:26.941 -07:00 [INF] Inside the Index view
+2020-03-27 17:46:37.340 -07:00 [WRN] User 11beddf9-7005-4ad6-bbc7-7d60d61eb136 validation failed: DuplicateUserName.
+2020-03-27 17:46:37.490 -07:00 [WRN] User 27872443-9d1f-4571-bcd0-8ac29146a87e validation failed: DuplicateUserName.
+2020-03-27 17:46:37.529 -07:00 [WRN] User dc90bea1-22b4-490b-b400-fc2b9c94b463 validation failed: DuplicateUserName.
+2020-03-27 17:46:37.572 -07:00 [WRN] User 3089ef2e-c835-4128-a60d-c3cee029350a validation failed: DuplicateUserName.
+2020-03-27 17:46:38.310 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.RESPApiProject.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 17:47:42.544 -07:00 [WRN] User 6c45f338-7d35-4b68-9a06-91672c167d8b validation failed: DuplicateUserName.
+2020-03-27 17:47:42.784 -07:00 [WRN] User 4fdde3ee-a823-460a-bc10-f5210acdd07a validation failed: DuplicateUserName.
+2020-03-27 17:47:42.816 -07:00 [WRN] User 8fb6fd7f-1f62-432c-a69a-73ea3b3e8988 validation failed: DuplicateUserName.
+2020-03-27 17:47:42.861 -07:00 [WRN] User 5278df02-d7b4-4bad-921c-a933a7f50ca5 validation failed: DuplicateUserName.
+2020-03-27 17:47:43.599 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.RESPApiProject.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 17:48:36.751 -07:00 [WRN] User aadafcfa-8ff6-44e1-ae16-5d600b314aa1 validation failed: DuplicateUserName.
+2020-03-27 17:48:36.938 -07:00 [WRN] User fe2cb119-44db-47d8-a53b-f5662eadc7bf validation failed: DuplicateUserName.
+2020-03-27 17:48:36.971 -07:00 [WRN] User 14da1532-e71c-4572-8685-404a75c3d65b validation failed: DuplicateUserName.
+2020-03-27 17:48:37.041 -07:00 [WRN] User 8c82ca2c-7d4b-4c05-974b-7e3e7ee2b3ae validation failed: DuplicateUserName.
+2020-03-27 17:48:37.686 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.RESPApiProject.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 17:49:24.577 -07:00 [WRN] User e8f864cd-7a53-4d4b-ba32-0f54d5af4770 validation failed: DuplicateUserName.
+2020-03-27 17:49:24.776 -07:00 [WRN] User 334509f9-6dda-4efd-9144-5f76d36e4310 validation failed: DuplicateUserName.
+2020-03-27 17:49:24.821 -07:00 [WRN] User defe180f-a249-481f-9a43-210ebcc5c7e7 validation failed: DuplicateUserName.
+2020-03-27 17:49:24.857 -07:00 [WRN] User 343d5c33-06ed-4c47-9b88-99449e8293b6 validation failed: DuplicateUserName.
+2020-03-27 17:49:25.457 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 17:50:35.302 -07:00 [WRN] User 9e3d8afc-d16f-4a70-bba4-517dd4fb5d3e validation failed: DuplicateUserName.
+2020-03-27 17:50:35.530 -07:00 [WRN] User 8f193ea9-8c66-498d-aff2-7ba7a7075abc validation failed: DuplicateUserName.
+2020-03-27 17:50:35.573 -07:00 [WRN] User 8177b551-43aa-4c43-b4f7-67df5b78f323 validation failed: DuplicateUserName.
+2020-03-27 17:50:35.733 -07:00 [WRN] User 883c5ba7-dd1f-4315-b314-56c0f994383b validation failed: DuplicateUserName.
+2020-03-27 17:50:36.335 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 18:13:31.353 -07:00 [WRN] User e54e84d1-39d4-49c4-8d6c-5fac6a766f04 validation failed: DuplicateUserName.
+2020-03-27 18:13:31.542 -07:00 [WRN] User 537f8a21-3266-4057-890c-6593a67babc0 validation failed: DuplicateUserName.
+2020-03-27 18:13:31.605 -07:00 [WRN] User 2a07726e-6104-4587-85f1-e4fd80787b74 validation failed: DuplicateUserName.
+2020-03-27 18:13:31.637 -07:00 [WRN] User 19b216d6-1a42-4f44-bddf-323f7cb1cf9d validation failed: DuplicateUserName.
+2020-03-27 18:13:32.297 -07:00 [FTL] Application startup exception
+System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIdentityCustomization.Filters.AuthenticationFilter' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+2020-03-27 18:14:27.478 -07:00 [WRN] User 7d79f993-01b1-4db7-a56c-c7c960dcaafe validation failed: DuplicateUserName.
+2020-03-27 18:14:27.638 -07:00 [WRN] User a4cd5e41-4cea-4b0b-a97c-8aa25e4753da validation failed: DuplicateUserName.
+2020-03-27 18:14:27.678 -07:00 [WRN] User bb100de0-0bcc-4957-b60c-f525a25a43a8 validation failed: DuplicateUserName.
+2020-03-27 18:14:27.721 -07:00 [WRN] User c4aee5e8-0ac3-46f3-960d-43af575c54e5 validation failed: DuplicateUserName.
+2020-03-27 18:14:28.922 -07:00 [INF] Inside the Index view
+2020-03-27 18:15:10.704 -07:00 [INF] Inside the PostLogView
+2020-03-27 18:15:11.002 -07:00 [INF] GetPostLogList
+2020-03-27 18:15:12.547 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]

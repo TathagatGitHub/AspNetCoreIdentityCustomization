@@ -63,7 +63,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _logger.LogInformation("Inside the ExceptionFilterMethod");
             throw new NotImplementedException();
         }
-
+        [ApiKeyAuth]
+        [HttpGet("RequestRestApiProjectweatherAPI")]
         public void RequestRestApiProjectweatherAPI()
         {
             IEnumerable<WeatherForecast> weatherForecasts;

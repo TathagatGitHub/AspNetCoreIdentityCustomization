@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+
 
 namespace RESPApiProject.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
+   
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,6 +28,7 @@ namespace RESPApiProject.Controllers
         }
 
         [HttpGet]
+        
         public IEnumerable<WeatherForecast> GetweatherList()
         {
             var rng = new Random();
