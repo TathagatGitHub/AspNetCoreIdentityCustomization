@@ -36,10 +36,10 @@ namespace RESPApiProject
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //  app.UseMiddleware<AuthenticationFilter>();
-            app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("GetweatherList")), branch =>
-            {
-                branch.UseAuthenticationFilter();
-            });
+            //app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("GetweatherList")), branch =>
+            //{
+            //    branch.UseAuthenticationFilter();
+            //});
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

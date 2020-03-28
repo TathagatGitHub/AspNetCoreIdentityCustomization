@@ -1,0 +1,179 @@
+2020-03-28 11:41:25.522 -07:00 [INF] Starting up
+2020-03-28 11:41:28.130 -07:00 [INF] Hello, world!
+2020-03-28 11:41:28.144 -07:00 [INF] Starting DummyData
+2020-03-28 11:41:31.760 -07:00 [WRN] User 9ce1f394-b0d6-4873-a1d2-eae1c2bd1bb1 validation failed: DuplicateUserName.
+2020-03-28 11:41:31.828 -07:00 [WRN] User 026b3ee8-f79d-4350-a334-cf564d087317 validation failed: DuplicateUserName.
+2020-03-28 11:41:31.876 -07:00 [WRN] User e9f65124-8caa-43f7-8b29-d866172223a7 validation failed: DuplicateUserName.
+2020-03-28 11:41:31.913 -07:00 [WRN] User 61240aaf-6ff9-4ba7-b03d-0038fbb4bdf9 validation failed: DuplicateUserName.
+2020-03-28 11:50:57.420 -07:00 [INF] Starting up
+2020-03-28 11:50:58.625 -07:00 [INF] Hello, world!
+2020-03-28 11:50:58.638 -07:00 [INF] Starting DummyData
+2020-03-28 11:51:00.675 -07:00 [WRN] User 17d9c309-273f-48d5-8a02-cf5c40679fcc validation failed: DuplicateUserName.
+2020-03-28 11:51:00.727 -07:00 [WRN] User cc789a4e-78ad-4be0-bc22-94e8a825172f validation failed: DuplicateUserName.
+2020-03-28 11:51:00.767 -07:00 [WRN] User afff8dc0-8e49-41dd-a867-34286c3f9d54 validation failed: DuplicateUserName.
+2020-03-28 11:51:00.802 -07:00 [WRN] User c6198e3c-fbee-4506-a3d9-591512c8cb30 validation failed: DuplicateUserName.
+2020-03-28 11:51:05.075 -07:00 [INF] Inside the Index view
+2020-03-28 11:51:58.854 -07:00 [ERR] The view 'RequireHttpsOnly' was not found. Searched locations: ["/Views/Home/RequireHttpsOnly.cshtml","/Views/Shared/RequireHttpsOnly.cshtml","/Pages/Shared/RequireHttpsOnly.cshtml"]
+2020-03-28 11:51:58.894 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The following locations were searched:
+/Views/Home/RequireHttpsOnly.cshtml
+/Views/Shared/RequireHttpsOnly.cshtml
+/Pages/Shared/RequireHttpsOnly.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 11:52:21.974 -07:00 [INF] Inside the Index view
+2020-03-28 11:55:00.097 -07:00 [INF] Inside the Index view
+2020-03-28 11:55:22.530 -07:00 [INF] Inside the Index view
+2020-03-28 11:56:15.320 -07:00 [INF] Starting up
+2020-03-28 11:56:17.390 -07:00 [INF] Hello, world!
+2020-03-28 11:56:17.399 -07:00 [INF] Starting DummyData
+2020-03-28 11:56:20.821 -07:00 [WRN] User d4278ac5-6fc4-4e00-99ea-b65ca4510be5 validation failed: DuplicateUserName.
+2020-03-28 11:56:20.871 -07:00 [WRN] User ab9a788a-e84c-432c-affa-83e0bfd4519d validation failed: DuplicateUserName.
+2020-03-28 11:56:20.900 -07:00 [WRN] User 9a92316a-f206-42af-ba48-53cfdc56c848 validation failed: DuplicateUserName.
+2020-03-28 11:56:20.933 -07:00 [WRN] User 145bfbb0-79bb-4d60-b34b-59dfea6f3f5d validation failed: DuplicateUserName.
+2020-03-28 11:56:23.631 -07:00 [INF] Inside the Index view
+2020-03-28 11:56:35.046 -07:00 [ERR] The view 'RequireHttpsOnly' was not found. Searched locations: ["/Views/Home/RequireHttpsOnly.cshtml","/Views/Shared/RequireHttpsOnly.cshtml","/Pages/Shared/RequireHttpsOnly.cshtml"]
+2020-03-28 11:56:35.067 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The following locations were searched:
+/Views/Home/RequireHttpsOnly.cshtml
+/Views/Shared/RequireHttpsOnly.cshtml
+/Pages/Shared/RequireHttpsOnly.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 13:10:10.941 -07:00 [INF] Starting up
+2020-03-28 13:10:12.822 -07:00 [INF] Hello, world!
+2020-03-28 13:10:12.832 -07:00 [INF] Starting DummyData
+2020-03-28 13:10:16.033 -07:00 [WRN] User 3f8eda81-3072-40d8-9889-ae892505a045 validation failed: DuplicateUserName.
+2020-03-28 13:10:16.072 -07:00 [WRN] User fd63ba5a-bbb7-4f18-a0d7-09bfcdbfc65b validation failed: DuplicateUserName.
+2020-03-28 13:10:16.100 -07:00 [WRN] User 0a6fba4f-8312-427f-ad84-94055b4e0541 validation failed: DuplicateUserName.
+2020-03-28 13:10:16.131 -07:00 [WRN] User 670864cf-c485-4332-a5b1-25bd14e09d6a validation failed: DuplicateUserName.
+2020-03-28 13:10:19.368 -07:00 [INF] Inside the Index view
+2020-03-28 13:10:59.614 -07:00 [ERR] The view 'RequireHttpsOnly' was not found. Searched locations: ["/Views/Home/RequireHttpsOnly.cshtml","/Views/Shared/RequireHttpsOnly.cshtml","/Pages/Shared/RequireHttpsOnly.cshtml"]
+2020-03-28 13:10:59.637 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The following locations were searched:
+/Views/Home/RequireHttpsOnly.cshtml
+/Views/Shared/RequireHttpsOnly.cshtml
+/Pages/Shared/RequireHttpsOnly.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 13:13:36.275 -07:00 [INF] Inside the Index view
+2020-03-28 13:13:59.265 -07:00 [ERR] The view 'RequireHttpsOnly' was not found. Searched locations: ["/Views/Home/RequireHttpsOnly.cshtml","/Views/Shared/RequireHttpsOnly.cshtml","/Pages/Shared/RequireHttpsOnly.cshtml"]
+2020-03-28 13:13:59.271 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The following locations were searched:
+/Views/Home/RequireHttpsOnly.cshtml
+/Views/Shared/RequireHttpsOnly.cshtml
+/Pages/Shared/RequireHttpsOnly.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 13:17:57.321 -07:00 [INF] Starting up
+2020-03-28 13:17:58.811 -07:00 [INF] Hello, world!
+2020-03-28 13:17:58.819 -07:00 [INF] Starting DummyData
+2020-03-28 13:18:00.317 -07:00 [WRN] User a93cfefa-0545-4dbd-839c-83993187f1ac validation failed: DuplicateUserName.
+2020-03-28 13:18:00.356 -07:00 [WRN] User 74642ca0-5beb-4980-b020-c11f8e4f9831 validation failed: DuplicateUserName.
+2020-03-28 13:18:00.384 -07:00 [WRN] User 3c404028-7c02-4de0-b87d-3c7f4ea89500 validation failed: DuplicateUserName.
+2020-03-28 13:18:00.412 -07:00 [WRN] User bcb5d48f-7c50-4482-8748-648c6d918c48 validation failed: DuplicateUserName.
+2020-03-28 13:18:03.822 -07:00 [INF] Inside the Index view
+2020-03-28 13:19:21.083 -07:00 [INF] Starting up
+2020-03-28 13:19:22.115 -07:00 [INF] Hello, world!
+2020-03-28 13:19:22.122 -07:00 [INF] Starting DummyData
+2020-03-28 13:19:24.317 -07:00 [WRN] User e708615b-00f9-431b-95cc-2d24550b51f6 validation failed: DuplicateUserName.
+2020-03-28 13:19:24.358 -07:00 [WRN] User 6cd890db-6aaa-4869-828b-4dcb16a4c7f6 validation failed: DuplicateUserName.
+2020-03-28 13:19:24.392 -07:00 [WRN] User 8f4ae7a2-2ab1-4f86-921d-6328201d48dc validation failed: DuplicateUserName.
+2020-03-28 13:19:24.429 -07:00 [WRN] User 863578d6-626d-4322-982e-b1aa212c1b93 validation failed: DuplicateUserName.
+2020-03-28 13:19:39.677 -07:00 [INF] Inside the Index view
+2020-03-28 13:20:28.709 -07:00 [INF] Starting up
+2020-03-28 13:20:29.746 -07:00 [INF] Hello, world!
+2020-03-28 13:20:29.755 -07:00 [INF] Starting DummyData
+2020-03-28 13:20:31.919 -07:00 [WRN] User 3fcaa8a1-a99a-413d-a46d-a8cb9e4d8a32 validation failed: DuplicateUserName.
+2020-03-28 13:20:31.957 -07:00 [WRN] User cea9468d-14cf-4dac-8ee1-e933956d5ed6 validation failed: DuplicateUserName.
+2020-03-28 13:20:31.985 -07:00 [WRN] User 50908942-c1ac-44f6-969a-5418cdc58dae validation failed: DuplicateUserName.
+2020-03-28 13:20:32.010 -07:00 [WRN] User c7fd49c1-0a37-40f6-afe3-d1ea6a66e537 validation failed: DuplicateUserName.
+2020-03-28 13:20:41.432 -07:00 [INF] Inside the Index view
+2020-03-28 13:24:23.998 -07:00 [INF] Starting up
+2020-03-28 13:24:25.379 -07:00 [INF] Hello, world!
+2020-03-28 13:24:25.387 -07:00 [INF] Starting DummyData
+2020-03-28 13:24:26.882 -07:00 [WRN] User ebdfd392-e2c1-4c1e-ab09-42a86446f14e validation failed: DuplicateUserName.
+2020-03-28 13:24:26.925 -07:00 [WRN] User 692a10b3-8b56-4c66-ab0e-e7aa77ca1725 validation failed: DuplicateUserName.
+2020-03-28 13:24:26.963 -07:00 [WRN] User dbe4527c-66a9-422d-b4a4-7210e42d26eb validation failed: DuplicateUserName.
+2020-03-28 13:24:26.993 -07:00 [WRN] User 19bb0372-7d65-4070-93dc-ff3f1888353e validation failed: DuplicateUserName.
+2020-03-28 13:24:31.840 -07:00 [INF] Inside the Index view
+2020-03-28 13:57:01.076 -07:00 [INF] Starting up
+2020-03-28 13:57:02.224 -07:00 [INF] Hello, world!
+2020-03-28 13:57:02.232 -07:00 [INF] Starting DummyData
+2020-03-28 13:57:04.814 -07:00 [WRN] User 91bbef4d-a407-4385-9785-f7220cd8a190 validation failed: DuplicateUserName.
+2020-03-28 13:57:04.865 -07:00 [WRN] User 11ecd101-de5a-4d08-8b7e-6957dc7135f1 validation failed: DuplicateUserName.
+2020-03-28 13:57:04.892 -07:00 [WRN] User 5057ad02-e8c1-4cd7-935c-387ac2ff9fd8 validation failed: DuplicateUserName.
+2020-03-28 13:57:04.926 -07:00 [WRN] User 63801d49-d69a-4df7-b23b-8f1f23ba07c1 validation failed: DuplicateUserName.
+2020-03-28 13:57:11.835 -07:00 [INF] Inside the Index view
+2020-03-28 14:00:57.598 -07:00 [INF] Starting up
+2020-03-28 14:00:58.738 -07:00 [INF] Hello, world!
+2020-03-28 14:00:58.747 -07:00 [INF] Starting DummyData
+2020-03-28 14:01:00.302 -07:00 [WRN] User 722a721f-e90a-4526-a6ed-17b5e8c82673 validation failed: DuplicateUserName.
+2020-03-28 14:01:00.353 -07:00 [WRN] User 99c3be40-88b7-446b-894e-a212b3a21832 validation failed: DuplicateUserName.
+2020-03-28 14:01:00.395 -07:00 [WRN] User c048d48a-e8bd-49b5-857c-10b905dc09f1 validation failed: DuplicateUserName.
+2020-03-28 14:01:00.421 -07:00 [WRN] User f343049d-0c86-479d-b956-417bae6d6357 validation failed: DuplicateUserName.
+2020-03-28 14:01:07.383 -07:00 [INF] Inside the Index view

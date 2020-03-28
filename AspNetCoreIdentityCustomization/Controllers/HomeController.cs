@@ -13,21 +13,26 @@ using AspNetCoreIdentityCustomization.WebApi.Client;
 using AspNetCoreIdentityCustomization.Filters;
 using RESPApiProject.Controllers;
 using RESPApiProject;
+using Microsoft.AspNetCore.Http;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
-    [ApiKeyAuth]
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private PostLogRepository _postlogrepository;
         private WeatherForecastController _weatherForecastController;
-        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository, WeatherForecastController weatherForecastController)
+        private const string ApiClientName = "Hims";
+        public IHttpContextAccessor _httpContext { get; set; }
+        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository, WeatherForecastController weatherForecastController, IHttpContextAccessor httpContext)
         {
             _logger = logger;
             _postlogrepository = postLogRepository;
             _weatherForecastController = weatherForecastController;
+            _httpContext = httpContext;
         }
+        [HttpsOnly]
         public IActionResult Index()
         {
            //throw new Exception("Error from Index");  
@@ -64,35 +69,18 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _logger.LogInformation("Inside the ExceptionFilterMethod");
             throw new NotImplementedException();
         }
-        
-     // [HttpGet]
+
+        [ApiKeyAuth]
         [HttpGet("RequestRestApiProjectweatherAPI")]
         public void RequestRestApiProjectweatherAPI()
         {
+
+            var ClientName = _httpContext.HttpContext.Items["ClientName"];
             IEnumerable<WeatherForecast> weatherForecasts;
             weatherForecasts = _weatherForecastController.GetweatherList();
         }
 
-        //public IActionResult About()
-        //{
-        //    _logger.LogInformation("Hello, {about}!");
-        //    ViewData["Message"] = "Your application description page.";
-
-        //    return View();
-        //}
-
-        //public IActionResult Contact()
-        //{
-        //    ViewData["Message"] = "Your contact page.";
-
-        //    return View();
-        //}
-
-        //public IActionResult Privacy()
-        //{
-        //    return View();
-        //}
-
+      
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -134,5 +122,14 @@ namespace AspNetCoreIdentityCustomization.Controllers
             
             return View();
         }
+
+        //[RequireHttps]
+        [HttpsOnly]
+        [HttpGet("RequireHttpsOnly")]
+        public IActionResult RequireHttpsOnly ()
+        {
+            return View();
+        }
+
     }
 }

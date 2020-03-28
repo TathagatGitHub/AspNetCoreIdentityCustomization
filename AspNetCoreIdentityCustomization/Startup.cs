@@ -66,10 +66,10 @@ namespace AspNetCoreIdentityCustomization
            
             services.AddTransient<PostLogRepository>();
             services.AddTransient<WeatherForecastController>();
-
+          //  services.AddScoped<HttpsOnly>();
             services.AddRazorPages();
             services.AddServerSideBlazor();
-
+            
             //  services.AddSingleton(Configuration);
             //  services.AddTransient<Configuration>();
         }
