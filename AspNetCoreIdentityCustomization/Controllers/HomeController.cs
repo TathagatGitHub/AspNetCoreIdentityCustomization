@@ -16,6 +16,7 @@ using RESPApiProject;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
+    [ApiKeyAuth]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -63,7 +64,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _logger.LogInformation("Inside the ExceptionFilterMethod");
             throw new NotImplementedException();
         }
-        [ApiKeyAuth]
+        
+     // [HttpGet]
         [HttpGet("RequestRestApiProjectweatherAPI")]
         public void RequestRestApiProjectweatherAPI()
         {
@@ -99,6 +101,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
 
         // Pre-Postlog Web API Testmethod
+        [HttpGet("TestRestSharpClient")]
         public IActionResult TestRestSharpClient()
         {
 

@@ -110,3 +110,53 @@ System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIde
 2020-03-27 18:15:10.704 -07:00 [INF] Inside the PostLogView
 2020-03-27 18:15:11.002 -07:00 [INF] GetPostLogList
 2020-03-27 18:15:12.547 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-27 19:27:22.259 -07:00 [INF] Starting up
+2020-03-27 19:27:24.654 -07:00 [INF] Hello, world!
+2020-03-27 19:27:24.674 -07:00 [INF] Starting DummyData
+2020-03-27 19:28:18.407 -07:00 [INF] Starting up
+2020-03-27 19:28:20.756 -07:00 [INF] Hello, world!
+2020-03-27 19:28:20.778 -07:00 [INF] Starting DummyData
+2020-03-27 19:28:25.602 -07:00 [WRN] User d884784f-fc30-48e7-8059-604ec401259e validation failed: DuplicateUserName.
+2020-03-27 19:28:25.689 -07:00 [WRN] User a6eaedca-4de8-473f-bf1c-b5d2850d969a validation failed: DuplicateUserName.
+2020-03-27 19:28:25.715 -07:00 [WRN] User 7db1d664-80bd-4c7b-b6fd-bded700ff209 validation failed: DuplicateUserName.
+2020-03-27 19:28:25.746 -07:00 [WRN] User 6aee03f5-f5f4-4858-9cd1-3639f05a4677 validation failed: DuplicateUserName.
+2020-03-27 19:28:37.677 -07:00 [INF] Inside the Index view
+2020-03-27 19:28:59.320 -07:00 [INF] Inside the Index view
+2020-03-27 19:31:03.154 -07:00 [INF] Starting up
+2020-03-27 19:31:05.647 -07:00 [INF] Hello, world!
+2020-03-27 19:31:05.663 -07:00 [INF] Starting DummyData
+2020-03-27 19:31:10.142 -07:00 [WRN] User 79d8806b-b5b7-49a3-8392-4cd74293ded0 validation failed: DuplicateUserName.
+2020-03-27 19:31:10.216 -07:00 [WRN] User 15f466e4-1535-4cec-9884-82f5d58e4e57 validation failed: DuplicateUserName.
+2020-03-27 19:31:10.251 -07:00 [WRN] User d2767bba-09c6-4c17-a94d-8125b96a5727 validation failed: DuplicateUserName.
+2020-03-27 19:31:10.285 -07:00 [WRN] User 09bd1eab-0be4-4fd9-9b77-fa95b0ff8d91 validation failed: DuplicateUserName.
+2020-03-27 19:31:14.029 -07:00 [INF] Inside the Index view
+2020-03-27 19:37:12.841 -07:00 [INF] Starting up
+2020-03-27 19:37:15.471 -07:00 [INF] Hello, world!
+2020-03-27 19:37:15.508 -07:00 [INF] Starting DummyData
+2020-03-27 19:37:19.196 -07:00 [WRN] User f2ba71c5-355d-4612-ad57-1d3c10db2155 validation failed: DuplicateUserName.
+2020-03-27 19:37:19.278 -07:00 [WRN] User 541db466-0bf6-40d5-9f82-e3990c2e9842 validation failed: DuplicateUserName.
+2020-03-27 19:37:19.317 -07:00 [WRN] User 89e0924a-3b60-46ed-931a-3cd2bdcbbbdd validation failed: DuplicateUserName.
+2020-03-27 19:37:19.351 -07:00 [WRN] User b1c1da8f-13fa-4915-8a41-79f6d8ca9544 validation failed: DuplicateUserName.
+2020-03-27 19:37:26.251 -07:00 [INF] Inside the Index view
+2020-03-27 19:37:41.604 -07:00 [INF] Inside the Index view
+2020-03-27 19:39:42.196 -07:00 [INF] Starting up
+2020-03-27 19:39:45.058 -07:00 [INF] Hello, world!
+2020-03-27 19:39:45.076 -07:00 [INF] Starting DummyData
+2020-03-27 19:39:50.780 -07:00 [WRN] User 9006be3d-ee28-4895-b54a-2f2095c58542 validation failed: DuplicateUserName.
+2020-03-27 19:39:50.885 -07:00 [WRN] User 12c7ceca-160a-4c8d-afa4-b49fcc1b58eb validation failed: DuplicateUserName.
+2020-03-27 19:39:50.923 -07:00 [WRN] User 23916ec7-ea53-48f6-8514-9b47fd5a88f8 validation failed: DuplicateUserName.
+2020-03-27 19:39:50.963 -07:00 [WRN] User 8aa3f11a-c58a-496f-8353-c1b9ff107195 validation failed: DuplicateUserName.
+2020-03-27 19:40:43.516 -07:00 [INF] Starting up
+2020-03-27 19:40:45.322 -07:00 [INF] Hello, world!
+2020-03-27 19:40:45.349 -07:00 [INF] Starting DummyData
+2020-03-27 19:40:47.815 -07:00 [WRN] User 06edc187-ab73-4be0-b15c-b15f6290ec87 validation failed: DuplicateUserName.
+2020-03-27 19:40:47.894 -07:00 [WRN] User e4e91e12-1959-46b9-8aa9-6f868d4d2540 validation failed: DuplicateUserName.
+2020-03-27 19:40:47.922 -07:00 [WRN] User 9e4626dd-117e-4a80-9239-6d920b8820bf validation failed: DuplicateUserName.
+2020-03-27 19:40:47.948 -07:00 [WRN] User 2a7dc503-0648-43dc-965d-e6613062c269 validation failed: DuplicateUserName.
+2020-03-27 19:42:56.291 -07:00 [INF] Starting up
+2020-03-27 19:42:59.328 -07:00 [INF] Hello, world!
+2020-03-27 19:42:59.348 -07:00 [INF] Starting DummyData
+2020-03-27 19:43:03.038 -07:00 [WRN] User 69487c34-4f7c-4887-949d-c3bc2705d683 validation failed: DuplicateUserName.
+2020-03-27 19:43:03.098 -07:00 [WRN] User bc47b48e-c1ea-4f0b-865e-43f4926deaf0 validation failed: DuplicateUserName.
+2020-03-27 19:43:03.127 -07:00 [WRN] User 56cc4837-2dd2-4863-8ba6-bbd3db643549 validation failed: DuplicateUserName.
+2020-03-27 19:43:03.158 -07:00 [WRN] User 4ace1d4e-fd99-42e2-803c-26b0b1c798da validation failed: DuplicateUserName.
