@@ -46,9 +46,7 @@ namespace AspNetCoreIdentityCustomization
         {
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
             services.AddLogging(logBuilder => logBuilder.AddSerilog(dispose: true));
-
-
-       
+                              
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -71,7 +69,7 @@ namespace AspNetCoreIdentityCustomization
            
             services.AddTransient<PostLogRepository>();
             services.AddTransient<WeatherForecastController>();
-            //  services.AddScoped<HttpsOnly>();
+          
             services.AddScoped<TimeElasped>();
             services.AddRazorPages();
             services.AddServerSideBlazor();

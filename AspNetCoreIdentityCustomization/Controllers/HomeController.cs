@@ -45,9 +45,9 @@ namespace AspNetCoreIdentityCustomization.Controllers
             return View();
         }
 
-        //[TimeElasped(ILogger < TimeElasped > _logger)]
-        [ServiceFilter(typeof(TimeElasped))]
-      // [TypeFilter(typeof(TimeElasped))]
+        // [ServiceFilter(typeof(TimeElasped))]
+         [TypeFilter(typeof(TypeFilterAttribute_TimerElasped), Arguments = new object[] { "Method 'PostLogList' called" })]
+        //[TypeFilter(typeof(MyAttribute), Arguments = new object[] { "Method 'PostLogList' called" })]
         public IActionResult PostLogList()
         {
             ViewBag._logger = _logger;
