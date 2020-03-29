@@ -21,6 +21,7 @@ using System.Configuration;
 using AspNetCoreIdentityCustomization.WebApi.Client;
 using RESPApiProject.Controllers;
 using AspNetCoreIdentityCustomization.Filters;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 //using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
 
 
@@ -31,9 +32,11 @@ namespace AspNetCoreIdentityCustomization
 {
     public class Startup
     {
+        ILogger _logger;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -44,6 +47,8 @@ namespace AspNetCoreIdentityCustomization
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
             services.AddLogging(logBuilder => logBuilder.AddSerilog(dispose: true));
 
+
+       
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -66,12 +71,12 @@ namespace AspNetCoreIdentityCustomization
            
             services.AddTransient<PostLogRepository>();
             services.AddTransient<WeatherForecastController>();
-          //  services.AddScoped<HttpsOnly>();
+            //  services.AddScoped<HttpsOnly>();
+            services.AddScoped<TimeElasped>();
             services.AddRazorPages();
             services.AddServerSideBlazor();
             
-            //  services.AddSingleton(Configuration);
-            //  services.AddTransient<Configuration>();
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

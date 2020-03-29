@@ -177,3 +177,310 @@ System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The
 2020-03-28 14:01:00.395 -07:00 [WRN] User c048d48a-e8bd-49b5-857c-10b905dc09f1 validation failed: DuplicateUserName.
 2020-03-28 14:01:00.421 -07:00 [WRN] User f343049d-0c86-479d-b956-417bae6d6357 validation failed: DuplicateUserName.
 2020-03-28 14:01:07.383 -07:00 [INF] Inside the Index view
+2020-03-28 14:57:56.659 -07:00 [INF] Starting up
+2020-03-28 14:57:58.093 -07:00 [INF] Hello, world!
+2020-03-28 14:57:58.102 -07:00 [INF] Starting DummyData
+2020-03-28 14:58:01.187 -07:00 [WRN] User 3ee16d30-c076-473a-9f56-f4e79d9ee0ba validation failed: DuplicateUserName.
+2020-03-28 14:58:01.234 -07:00 [WRN] User bbf947ba-0ef6-4fbc-913a-d12a6e3556b6 validation failed: DuplicateUserName.
+2020-03-28 14:58:01.274 -07:00 [WRN] User 86847980-067d-4fe1-87be-c51a89d0b6ab validation failed: DuplicateUserName.
+2020-03-28 14:58:01.329 -07:00 [WRN] User 0fd719fc-c671-4f63-8adc-6b5a5abfeda5 validation failed: DuplicateUserName.
+2020-03-28 14:58:08.842 -07:00 [INF] Inside the Index view
+2020-03-28 14:58:20.521 -07:00 [INF] Inside the PostLogView
+2020-03-28 14:58:20.677 -07:00 [INF] GetPostLogList
+2020-03-28 14:58:22.381 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 15:09:35.700 -07:00 [INF] Starting up
+2020-03-28 15:09:36.925 -07:00 [INF] Hello, world!
+2020-03-28 15:09:36.933 -07:00 [INF] Starting DummyData
+2020-03-28 15:09:39.636 -07:00 [WRN] User 2a071792-8cf5-49b8-8a30-111d65a95321 validation failed: DuplicateUserName.
+2020-03-28 15:09:39.706 -07:00 [WRN] User db3b0fa0-912a-4db5-81fa-959d45d928cd validation failed: DuplicateUserName.
+2020-03-28 15:09:39.737 -07:00 [WRN] User f16fb715-16ba-4464-9a96-030d66e82bea validation failed: DuplicateUserName.
+2020-03-28 15:09:39.767 -07:00 [WRN] User fc9bd704-9172-4bb5-8add-8d67e84b4d9e validation failed: DuplicateUserName.
+2020-03-28 15:09:45.470 -07:00 [INF] Inside the Index view
+2020-03-28 15:09:51.272 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[AspNetCoreIdentityCustomization.Filters.TimeElasped]' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 15:10:04.836 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[AspNetCoreIdentityCustomization.Filters.TimeElasped]' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 15:15:57.185 -07:00 [INF] Starting up
+2020-03-28 15:15:58.319 -07:00 [INF] Hello, world!
+2020-03-28 15:15:58.327 -07:00 [INF] Starting DummyData
+2020-03-28 15:16:00.249 -07:00 [WRN] User 4c25b35b-89cc-40a6-831c-7a5a3a0ef6ed validation failed: DuplicateUserName.
+2020-03-28 15:16:00.295 -07:00 [WRN] User 16b51c30-85e2-43f4-88e4-0a5e187fb57d validation failed: DuplicateUserName.
+2020-03-28 15:16:00.327 -07:00 [WRN] User 3ba9a61e-b3b3-45ba-b654-a710692fb7bd validation failed: DuplicateUserName.
+2020-03-28 15:16:00.353 -07:00 [WRN] User b05ebc96-22b5-49a8-8659-93f645c59a52 validation failed: DuplicateUserName.
+2020-03-28 15:17:27.322 -07:00 [INF] Inside the Index view
+2020-03-28 15:17:33.302 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[AspNetCoreIdentityCustomization.Filters.TimeElasped]' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 15:53:41.409 -07:00 [INF] Starting up
+2020-03-28 15:53:43.373 -07:00 [INF] Hello, world!
+2020-03-28 15:53:43.394 -07:00 [INF] Starting DummyData
+2020-03-28 15:53:46.081 -07:00 [WRN] User ae061d81-74e8-409d-b999-e97b879b1447 validation failed: DuplicateUserName.
+2020-03-28 15:53:46.131 -07:00 [WRN] User 3a909e8b-93cc-4375-b5fd-beec8c5e55d2 validation failed: DuplicateUserName.
+2020-03-28 15:53:46.157 -07:00 [WRN] User ce23b216-b993-4a83-8073-c5644a4189f0 validation failed: DuplicateUserName.
+2020-03-28 15:53:46.185 -07:00 [WRN] User 45c1e2f4-1182-4c8c-97c1-35213e8930e2 validation failed: DuplicateUserName.
+2020-03-28 15:53:53.575 -07:00 [INF] Inside the Index view
+2020-03-28 15:53:57.499 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[AspNetCoreIdentityCustomization.Filters.TimeElasped]' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 15:56:00.070 -07:00 [INF] Starting up
+2020-03-28 15:56:01.143 -07:00 [INF] Hello, world!
+2020-03-28 15:56:01.152 -07:00 [INF] Starting DummyData
+2020-03-28 15:56:02.839 -07:00 [WRN] User 70e04156-fe06-454f-8c21-f24408cf4808 validation failed: DuplicateUserName.
+2020-03-28 15:56:02.879 -07:00 [WRN] User 1d03cbf3-e33e-4315-a618-beab6510c73e validation failed: DuplicateUserName.
+2020-03-28 15:56:02.908 -07:00 [WRN] User 7aeeb997-1c2e-4614-a811-9a40483f0f53 validation failed: DuplicateUserName.
+2020-03-28 15:56:02.941 -07:00 [WRN] User b01a2098-cbf5-479e-85bf-99bad8078ff9 validation failed: DuplicateUserName.
+2020-03-28 15:56:06.542 -07:00 [INF] Inside the Index view
+2020-03-28 15:56:10.200 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.Logger`1[AspNetCoreIdentityCustomization.Filters.TimeElasped]' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 15:58:22.362 -07:00 [INF] Starting up
+2020-03-28 15:58:23.885 -07:00 [INF] Hello, world!
+2020-03-28 15:58:23.894 -07:00 [INF] Starting DummyData
+2020-03-28 15:58:26.121 -07:00 [WRN] User 07722ea8-cc47-453e-b201-2af538884db5 validation failed: DuplicateUserName.
+2020-03-28 15:58:26.171 -07:00 [WRN] User 5376ed77-0ef3-43fb-a36e-dc76b5de1bc0 validation failed: DuplicateUserName.
+2020-03-28 15:58:26.218 -07:00 [WRN] User 4a4885d9-eb2e-4d9c-ad5e-9bb6ba0f0f4f validation failed: DuplicateUserName.
+2020-03-28 15:58:26.244 -07:00 [WRN] User b9716c45-d72c-48e6-806a-f03199ad67df validation failed: DuplicateUserName.
+2020-03-28 15:58:32.557 -07:00 [INF] Inside the Index view
+2020-03-28 15:58:35.976 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 16:13:37.878 -07:00 [INF] Starting up
+2020-03-28 16:13:39.269 -07:00 [INF] Hello, world!
+2020-03-28 16:13:39.276 -07:00 [INF] Starting DummyData
+2020-03-28 16:13:41.125 -07:00 [WRN] User 990d851e-572e-4bf4-9aa1-4f1e4fba719c validation failed: DuplicateUserName.
+2020-03-28 16:13:41.189 -07:00 [WRN] User 6121820a-bc32-4158-af70-aa92ff61f6cd validation failed: DuplicateUserName.
+2020-03-28 16:13:41.240 -07:00 [WRN] User 668f427f-f678-4381-90e0-08e4d9832c83 validation failed: DuplicateUserName.
+2020-03-28 16:13:41.286 -07:00 [WRN] User 1ef09cf4-f457-460f-bdea-a96af652d3b3 validation failed: DuplicateUserName.
+2020-03-28 16:13:46.288 -07:00 [INF] Inside the Index view
+2020-03-28 16:14:01.958 -07:00 [INF] Inside the PostLogView
+2020-03-28 16:14:02.882 -07:00 [INF] GetPostLogList
+2020-03-28 16:14:03.876 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 16:14:55.514 -07:00 [INF] Inside the PostLogView
+2020-03-28 16:14:55.515 -07:00 [INF] GetPostLogList
+2020-03-28 16:14:56.978 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 16:15:10.348 -07:00 [INF] Inside the PostLogView
+2020-03-28 16:15:10.353 -07:00 [INF] GetPostLogList
+2020-03-28 16:15:11.132 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 16:15:24.643 -07:00 [INF] Inside the Index view
+2020-03-28 16:15:34.592 -07:00 [INF] Inside the PostLogView
+2020-03-28 16:15:34.594 -07:00 [INF] GetPostLogList
+2020-03-28 16:15:35.482 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 16:16:15.770 -07:00 [INF] Starting up
+2020-03-28 16:16:17.860 -07:00 [INF] Hello, world!
+2020-03-28 16:16:17.873 -07:00 [INF] Starting DummyData
+2020-03-28 16:16:19.756 -07:00 [WRN] User 9c70c318-cbb7-4080-8425-8b1b24ba0297 validation failed: DuplicateUserName.
+2020-03-28 16:16:19.801 -07:00 [WRN] User 524b3a95-9532-4093-ad1d-d0f8f91cfac3 validation failed: DuplicateUserName.
+2020-03-28 16:16:19.825 -07:00 [WRN] User b7fd6500-ff7f-4554-b007-cd8b8b393619 validation failed: DuplicateUserName.
+2020-03-28 16:16:19.850 -07:00 [WRN] User 879843ca-59c4-4c29-9c4b-e87603f6f317 validation failed: DuplicateUserName.
+2020-03-28 16:16:23.234 -07:00 [INF] Inside the Index view
+2020-03-28 16:16:35.325 -07:00 [INF] Inside the PostLogView
+2020-03-28 16:16:37.819 -07:00 [INF] GetPostLogList
+2020-03-28 16:16:38.795 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-28 19:59:01.912 -07:00 [INF] Starting up
+2020-03-28 19:59:03.917 -07:00 [INF] Hello, world!
+2020-03-28 19:59:03.932 -07:00 [INF] Starting DummyData
+2020-03-28 19:59:08.824 -07:00 [WRN] User 17207c80-052e-42ff-8bb4-5a747c8b16eb validation failed: DuplicateUserName.
+2020-03-28 19:59:08.916 -07:00 [WRN] User 5088cc2d-6784-41b5-bbcf-0c5463e773de validation failed: DuplicateUserName.
+2020-03-28 19:59:08.948 -07:00 [WRN] User eb3f3afa-d392-486d-a141-8f9ee75f0090 validation failed: DuplicateUserName.
+2020-03-28 19:59:08.994 -07:00 [WRN] User 0785110d-22dd-42f5-85ff-af66df3fceb1 validation failed: DuplicateUserName.
+2020-03-28 19:59:23.917 -07:00 [INF] Inside the Index view
+2020-03-28 19:59:32.752 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.ServiceFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-28 20:01:54.196 -07:00 [INF] Starting up
+2020-03-28 20:01:56.505 -07:00 [INF] Hello, world!
+2020-03-28 20:01:56.528 -07:00 [INF] Starting DummyData
+2020-03-28 20:02:00.021 -07:00 [WRN] User dc745ea4-6b37-4c01-a0fb-bcc83d01b275 validation failed: DuplicateUserName.
+2020-03-28 20:02:00.079 -07:00 [WRN] User 3a40a819-be93-4968-9e1d-1fd50baf272a validation failed: DuplicateUserName.
+2020-03-28 20:02:00.102 -07:00 [WRN] User 6c9d8c36-9b31-4823-acb7-697ed572d8fe validation failed: DuplicateUserName.
+2020-03-28 20:02:00.125 -07:00 [WRN] User 4e42e4c2-c344-4b6a-801b-681a7072c1b4 validation failed: DuplicateUserName.
+2020-03-28 20:02:44.811 -07:00 [INF] Inside the Index view
+2020-03-28 20:03:02.248 -07:00 [INF] Inside the PostLogView
+2020-03-28 20:03:02.496 -07:00 [INF] GetPostLogList
+2020-03-28 20:03:40.615 -07:00 [INF] Starting up
+2020-03-28 20:03:42.850 -07:00 [INF] Hello, world!
+2020-03-28 20:03:42.873 -07:00 [INF] Starting DummyData
+2020-03-28 20:03:46.659 -07:00 [WRN] User f343f366-f82d-4dac-9bed-b8e03a2397ad validation failed: DuplicateUserName.
+2020-03-28 20:03:46.714 -07:00 [WRN] User 3ff14760-a966-4459-9129-9efee97a92ce validation failed: DuplicateUserName.
+2020-03-28 20:03:46.751 -07:00 [WRN] User 343e7027-61f3-413c-9e92-8cb3ab820748 validation failed: DuplicateUserName.
+2020-03-28 20:03:46.779 -07:00 [WRN] User 73b63a32-8f14-4396-addc-821f4ac7838e validation failed: DuplicateUserName.
+2020-03-28 20:04:14.330 -07:00 [INF] Inside the Index view
+2020-03-28 20:04:22.420 -07:00 [INF] Inside the PostLogView
+2020-03-28 20:04:22.654 -07:00 [INF] GetPostLogList
+2020-03-28 20:22:56.426 -07:00 [INF] Starting up
+2020-03-28 20:22:57.513 -07:00 [INF] Hello, world!
+2020-03-28 20:22:57.523 -07:00 [INF] Starting DummyData
+2020-03-28 20:23:00.522 -07:00 [WRN] User d1df8f04-7f11-4e26-bc24-6a891bbc150c validation failed: DuplicateUserName.
+2020-03-28 20:23:00.567 -07:00 [WRN] User 1145f631-6263-4e9a-9fef-beae78d11218 validation failed: DuplicateUserName.
+2020-03-28 20:23:00.689 -07:00 [WRN] User f7d9c2c3-e03d-413b-a3d1-3faa4d45f00e validation failed: DuplicateUserName.
+2020-03-28 20:23:00.748 -07:00 [WRN] User 2db9cbfa-c1fa-42f8-962e-abdbb13dceb2 validation failed: DuplicateUserName.
+2020-03-28 20:23:27.625 -07:00 [INF] Inside the Index view
+2020-03-28 20:23:32.382 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger' while attempting to activate 'AspNetCoreIdentityCustomization.Filters.TimeElasped'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.TypeFilterAttribute.CreateInstance(IServiceProvider serviceProvider)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.ProvideFilter(FilterProviderContext context, FilterItem filterItem)
+   at Microsoft.AspNetCore.Mvc.Filters.DefaultFilterProvider.OnProvidersExecuting(FilterProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.CreateUncachedFiltersCore(IFilterProvider[] filterProviders, ActionContext actionContext, List`1 filterItems)
+   at Microsoft.AspNetCore.Mvc.Filters.FilterFactory.GetAllFilters(IFilterProvider[] filterProviders, ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerProvider.OnProvidersExecuting(ActionInvokerProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionInvokerFactory.CreateInvoker(ActionContext actionContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ActionEndpointFactory.<>c__DisplayClass7_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)

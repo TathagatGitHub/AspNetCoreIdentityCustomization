@@ -14,6 +14,7 @@ using AspNetCoreIdentityCustomization.Filters;
 using RESPApiProject.Controllers;
 using RESPApiProject;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -44,8 +45,12 @@ namespace AspNetCoreIdentityCustomization.Controllers
             return View();
         }
 
+        //[TimeElasped(ILogger < TimeElasped > _logger)]
+        [ServiceFilter(typeof(TimeElasped))]
+      // [TypeFilter(typeof(TimeElasped))]
         public IActionResult PostLogList()
         {
+            ViewBag._logger = _logger;
            // throw new Exception();
             _logger.LogInformation("Inside the PostLogView");
             // PostLogRepository postlog =new PostLogRepository (); 
@@ -53,6 +58,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
             //logs = _postlogrepository.GetPostLog(1);
             logs = _postlogrepository.GetPostLogList();
             _logger.LogInformation("PostLog-" + logs.ToList());
+          //  var TimeElasped = _httpContext.HttpContext.Items["TimeElasped"];
+           // _logger.LogInformation(TimeElasped.ToString());
             return View(logs);
         }
 
