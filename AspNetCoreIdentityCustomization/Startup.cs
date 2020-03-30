@@ -62,15 +62,12 @@ namespace AspNetCoreIdentityCustomization
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultUI()
                     .AddDefaultTokenProviders();
-
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            //    services.Configure<Appsettings>(Configuration);
-           
+         
             services.AddTransient<PostLogRepository>();
             services.AddTransient<WeatherForecastController>();
           
-            services.AddScoped<TimeElasped>();
+            services.AddScoped<ServiceFilterExample>(); //ServiceFilterExample Need DI
+            services.AddScoped<AsyncActionFilterExample>();//AsyncActionFilterExample
             services.AddRazorPages();
             services.AddServerSideBlazor();
             
@@ -88,18 +85,15 @@ namespace AspNetCoreIdentityCustomization
          
             if (env.IsDevelopment())
             {
-
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
             else
-            {
-               
+            {  
              app.UseExceptionHandler("/Error");
-                      //  app.UseStatusCodePages();
-                app.UseHsts();
+             app.UseHsts();
             }
-         //   app.UseMiddleware<AuthenticationFilter>();
+         
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();

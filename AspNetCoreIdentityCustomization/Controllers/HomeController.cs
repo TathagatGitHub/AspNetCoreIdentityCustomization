@@ -35,33 +35,45 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
         [HttpsOnly]
         public IActionResult Index()
-        {
-           //throw new Exception("Error from Index");  
+        {        
             _logger.LogInformation("Inside the Index view");
-           // PostLogRepository postlog =new PostLogRepository (); 
-            //PostLog logs;
-            //logs= _postlogrepository.GetPostLog(1);
-            //_logger.LogInformation("PostLog-"+ logs.ScheduleName);
             return View();
         }
 
-        // [ServiceFilter(typeof(TimeElasped))]
+        
          [TypeFilter(typeof(TypeFilterAttribute_TimerElasped), Arguments = new object[] { "Method 'PostLogList' called" })]
-        //[TypeFilter(typeof(MyAttribute), Arguments = new object[] { "Method 'PostLogList' called" })]
-        public IActionResult PostLogList()
+         public IActionResult PostLogList()
         {
-            ViewBag._logger = _logger;
-           // throw new Exception();
-            _logger.LogInformation("Inside the PostLogView");
-            // PostLogRepository postlog =new PostLogRepository (); 
+            _logger.LogInformation("Inside the TypeFilter");
+     
             IEnumerable<PostLog> logs;
-            //logs = _postlogrepository.GetPostLog(1);
+     
             logs = _postlogrepository.GetPostLogList();
             _logger.LogInformation("PostLog-" + logs.ToList());
-          //  var TimeElasped = _httpContext.HttpContext.Items["TimeElasped"];
-           // _logger.LogInformation(TimeElasped.ToString());
             return View(logs);
         }
+
+         [ServiceFilter(typeof(ServiceFilterExample))]       
+        public IActionResult ServiceFilterExample()
+        {
+            _logger.LogInformation("Inside the ServiceFilterExample");
+
+            IEnumerable<PostLog> logs;
+
+            logs = _postlogrepository.GetPostLogList();
+            _logger.LogInformation("PostLog-" + logs.ToList());
+            return View(logs);
+        }
+
+
+        [ServiceFilter(typeof(AsyncActionFilterExample))]
+        public void AsyncActionFilterExample()
+        {
+            _logger.LogInformation("Inside the ServiceFilterExample");
+
+           
+        }
+
 
         public IActionResult GlobalExceptionMethod()
         {

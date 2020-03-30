@@ -162,3 +162,52 @@ System.InvalidOperationException: A suitable constructor for type 'AspNetCoreIde
 2020-03-29 13:30:30.230 -07:00 [INF] GetPostLogList
 2020-03-29 13:30:31.421 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
 2020-03-29 13:30:34.069 -07:00 [INF]  Elapsed time: 9582.4761 ms
+2020-03-29 17:05:52.363 -07:00 [INF] Starting up
+2020-03-29 17:05:54.506 -07:00 [INF] Hello, world!
+2020-03-29 17:05:54.523 -07:00 [INF] Starting DummyData
+2020-03-29 17:06:53.279 -07:00 [INF] Starting up
+2020-03-29 17:06:55.607 -07:00 [INF] Hello, world!
+2020-03-29 17:06:55.630 -07:00 [INF] Starting DummyData
+2020-03-29 17:07:01.930 -07:00 [WRN] User f8f831f0-db67-4aa8-a62b-4ea35a463bdf validation failed: DuplicateUserName.
+2020-03-29 17:07:01.990 -07:00 [WRN] User 4b180292-43e9-4bde-92a8-de571236bf60 validation failed: DuplicateUserName.
+2020-03-29 17:07:02.023 -07:00 [WRN] User edf01d7c-1818-4dbe-9651-ff867ec3b347 validation failed: DuplicateUserName.
+2020-03-29 17:07:02.047 -07:00 [WRN] User 3e14b17f-2bae-4613-9400-a4d386c8213f validation failed: DuplicateUserName.
+2020-03-29 17:07:08.476 -07:00 [INF] Inside the Index view
+2020-03-29 17:07:44.268 -07:00 [INF] Inside the ServiceFilterExample
+2020-03-29 17:07:46.900 -07:00 [INF] GetPostLogList
+2020-03-29 17:07:47.729 -07:00 [INF] PostLog-System.Collections.Generic.List`1[AspNetCoreIdentityCustomization.Core.PostLog]
+2020-03-29 17:07:47.761 -07:00 [ERR] The view 'AsyncActionFilterExample' was not found. Searched locations: ["/Views/Home/AsyncActionFilterExample.cshtml","/Views/Shared/AsyncActionFilterExample.cshtml","/Pages/Shared/AsyncActionFilterExample.cshtml"]
+2020-03-29 17:07:47.793 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'AsyncActionFilterExample' was not found. The following locations were searched:
+/Views/Home/AsyncActionFilterExample.cshtml
+/Views/Shared/AsyncActionFilterExample.cshtml
+/Pages/Shared/AsyncActionFilterExample.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-03-29 17:10:43.581 -07:00 [INF] Starting up
+2020-03-29 17:10:45.998 -07:00 [INF] Hello, world!
+2020-03-29 17:10:46.012 -07:00 [INF] Starting DummyData
+2020-03-29 17:10:48.524 -07:00 [WRN] User 38124fe2-a0b5-4ea4-b509-837ca305e711 validation failed: DuplicateUserName.
+2020-03-29 17:10:48.568 -07:00 [WRN] User 842651fa-801e-41f3-8399-d02f61360c21 validation failed: DuplicateUserName.
+2020-03-29 17:10:48.605 -07:00 [WRN] User 2b843b5d-88ce-47ac-b40b-7ca088ea1754 validation failed: DuplicateUserName.
+2020-03-29 17:10:48.628 -07:00 [WRN] User e034e760-6d6a-46ad-9706-b390e0d1725c validation failed: DuplicateUserName.
+2020-03-29 17:10:52.056 -07:00 [INF] Inside the Index view
+2020-03-29 17:11:07.153 -07:00 [INF] Inside the ServiceFilterExample
+2020-03-29 17:11:35.423 -07:00 [INF] Inside the Index view
+2020-03-29 17:11:42.359 -07:00 [INF] Inside the ServiceFilterExample
