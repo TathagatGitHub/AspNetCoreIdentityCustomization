@@ -33,7 +33,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _weatherForecastController = weatherForecastController;
             _httpContext = httpContext;
         }
-        [HttpsOnly]
+        //[HttpsOnly]
         public IActionResult Index()
         {        
             _logger.LogInformation("Inside the Index view");
@@ -107,6 +107,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
 
 
+        [ApiKeyAuth]
         // Pre-Postlog Web API Testmethod
         [HttpGet("TestRestSharpClient")]
         public IActionResult TestRestSharpClient()

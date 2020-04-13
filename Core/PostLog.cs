@@ -37,4 +37,6 @@ namespace AspNetCoreIdentityCustomization.Core
         [Required]
         public User UpdatedBy { get; set; }
     }
+
+
 }
