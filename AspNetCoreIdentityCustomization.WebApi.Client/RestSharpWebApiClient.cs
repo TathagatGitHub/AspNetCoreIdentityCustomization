@@ -8,11 +8,15 @@ using RESPApiProject.Controllers;
 
 using System.Collections.Generic;
 using RESPApiProject;
+using AspNetCoreIdentityCustomization.Core;
+using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
+//using AspNetCoreIdentityCustomization.WebApi.Client;
+using System.Net.Http;
+using System.Net;
 
 namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
-
-
     public class RestSharpWebApiClient
     {
         private string _getUrl = "https://prepostlogwebapi.oceanmediainc.com";
@@ -21,8 +25,6 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         private string _logType = "Postlog";
         private string _clientId = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
         private readonly ILogger _logger;
-
-       
 
         public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)//, WeatherForecastController weatherForecastController )
         {
@@ -39,48 +41,26 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         {
             _getUrl = APIUrl;
             _logger = logger;
-
         }
 
-    //    //Weather Forcast API from this Solution
-    //    public void CallRESTAPIProjectAPI()
-    //    {
-    //        _logger.LogInformation("Inside the Pre-postlog Controler Method!");
-    //        IEnumerable<WeatherForecast> weatherForecast;
-    //        weatherForecast = _weatherForecastController.GetweatherList();
-
-
-
-
-    //}
-
-        // Pre-PostLog 
-        public async void  RestClientGetMethod()
-        {
+          public async Task<ActionResult<SearchResponse>> RestClientGetMethodAsync()
+          {
             _logger.LogInformation("Inside the Pre-postlog Controler Method!");
+            var searchResponse = new SearchResponse();
             IRestClient restClient = new RestClient(_getUrl);
             IRestRequest restRequest = new RestRequest(Method.POST);
-           //restClient.BaseUrl = System.Uri(_getUrl);
-
+         
             restRequest.AddHeader("Content-Type", "application/json");
             restRequest.AddHeader("ClientKey", _clientId);
 
-            //restRequest.AddParameter("country", _country, ParameterType.RequestBody);
-            //restRequest.AddParameter("networktype", _networktype, ParameterType.RequestBody);
-
-            //restRequest.AddParameter("LogType", _logType, ParameterType.RequestBody);
-
-            var cancellationTokenSource = new CancellationTokenSource();
-            //string jsonBody = "{"+
-            //                    "\"country\":\"US\","+
-            //                    "\"networktype\":\"National Cable\","+
-            //                    "\"LogType\":\"Postlog\"  }";
+            
             string jsonBody1 = "{" +
                                 "\"country\":\"US\"," +
                                 "\"networktype\":\"National Cable\"," +
                                 "\"LogType\":\"Prelog\"}";
 
             restRequest.AddJsonBody(jsonBody1);
+        
             restClient.ExecuteAsync(restRequest, response =>
             {
                 Console.WriteLine(response.StatusCode);
@@ -88,11 +68,13 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
                 Console.WriteLine(response.Content);
                 _logger.LogInformation("StatusCode:" + response.StatusCode);
                 _logger.LogInformation("ContentLength:" + response.ContentLength);
-                _logger.LogInformation("Content:" + response.Content);
+           //    _logger.LogInformation("Content:" + response.Content);
+               // searchResponse.SearchResults = response.Content;
+                searchResponse.Data =  JsonSerializer.Deserialize<IList<PostLogLine>>(response.Content);
             });
 
            // Will output the HTML contents of the requested page
-            //return restResponse;
+           return  searchResponse;
         }
 
         //GAReport Client
@@ -120,6 +102,73 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 
             // Will output the HTML contents of the requested page
             //return restResponse;
+        }
+
+        public async Task<SearchResponse> HttpClientPrePostLogMethod()
+        {
+            var values = new Dictionary<string, string>
+            {
+                {"country","US" },
+                {"networktype","National Cable"},
+                {"LogType","Postlog" }
+
+            };
+            List<PostLogLine> postloglist = new List<PostLogLine>();
+            var searchResponse = new SearchResponse();
+         
+            using (var httpClient = new HttpClient())
+            {
+                HttpRequestMessage requestMessage = new HttpRequestMessage(HttpMethod.Post, _getUrl);
+
+                requestMessage.Headers.Add("ClientKey", _clientId);
+
+               // requestMessage.Headers.Add("Content-Type", "application/json");
+
+                httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+          
+               requestMessage.Content = new FormUrlEncodedContent(values);
+
+                // Send the request to the server
+                HttpResponseMessage response = await httpClient.SendAsync(requestMessage);
+
+                // Just as an example I'm turning the response into a string here
+                string responseAsString = await response.Content.ReadAsStringAsync();
+
+                //     var responseStream = await response.Content.ReadAsStringAsync();
+                //searchResponse.SearchResults = JsonSerializer.Deserialize<IList<PostLogLine>>(responseAsString);
+                searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content.ToString());
+            }
+            return searchResponse;
+        }
+
+        public async Task<SearchResponse> GetPrePostLogLineDataAsync(string prepostServiceUrl, string apiKey, RequestBodyModel requestModel)
+        {
+            var response = new SearchResponse() { Data = new List<PostLogLine>() };
+            var dataAsString = Newtonsoft.Json.JsonConvert.SerializeObject(requestModel);
+            var content = new StringContent(dataAsString);
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("ClientKey", apiKey);
+                client.BaseAddress = new Uri(prepostServiceUrl);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = TimeSpan.FromMinutes(60);
+             var responseObj = await client.PostAsync(prepostServiceUrl, content);
+                //var responseObj = client.PostAsJsonAsync(prepostServiceUrl, content).Result;
+                if (responseObj != null)
+                {
+                    if (responseObj.StatusCode.Equals(HttpStatusCode.OK))
+                    {
+                        response = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchResponse>(responseObj.Content.ReadAsStringAsync().Result);
+                    }
+                    else
+                    {
+                        response.ErrorResult.ErrorDescription = responseObj.Content.ReadAsStringAsync().Result;
+                        response.ErrorResult.ErrorCode = 99;
+                    }
+                }
+                return response;
+            }
         }
     }
 

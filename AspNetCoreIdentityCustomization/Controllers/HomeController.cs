@@ -110,14 +110,24 @@ namespace AspNetCoreIdentityCustomization.Controllers
         [ApiKeyAuth]
         // Pre-Postlog Web API Testmethod
         [HttpGet("TestRestSharpClient")]
-        public IActionResult TestRestSharpClient()
+        public async Task<IActionResult> TestRestSharpClientAsync()
         {
 
-            
+            var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
+            string apiEndpointUrl = "https://prepostloglineapi.oceanmedia.com/";
+            string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
+
+
+            var resultSet = default(SearchResponse);
+
             // Pre-PostLog API Test
             RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
-            restSharpWebApiClient.RestClientGetMethod();
-            return View();
+
+             resultSet = await restSharpWebApiClient.HttpClientPrePostLogMethod();
+            //resultSet = await restSharpWebApiClient.GetPrePostLogLineDataAsync(apiEndpointUrl, apiKey, request);
+
+
+             return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
         }
 
         // GAReports Test Client

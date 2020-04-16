@@ -1,0 +1,26 @@
+2020-04-13 16:20:24.802 -07:00 [INF] Starting up
+2020-04-13 16:20:27.621 -07:00 [INF] Hello, world!
+2020-04-13 16:20:27.632 -07:00 [INF] Starting DummyData
+2020-04-13 16:20:29.893 -07:00 [WRN] User 68b49a86-05a3-4642-9c03-1ac6b53d9319 validation failed: DuplicateUserName.
+2020-04-13 16:20:29.961 -07:00 [WRN] User b94794f7-f56f-409d-b924-894544fd805c validation failed: DuplicateUserName.
+2020-04-13 16:20:30.004 -07:00 [WRN] User 508293b9-79e9-45e8-921d-c995f11be3db validation failed: DuplicateUserName.
+2020-04-13 16:20:30.042 -07:00 [WRN] User e9c14a98-e6ae-496c-b48c-ef3c4af2c11f validation failed: DuplicateUserName.
+2020-04-13 16:20:31.000 -07:00 [INF] Inside the Index view
+2020-04-13 16:21:54.976 -07:00 [INF] Starting up
+2020-04-13 16:21:56.000 -07:00 [INF] Hello, world!
+2020-04-13 16:21:56.008 -07:00 [INF] Starting DummyData
+2020-04-13 16:21:57.572 -07:00 [WRN] User c83b4966-c97b-4590-b890-6fd4d2bdf2d8 validation failed: DuplicateUserName.
+2020-04-13 16:21:57.624 -07:00 [WRN] User 7a757f75-05e4-412f-a684-e951f56da22f validation failed: DuplicateUserName.
+2020-04-13 16:21:57.649 -07:00 [WRN] User cdd93c7d-cf13-431f-a554-f1a389d24690 validation failed: DuplicateUserName.
+2020-04-13 16:21:57.673 -07:00 [WRN] User 28244286-3e34-4190-9608-496de423c7d9 validation failed: DuplicateUserName.
+2020-04-13 16:21:58.183 -07:00 [INF] Inside the Index view
+2020-04-13 16:23:08.113 -07:00 [INF] Inside the Pre-postlog Controler Method!
+2020-04-13 19:18:16.146 -07:00 [INF] Starting up
+2020-04-13 19:18:18.034 -07:00 [INF] Hello, world!
+2020-04-13 19:18:18.046 -07:00 [INF] Starting DummyData
+2020-04-13 19:18:22.341 -07:00 [WRN] User a1c8d408-ed8e-4db8-9af5-d5c46a3142e6 validation failed: DuplicateUserName.
+2020-04-13 19:18:22.435 -07:00 [WRN] User 9f17472e-439e-4f07-9f61-48d1c764225b validation failed: DuplicateUserName.
+2020-04-13 19:18:22.465 -07:00 [WRN] User 9aa18833-1e00-4a3a-b689-9d34f737cf0c validation failed: DuplicateUserName.
+2020-04-13 19:18:22.497 -07:00 [WRN] User 49247e5d-5176-4526-811b-758d184c5916 validation failed: DuplicateUserName.
+2020-04-13 19:18:23.400 -07:00 [INF] Inside the Index view
+2020-04-13 19:21:14.589 -07:00 [INF] Inside the Pre-postlog Controler Method!

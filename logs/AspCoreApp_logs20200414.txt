@@ -1,0 +1,107 @@
+2020-04-14 15:51:13.355 -07:00 [INF] Starting up
+2020-04-14 15:51:16.680 -07:00 [INF] Hello, world!
+2020-04-14 15:51:16.703 -07:00 [INF] Starting DummyData
+2020-04-14 15:51:22.227 -07:00 [WRN] User 271e5e4f-2c10-4c23-aef8-cf9a5a3d0eb5 validation failed: DuplicateUserName.
+2020-04-14 15:51:22.341 -07:00 [WRN] User 0e619f32-2a88-4161-8adf-28a43ada5e61 validation failed: DuplicateUserName.
+2020-04-14 15:51:22.374 -07:00 [WRN] User d77939ea-0143-4080-bd64-4ca5c14c0237 validation failed: DuplicateUserName.
+2020-04-14 15:51:22.406 -07:00 [WRN] User 07418f11-e6dd-48ab-9bea-44b20250a1f8 validation failed: DuplicateUserName.
+2020-04-14 15:51:23.657 -07:00 [INF] Inside the Index view
+2020-04-14 15:52:22.198 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 405 (Method Not Allowed).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at AspNetCoreIdentityCustomization.WebApi.Client.RestSharpWebApiClient.HttpClientPrePostLogMethod() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.WebApi.Client\RestSharpWebApiClient.cs:line 114
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.TestRestSharpClientAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 122
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-14 16:19:52.382 -07:00 [INF] Starting up
+2020-04-14 16:19:56.224 -07:00 [INF] Hello, world!
+2020-04-14 16:19:56.250 -07:00 [INF] Starting DummyData
+2020-04-14 16:20:00.779 -07:00 [WRN] User 40a71e57-62b6-459a-94e4-0c9678bac27c validation failed: DuplicateUserName.
+2020-04-14 16:20:00.837 -07:00 [WRN] User 8ea4bef6-c70e-4b03-93a9-e7697d659f0e validation failed: DuplicateUserName.
+2020-04-14 16:20:00.865 -07:00 [WRN] User 7d549bf7-e149-42e3-a536-2ea2d73d2ebd validation failed: DuplicateUserName.
+2020-04-14 16:20:00.898 -07:00 [WRN] User 8209d5a9-0d41-4a9f-a09e-0cb71442af49 validation failed: DuplicateUserName.
+2020-04-14 16:20:01.746 -07:00 [INF] Inside the Index view
+2020-04-14 16:20:45.352 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: '<' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: '<' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& readStack, JsonReaderException ex)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadCore(Type returnType, JsonSerializerOptions options, Utf8JsonReader& reader)
+   at System.Text.Json.JsonSerializer.Deserialize(String json, Type returnType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at AspNetCoreIdentityCustomization.WebApi.Client.RestSharpWebApiClient.HttpClientPrePostLogMethod() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.WebApi.Client\RestSharpWebApiClient.cs:line 134
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.TestRestSharpClientAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 122
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-14 16:29:20.629 -07:00 [INF] Starting up
+2020-04-14 16:29:23.229 -07:00 [INF] Hello, world!
+2020-04-14 16:29:23.244 -07:00 [INF] Starting DummyData
+2020-04-14 16:29:26.855 -07:00 [WRN] User 9231d7b8-f400-4a8b-95bd-9f716721f0ac validation failed: DuplicateUserName.
+2020-04-14 16:29:26.910 -07:00 [WRN] User 96b02ebc-5127-4887-8052-b215c3ab4674 validation failed: DuplicateUserName.
+2020-04-14 16:29:26.938 -07:00 [WRN] User 7a538319-a673-4806-86bc-30a025a0d3a9 validation failed: DuplicateUserName.
+2020-04-14 16:29:26.990 -07:00 [WRN] User 9611670b-9d32-444e-a7b0-cfdd0c4c7036 validation failed: DuplicateUserName.
+2020-04-14 16:29:28.073 -07:00 [INF] Inside the Index view
+2020-04-14 16:37:37.204 -07:00 [INF] Starting up
+2020-04-14 16:37:39.395 -07:00 [INF] Hello, world!
+2020-04-14 16:37:39.416 -07:00 [INF] Starting DummyData
+2020-04-14 16:37:43.970 -07:00 [WRN] User a6969251-4bf3-40c1-850e-b9292d8f6e7b validation failed: DuplicateUserName.
+2020-04-14 16:37:44.054 -07:00 [WRN] User 72543b3c-9b25-4552-a46a-44322137b4d9 validation failed: DuplicateUserName.
+2020-04-14 16:37:44.080 -07:00 [WRN] User 2f9c1e23-21b7-4f38-861e-ad323591dd6b validation failed: DuplicateUserName.
+2020-04-14 16:37:44.107 -07:00 [WRN] User 37e12522-4407-4107-a81a-76035694c56e validation failed: DuplicateUserName.
+2020-04-14 16:37:45.020 -07:00 [INF] Inside the Index view
+2020-04-14 16:38:23.669 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Misused header name. Make sure request headers are used with HttpRequestMessage, response headers with HttpResponseMessage, and content headers with HttpContent objects.
+   at System.Net.Http.Headers.HttpHeaders.GetHeaderDescriptor(String name)
+   at System.Net.Http.Headers.HttpHeaders.Add(String name, String value)
+   at AspNetCoreIdentityCustomization.WebApi.Client.RestSharpWebApiClient.HttpClientPrePostLogMethod() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.WebApi.Client\RestSharpWebApiClient.cs:line 124
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.TestRestSharpClientAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 122
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
