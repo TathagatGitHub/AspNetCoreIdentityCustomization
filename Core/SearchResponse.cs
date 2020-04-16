@@ -7,10 +7,11 @@ namespace AspNetCoreIdentityCustomization.Core
 
     public class SearchResponse
     {
-        public IList<PostLogLine> Data { get; set; }
+        
         public string Status { get; set; }
         public ErrorResult ErrorResult { get; set; }
         public int TotalRecords { get; set; }
+        public IList<PostLogLine> Data { get; set; }
     }
     public class PostLogLine
     {

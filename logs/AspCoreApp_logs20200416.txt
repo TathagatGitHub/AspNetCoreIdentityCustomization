@@ -391,3 +391,59 @@ System.Text.Json.JsonException: 'S' is an invalid start of a value. Path: $ | Li
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-16 15:23:48.981 -07:00 [INF] Starting up
+2020-04-16 15:23:51.857 -07:00 [INF] Hello, world!
+2020-04-16 15:23:51.873 -07:00 [INF] Starting DummyData
+2020-04-16 15:23:56.471 -07:00 [WRN] User ab42e825-8a56-4bd6-904d-05dd018e3d92 validation failed: DuplicateUserName.
+2020-04-16 15:23:56.546 -07:00 [WRN] User c12a86fc-de06-4c59-aa4e-975f2da5e777 validation failed: DuplicateUserName.
+2020-04-16 15:23:56.616 -07:00 [WRN] User 649e0f10-ca9d-4d4a-8cba-0ae312b03085 validation failed: DuplicateUserName.
+2020-04-16 15:23:56.649 -07:00 [WRN] User 4feaae03-e201-4e4d-9ebc-731127557093 validation failed: DuplicateUserName.
+2020-04-16 15:23:58.354 -07:00 [INF] Inside the Index view
+2020-04-16 15:37:40.938 -07:00 [INF] Starting up
+2020-04-16 15:37:44.159 -07:00 [INF] Hello, world!
+2020-04-16 15:37:44.180 -07:00 [INF] Starting DummyData
+2020-04-16 15:37:49.362 -07:00 [WRN] User e47158c9-4e2c-492e-974d-1e32d39b5373 validation failed: DuplicateUserName.
+2020-04-16 15:37:49.426 -07:00 [WRN] User a4a0f8d7-d01a-40ae-a3d9-29f49da63837 validation failed: DuplicateUserName.
+2020-04-16 15:37:49.452 -07:00 [WRN] User 69e1f2e0-3d54-48f5-b78d-22fd8a32e0d4 validation failed: DuplicateUserName.
+2020-04-16 15:37:49.479 -07:00 [WRN] User 7df62634-54e7-4894-bf17-2ee6908b8f63 validation failed: DuplicateUserName.
+2020-04-16 15:37:50.564 -07:00 [INF] Inside the Index view
+2020-04-16 15:38:27.833 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: 'S' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: 'S' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeValue(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadFirstToken(Byte first)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& readStack, JsonReaderException ex)
+   at System.Text.Json.JsonSerializer.ReadCore(JsonSerializerOptions options, Utf8JsonReader& reader, ReadStack& readStack)
+   at System.Text.Json.JsonSerializer.ReadCore(Type returnType, JsonSerializerOptions options, Utf8JsonReader& reader)
+   at System.Text.Json.JsonSerializer.Deserialize(String json, Type returnType, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at AspNetCoreIdentityCustomization.WebApi.Client.RestSharpWebApiClient.HttpClientPrePostLogMethod() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.WebApi.Client\RestSharpWebApiClient.cs:line 139
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.TestRestSharpClientAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 126
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-16 15:43:34.794 -07:00 [INF] Starting up
+2020-04-16 15:43:38.542 -07:00 [INF] Hello, world!
+2020-04-16 15:43:38.577 -07:00 [INF] Starting DummyData
+2020-04-16 15:43:42.454 -07:00 [WRN] User 459dceb3-acd0-4896-b98d-b038b802c7b0 validation failed: DuplicateUserName.
+2020-04-16 15:43:42.514 -07:00 [WRN] User b80371fb-a763-4e9e-9d4f-d379a882278b validation failed: DuplicateUserName.
+2020-04-16 15:43:42.543 -07:00 [WRN] User baeed863-f4bc-4074-805d-b9c97c697ae2 validation failed: DuplicateUserName.
+2020-04-16 15:43:42.574 -07:00 [WRN] User b1599652-854c-4be7-aaef-877285900085 validation failed: DuplicateUserName.
+2020-04-16 15:43:43.934 -07:00 [INF] Inside the Index view

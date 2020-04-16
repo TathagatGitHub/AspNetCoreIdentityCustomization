@@ -136,7 +136,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 
                 //     var responseStream = await response.Content.ReadAsStringAsync();
                 //searchResponse.SearchResults = JsonSerializer.Deserialize<IList<PostLogLine>>(responseAsString);
-                searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content.ToString());
+                searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content.ReadAsStringAsync().Result);
             }
             return searchResponse;
         }
