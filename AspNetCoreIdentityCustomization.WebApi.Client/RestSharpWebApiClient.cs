@@ -80,14 +80,12 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 
         public async Task<SearchResponse> RestSharpClientGetMethodAsync()
         {
-        //     RestClient client = new RestClient(_getUrl);
-        //RestRequest request = new RestRequest("Default", Method.POST);
+       
             string jsonBody1 = "{" +
                                "\"country\":\"US\"," +
                                "\"networktype\":\"National Cable\"," +
                                "\"LogType\":\"Prelog\"}";
-          //  request.AddJsonBody(jsonBody1);
-            //var response = client.Execute(request);
+        
 
             _logger.LogInformation("Inside the Pre-postlog Controler Method!");
             var searchResponse = new SearchResponse();
@@ -103,23 +101,10 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             IRestResponse response = default(IRestResponse);
 
             response = (IRestResponse)(await taskCompletion.Task);
-          //  if (response.ErrorException != null)
-            //    searchResponse.ErrorResult.ErrorDescription=response.ErrorException.Message;
-            //return new ApiResponse<TEntity>(response.Data, response.Headers, GetExceptionsFromResponse(response));
-            searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
-            //new SearchResponse(jsonSerializer.Deserialize<TEntity>(new JTokenReader(JToken.Parse(response.Content))), response.Headers, GetExceptionsFromResponse(response));
-
-            //restClient.ExecuteAsync(restRequest, response =>
-            //{
-            //    Console.WriteLine(response.StatusCode);
-            //    Console.WriteLine(response.ContentLength);
-            //    Console.WriteLine(response.Content);
-            //    _logger.LogInformation("StatusCode:" + response.StatusCode);
-            //    _logger.LogInformation("ContentLength:" + response.ContentLength);
-            //    //    _logger.LogInformation("Content:" + response.Content);
-            //    // searchResponse.SearchResults = response.Content;
-            //    searchResponse.Data = JsonSerializer.Deserialize<IList<PostLogLine>>(response.Content);
-            //});
+            if (response.StatusCode == HttpStatusCode.OK)
+                searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
+            else
+                searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
 
             // Will output the HTML contents of the requested page
             return searchResponse;
@@ -187,35 +172,35 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             return searchResponse;
         }
 
-        public async Task<SearchResponse> GetPrePostLogLineDataAsync(string prepostServiceUrl, string apiKey, RequestBodyModel requestModel)
-        {
-            var response = new SearchResponse() { Data = new List<PostLogLine>() };
-            var dataAsString = Newtonsoft.Json.JsonConvert.SerializeObject(requestModel);
-            var content = new StringContent(dataAsString);
-            using (var client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Add("ClientKey", apiKey);
-                client.BaseAddress = new Uri(prepostServiceUrl);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                client.Timeout = TimeSpan.FromMinutes(60);
-             var responseObj = await client.PostAsync(prepostServiceUrl, content);
-                //var responseObj = client.PostAsJsonAsync(prepostServiceUrl, content).Result;
-                 if (responseObj != null)
-                {
-                    if (responseObj.StatusCode.Equals(HttpStatusCode.OK))
-                    {
-                        response = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchResponse>(responseObj.Content.ReadAsStringAsync().Result);
-                    }
-                    else
-                    {
-                        response.ErrorResult.ErrorDescription = responseObj.Content.ReadAsStringAsync().Result;
-                        response.ErrorResult.ErrorCode = 99;
-                    }
-                }
-                return response;
-            }
-        }
+        //public async Task<SearchResponse> GetPrePostLogLineDataAsync(string prepostServiceUrl, string apiKey, RequestBodyModel requestModel)
+        //{
+        //    var response = new SearchResponse() { Data = new List<PostLogLine>() };
+        //    var dataAsString = Newtonsoft.Json.JsonConvert.SerializeObject(requestModel);
+        //    var content = new StringContent(dataAsString);
+        //    using (var client = new HttpClient())
+        //    {
+        //        client.DefaultRequestHeaders.Add("ClientKey", apiKey);
+        //        client.BaseAddress = new Uri(prepostServiceUrl);
+        //        client.DefaultRequestHeaders.Accept.Clear();
+        //        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+        //        client.Timeout = TimeSpan.FromMinutes(60);
+        //     var responseObj = await client.PostAsync(prepostServiceUrl, content);
+        //        //var responseObj = client.PostAsJsonAsync(prepostServiceUrl, content).Result;
+        //         if (responseObj != null)
+        //        {
+        //            if (responseObj.StatusCode.Equals(HttpStatusCode.OK))
+        //            {
+        //                response = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchResponse>(responseObj.Content.ReadAsStringAsync().Result);
+        //            }
+        //            else
+        //            {
+        //                response.ErrorResult.ErrorDescription = responseObj.Content.ReadAsStringAsync().Result;
+        //                response.ErrorResult.ErrorCode = 99;
+        //            }
+        //        }
+        //        return response;
+        //    }
+        //}
     }
 
     

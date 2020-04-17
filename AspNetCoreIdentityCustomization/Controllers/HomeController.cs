@@ -120,16 +120,12 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             var resultSet = default(SearchResponse);
 
-            // Syncronus Call
             RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
-        //     resultSet = await restSharpWebApiClient.HttpClientPrePostLogMethod();
+            // Syncronus Call
+            //     resultSet = await restSharpWebApiClient.HttpClientPrePostLogMethod();
 
             //Asyncronus call
             resultSet = await restSharpWebApiClient.RestSharpClientGetMethodAsync().ConfigureAwait(false);
-
-            
-            //resultSet = await restSharpWebApiClient.GetPrePostLogLineDataAsync(apiEndpointUrl, apiKey, request);
-
 
              return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
         }
