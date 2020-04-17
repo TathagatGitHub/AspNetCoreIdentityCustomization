@@ -43,7 +43,8 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _logger = logger;
         }
 
-          public async Task<ActionResult<SearchResponse>> RestClientGetMethodAsync()
+        //RestSharp Client, wrting response to log
+        public async Task<ActionResult<SearchResponse>> RestClientGetMethodAsync()
           {
             _logger.LogInformation("Inside the Pre-postlog Controler Method!");
             var searchResponse = new SearchResponse();
@@ -77,6 +78,52 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
            return  searchResponse;
         }
 
+        public async Task<SearchResponse> RestSharpClientGetMethodAsync()
+        {
+        //     RestClient client = new RestClient(_getUrl);
+        //RestRequest request = new RestRequest("Default", Method.POST);
+            string jsonBody1 = "{" +
+                               "\"country\":\"US\"," +
+                               "\"networktype\":\"National Cable\"," +
+                               "\"LogType\":\"Prelog\"}";
+          //  request.AddJsonBody(jsonBody1);
+            //var response = client.Execute(request);
+
+            _logger.LogInformation("Inside the Pre-postlog Controler Method!");
+            var searchResponse = new SearchResponse();
+            IRestClient restClient = new RestClient(_getUrl);
+            IRestRequest restRequest = new RestRequest(Method.POST);
+
+            restRequest.AddHeader("Content-Type", "application/json");
+            restRequest.AddHeader("ClientKey", _clientId);
+
+            restRequest.AddJsonBody(jsonBody1);
+            TaskCompletionSource<IRestResponse> taskCompletion = new TaskCompletionSource<IRestResponse>();
+            restClient.ExecuteAsync<SearchResponse>(restRequest, r => taskCompletion.SetResult(r));
+            IRestResponse response = default(IRestResponse);
+
+            response = (IRestResponse)(await taskCompletion.Task);
+          //  if (response.ErrorException != null)
+            //    searchResponse.ErrorResult.ErrorDescription=response.ErrorException.Message;
+            //return new ApiResponse<TEntity>(response.Data, response.Headers, GetExceptionsFromResponse(response));
+            searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
+            //new SearchResponse(jsonSerializer.Deserialize<TEntity>(new JTokenReader(JToken.Parse(response.Content))), response.Headers, GetExceptionsFromResponse(response));
+
+            //restClient.ExecuteAsync(restRequest, response =>
+            //{
+            //    Console.WriteLine(response.StatusCode);
+            //    Console.WriteLine(response.ContentLength);
+            //    Console.WriteLine(response.Content);
+            //    _logger.LogInformation("StatusCode:" + response.StatusCode);
+            //    _logger.LogInformation("ContentLength:" + response.ContentLength);
+            //    //    _logger.LogInformation("Content:" + response.Content);
+            //    // searchResponse.SearchResults = response.Content;
+            //    searchResponse.Data = JsonSerializer.Deserialize<IList<PostLogLine>>(response.Content);
+            //});
+
+            // Will output the HTML contents of the requested page
+            return searchResponse;
+        }
         //GAReport Client
         public async void RestClientGAReportPostMethod()
         {
@@ -104,6 +151,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             //return restResponse;
         }
 
+        //Syncronus call - Works! 
         public async Task<SearchResponse> HttpClientPrePostLogMethod()
         {
             var values = new Dictionary<string, string>
@@ -122,9 +170,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 
                 requestMessage.Headers.Add("ClientKey", _clientId);
 
-               // requestMessage.Headers.Add("Content-Type", "application/json");
-
-                httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+               httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
           
                requestMessage.Content = new FormUrlEncodedContent(values);
 
@@ -155,7 +201,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
                 client.Timeout = TimeSpan.FromMinutes(60);
              var responseObj = await client.PostAsync(prepostServiceUrl, content);
                 //var responseObj = client.PostAsJsonAsync(prepostServiceUrl, content).Result;
-                if (responseObj != null)
+                 if (responseObj != null)
                 {
                     if (responseObj.StatusCode.Equals(HttpStatusCode.OK))
                     {

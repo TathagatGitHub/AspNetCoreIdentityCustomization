@@ -447,3 +447,40 @@ System.Text.Json.JsonException: 'S' is an invalid start of a value. Path: $ | Li
 2020-04-16 15:43:42.543 -07:00 [WRN] User baeed863-f4bc-4074-805d-b9c97c697ae2 validation failed: DuplicateUserName.
 2020-04-16 15:43:42.574 -07:00 [WRN] User b1599652-854c-4be7-aaef-877285900085 validation failed: DuplicateUserName.
 2020-04-16 15:43:43.934 -07:00 [INF] Inside the Index view
+2020-04-16 20:26:25.307 -07:00 [INF] Starting up
+2020-04-16 20:26:27.911 -07:00 [INF] Hello, world!
+2020-04-16 20:26:27.927 -07:00 [INF] Starting DummyData
+2020-04-16 20:26:32.361 -07:00 [WRN] User 0df82b7b-6b45-4583-af98-84154f820509 validation failed: DuplicateUserName.
+2020-04-16 20:26:32.444 -07:00 [WRN] User faade3c5-61ac-4517-8320-a7e553c6d65a validation failed: DuplicateUserName.
+2020-04-16 20:26:32.497 -07:00 [WRN] User cfa60998-9d8d-441e-a29c-650de2ce3259 validation failed: DuplicateUserName.
+2020-04-16 20:26:32.540 -07:00 [WRN] User 15993ded-e054-4bb4-a7a7-c6bffdb08f8b validation failed: DuplicateUserName.
+2020-04-16 20:26:33.551 -07:00 [INF] Inside the Index view
+2020-04-16 20:27:57.832 -07:00 [INF] Inside the Pre-postlog Controler Method!
+2020-04-16 20:30:16.305 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCoreIdentityCustomization.WebApi.Client.RestSharpWebApiClient.RestSharpClientGetMethodAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization.WebApi.Client\RestSharpWebApiClient.cs:line 107
+   at AspNetCoreIdentityCustomization.Controllers.HomeController.TestRestSharpClientAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Controllers\HomeController.cs:line 128
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-04-16 20:32:39.491 -07:00 [INF] Starting up
+2020-04-16 20:32:43.254 -07:00 [INF] Hello, world!
+2020-04-16 20:32:43.272 -07:00 [INF] Starting DummyData
+2020-04-16 20:32:48.200 -07:00 [WRN] User 5dfb1d98-7e0d-4837-a177-30fb619935a4 validation failed: DuplicateUserName.
+2020-04-16 20:32:48.313 -07:00 [WRN] User 41669102-b0cb-45b6-8237-bba8cee5e620 validation failed: DuplicateUserName.
+2020-04-16 20:32:48.374 -07:00 [WRN] User fa6345f6-5daa-4ac4-a89a-511d72dafce0 validation failed: DuplicateUserName.
+2020-04-16 20:32:48.429 -07:00 [WRN] User e3e657eb-3ac4-4e83-87b6-629c4e623e1d validation failed: DuplicateUserName.
+2020-04-16 20:32:50.022 -07:00 [INF] Inside the Index view
+2020-04-16 20:33:13.993 -07:00 [INF] Inside the Pre-postlog Controler Method!
