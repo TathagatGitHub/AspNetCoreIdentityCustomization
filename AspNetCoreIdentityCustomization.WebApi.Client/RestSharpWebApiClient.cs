@@ -78,6 +78,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
            return  searchResponse;
         }
 
+        //RestSharp Client with Async and Deserialize the response into Response Model
         public async Task<SearchResponse> RestSharpClientGetMethodAsync()
         {
        
@@ -109,7 +110,9 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             // Will output the HTML contents of the requested page
             return searchResponse;
         }
+        
         //GAReport Client
+        // RestSharp Client with Async and loggging the return into the log file
         public async void RestClientGAReportPostMethod()
         {
             _logger.LogInformation("Inside the RestClientGAReportPostMethod!");
@@ -172,35 +175,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             return searchResponse;
         }
 
-        //public async Task<SearchResponse> GetPrePostLogLineDataAsync(string prepostServiceUrl, string apiKey, RequestBodyModel requestModel)
-        //{
-        //    var response = new SearchResponse() { Data = new List<PostLogLine>() };
-        //    var dataAsString = Newtonsoft.Json.JsonConvert.SerializeObject(requestModel);
-        //    var content = new StringContent(dataAsString);
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.DefaultRequestHeaders.Add("ClientKey", apiKey);
-        //        client.BaseAddress = new Uri(prepostServiceUrl);
-        //        client.DefaultRequestHeaders.Accept.Clear();
-        //        client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-        //        client.Timeout = TimeSpan.FromMinutes(60);
-        //     var responseObj = await client.PostAsync(prepostServiceUrl, content);
-        //        //var responseObj = client.PostAsJsonAsync(prepostServiceUrl, content).Result;
-        //         if (responseObj != null)
-        //        {
-        //            if (responseObj.StatusCode.Equals(HttpStatusCode.OK))
-        //            {
-        //                response = Newtonsoft.Json.JsonConvert.DeserializeObject<SearchResponse>(responseObj.Content.ReadAsStringAsync().Result);
-        //            }
-        //            else
-        //            {
-        //                response.ErrorResult.ErrorDescription = responseObj.Content.ReadAsStringAsync().Result;
-        //                response.ErrorResult.ErrorCode = 99;
-        //            }
-        //        }
-        //        return response;
-        //    }
-        //}
+       
     }
 
     

@@ -107,8 +107,10 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
 
 
+        // API Authentication
         [ApiKeyAuth]
         // Pre-Postlog Web API Testmethod
+        // RestSharp Aync call with Deserialization
         [HttpGet("TestRestSharpClient")]
         public async Task<IActionResult> TestRestSharpClientAsync()
         {
@@ -121,14 +123,16 @@ namespace AspNetCoreIdentityCustomization.Controllers
             var resultSet = default(SearchResponse);
 
             RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
-            // Syncronus Call
+            
+            // HTTPClient Syncronus Call- Works!
             //     resultSet = await restSharpWebApiClient.HttpClientPrePostLogMethod();
 
-            //Asyncronus call
+            //RestSharp Asyncronus call-Works!
             resultSet = await restSharpWebApiClient.RestSharpClientGetMethodAsync().ConfigureAwait(false);
 
              return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
         }
+
 
         // GAReports Test Client
         public IActionResult GAReportRestSharpClient()
@@ -151,6 +155,29 @@ namespace AspNetCoreIdentityCustomization.Controllers
             restSharpWebApiClientGaReport.RestClientGAReportPostMethod();
             
             return View();
+        }
+
+        // API Authentication
+       // [ApiKeyAuth]
+        // Pre-Postlog Web API Testmethod
+        // RestSharp Aync call with Deserialization
+        [HttpGet("TestHTTPAsycnClient")]
+        public async Task<IActionResult> TestHTTPAsycnClient()
+        {
+
+            var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
+            string apiEndpointUrl = "https://prepostloglineapi.oceanmedia.com/";
+            string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
+
+
+            var resultSet = default(SearchResponse);
+
+            RestSharpWebApiClient restSharpWebApiClient = new RestSharpWebApiClient(_logger, "https://prepostlogwebapi.oceanmediainc.com", "US", "National Cable", "Postlog", "fd5ef968-6096-4230-a4dd-7b9ac9eedab0");
+
+            // HTTPClient Syncronus Call- Works!
+            resultSet = await restSharpWebApiClient.HttpClientPrePostLogMethod();
+
+           return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
         }
 
         //[RequireHttps]

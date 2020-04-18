@@ -1,0 +1,8 @@
+2020-04-18 14:56:21.985 -07:00 [WRN] User bff0a605-44fd-43a8-9b92-ea905ec7c1cb validation failed: DuplicateUserName.
+2020-04-18 14:56:22.068 -07:00 [WRN] User 47aed6c1-1c80-4ffe-b7f9-0bb6083b76b0 validation failed: DuplicateUserName.
+2020-04-18 14:56:22.078 -07:00 [WRN] User 8a98f3e6-4f9b-46e9-80e9-84d360ed4437 validation failed: DuplicateUserName.
+2020-04-18 14:56:22.090 -07:00 [WRN] User 7f9b7284-f6d0-480f-90da-6e5e16089ed3 validation failed: DuplicateUserName.
+2020-04-18 14:57:20.223 -07:00 [INF] Inside the Index view
+2020-04-18 15:00:53.407 -07:00 [INF] Inside the Index view
+2020-04-18 15:02:45.468 -07:00 [INF] Inside the Index view
+2020-04-18 15:06:02.005 -07:00 [INF] Inside the Pre-postlog Controler Method!
