@@ -19,6 +19,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
     public class RestSharpWebApiClient
     {
+
         private string _getUrl = "https://prepostlogwebapi.oceanmediainc.com";
         private string _country = "US";
         private string _networktype = "National Cable";
@@ -103,6 +104,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             response = (IRestResponse)(await taskCompletion.Task);
             if (response.StatusCode == HttpStatusCode.OK)
                 searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
+            //var dataTable = response.Schema.Fields.AsDataTable(searchResponse);
             else
                 searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
 

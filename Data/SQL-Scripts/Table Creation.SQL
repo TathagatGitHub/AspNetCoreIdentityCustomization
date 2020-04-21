@@ -51,4 +51,17 @@ CREATE TABLE [dbo].[schedule](
 ) ON [PRIMARY]
 GO
 
-
+CREATE TABLE [dbo].PostLogLine(
+	NetworkName [nvarchar](100) NOT NULL,
+	DayPartDesc [nvarchar](50) NULL,
+	SpotLen [int] NULL,
+	Rate decimal NULL,
+	Imp decimal NULL,
+	SpotDate [date] NULL,
+	SpotTime [nvarchar](10) NULL,
+	MediaTypeCode [nvarchar](10) NULL,
+	ISCI [nvarchar](15) NULL,
+	SigmaProgramName [nvarchar](100) NULL,
+	BuyType [nvarchar](10) NULL
+) 
+GO
