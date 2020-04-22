@@ -15,6 +15,7 @@ using RESPApiProject.Controllers;
 using RESPApiProject;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Configuration;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -22,18 +23,24 @@ namespace AspNetCoreIdentityCustomization.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _config;
         private PostLogRepository _postlogrepository;
       private IRestSharpWebApiClientService _restSharpWebApiClientService;
         private WeatherForecastController _weatherForecastController;
         private const string ApiClientName = "Hims";
         public IHttpContextAccessor _httpContext { get; set; }
-        public HomeController(ILogger<HomeController> logger, PostLogRepository postLogRepository, WeatherForecastController weatherForecastController, IHttpContextAccessor httpContext)
+        public HomeController(IConfiguration configuration, ILogger<HomeController> logger, 
+            PostLogRepository postLogRepository, 
+            WeatherForecastController weatherForecastController, 
+            IHttpContextAccessor httpContext, 
+            IRestSharpWebApiClientService restSharpWebApiClientService)
         {
+            _config = configuration;
             _logger = logger;
             _postlogrepository = postLogRepository;
             _weatherForecastController = weatherForecastController;
             _httpContext = httpContext;
-         //   _restSharpWebApiClient = restSharpWebApiClient;
+            _restSharpWebApiClientService = restSharpWebApiClientService;
         }
         //[HttpsOnly]
         public IActionResult Index()
@@ -116,7 +123,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
         {
 
             var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
-            string apiEndpointUrl = "https://prepostloglineapi.oceanmedia.com/";
+            string apiEndpointUrl = "https://prepostlogwebapi.oceanmediainc.com";
             string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
 
 
@@ -164,7 +171,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             return View();
         }
 
-
+        [HttpGet("RestSharpPrePostLogBulkInsertAsync")]
         public async Task<IActionResult> RestSharpPrePostLogBulkInsertAsync()
         {
            // var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
@@ -172,8 +179,11 @@ namespace AspNetCoreIdentityCustomization.Controllers
                                "\"country\":\"US\"," +
                                "\"networktype\":\"National Cable\"," +
                                "\"LogType\":\"Prelog\"}";
-            string apiEndpointUrl = "https://prepostloglineapi.oceanmedia.com/";
-            string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
+            String apiEndpointUrl = _config["prePostLogUrlProd"];
+
+            //string apiEndpointUrl = "https://prepostlogwebapi.oceanmediainc.com";
+            String apiKey = _config["prePostLogUrlProdClientKey"];
+         //   string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
             
             var resultSet = default(SearchResponse);
 

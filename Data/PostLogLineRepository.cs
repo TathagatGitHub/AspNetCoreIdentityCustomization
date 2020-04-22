@@ -35,7 +35,7 @@ namespace AspNetCoreIdentityCustomization.Data
                     using (var connection = new SqlConnection(this.connection))
                     {
                         await connection.ExecuteAsync(
-                            "INSERT INTO [Users] (NetworkName , LastUpdatedAt) VALUES (@NetworkName, @DayPartDesc)",
+                            "INSERT INTO [PostLogLine] (NetworkName , DayPartDesc,SpotLen,Rate,Imp,SpotDate,SpotTime,MediaTypeCode,ISCI,SigmaProgramName,BuyType) VALUES (@NetworkName, @DayPartDesc)",
                             postLogLines.Select(u => new { NetworkName = u.NetworkName, DayPartDesc =u.DayPartDesc,
                                 SpotLen =u.SpotLen,
                                 Rate=u.Rate,
