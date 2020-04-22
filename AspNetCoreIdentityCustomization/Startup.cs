@@ -64,6 +64,9 @@ namespace AspNetCoreIdentityCustomization
                     .AddDefaultTokenProviders();
          
             services.AddTransient<PostLogRepository>();
+             services.AddTransient<PostLogLineRepository>();
+          //  services.AddScoped<DCMAdvertiserRepository>();
+            services.AddScoped<IRestSharpWebApiClientService, RestSharpWebApiClientService>();
             services.AddTransient<WeatherForecastController>();
           
             services.AddScoped<ServiceFilterExample>(); //ServiceFilterExample Need DI

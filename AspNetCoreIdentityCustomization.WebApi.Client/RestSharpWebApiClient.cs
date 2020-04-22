@@ -14,12 +14,13 @@ using Microsoft.AspNetCore.Mvc;
 //using AspNetCoreIdentityCustomization.WebApi.Client;
 using System.Net.Http;
 using System.Net;
+using AspNetCoreIdentityCustomization.Data;
 
 namespace AspNetCoreIdentityCustomization.WebApi.Client
 {
     public class RestSharpWebApiClient
     {
-
+        //private PostLogLineRepository _postlogLinerepository;
         private string _getUrl = "https://prepostlogwebapi.oceanmediainc.com";
         private string _country = "US";
         private string _networktype = "National Cable";
@@ -27,7 +28,8 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
         private string _clientId = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
         private readonly ILogger _logger;
 
-        public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,string NetworkType, string Postlog,string ClientId)//, WeatherForecastController weatherForecastController )
+        public RestSharpWebApiClient(ILogger logger, string APIUrl,string Country,
+            string NetworkType, string Postlog,string ClientId)//, WeatherForecastController weatherForecastController )
         {
             _getUrl= APIUrl;
             _country = Country;
@@ -35,6 +37,7 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
             _logType = Postlog;
             _clientId = ClientId;
             _logger = logger;
+            //_postlogLinerepository = postlogLinerepository;
             //_weatherForecastController = weatherForecastController;
         }
 
@@ -103,10 +106,13 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
 
             response = (IRestResponse)(await taskCompletion.Task);
             if (response.StatusCode == HttpStatusCode.OK)
+            {
                 searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
-            //var dataTable = response.Schema.Fields.AsDataTable(searchResponse);
+                //var dataTable = response.Schema.Fields.AsDataTable(searchResponse);
+               // _postlogLinerepository.InsertBulkPostLogLineAsync(searchResponse.Data);
+            }
             else
-                searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
+                searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
 
             // Will output the HTML contents of the requested page
             return searchResponse;

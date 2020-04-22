@@ -23,6 +23,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private PostLogRepository _postlogrepository;
+      private IRestSharpWebApiClientService _restSharpWebApiClientService;
         private WeatherForecastController _weatherForecastController;
         private const string ApiClientName = "Hims";
         public IHttpContextAccessor _httpContext { get; set; }
@@ -32,6 +33,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _postlogrepository = postLogRepository;
             _weatherForecastController = weatherForecastController;
             _httpContext = httpContext;
+         //   _restSharpWebApiClient = restSharpWebApiClient;
         }
         //[HttpsOnly]
         public IActionResult Index()
@@ -126,8 +128,9 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             //Asyncronus call
             resultSet = await restSharpWebApiClient.RestSharpClientGetMethodAsync().ConfigureAwait(false);
+           // resultSet = await _restSharpWebApiClient.RestSharpClientGetMethodAsync().ConfigureAwait(false);
 
-             return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
+            return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
         }
 
         // GAReports Test Client
@@ -161,5 +164,25 @@ namespace AspNetCoreIdentityCustomization.Controllers
             return View();
         }
 
+
+        public async Task<IActionResult> RestSharpPrePostLogBulkInsertAsync()
+        {
+           // var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
+            string jsonBody = "{" +
+                               "\"country\":\"US\"," +
+                               "\"networktype\":\"National Cable\"," +
+                               "\"LogType\":\"Prelog\"}";
+            string apiEndpointUrl = "https://prepostloglineapi.oceanmedia.com/";
+            string apiKey = "fd5ef968-6096-4230-a4dd-7b9ac9eedab0";
+            
+            var resultSet = default(SearchResponse);
+
+            //Asyncronus call
+           
+            resultSet = await _restSharpWebApiClientService.GetUsingRestSharpAndBulkInsertUsingDapper(apiKey, jsonBody,
+            apiEndpointUrl).ConfigureAwait(false);
+
+            return Ok(new { Status = "Success", TotalRecords = resultSet.Data.Count, Data = resultSet.Data });
+        }
     }
 }
