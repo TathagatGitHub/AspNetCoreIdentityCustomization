@@ -126,3 +126,12 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2020-04-22 13:37:52.533 -07:00 [WRN] User 431ea695-f624-4b5c-bfa3-9f86c67e1ea8 validation failed: DuplicateUserName.
 2020-04-22 13:37:53.030 -07:00 [INF] Inside the Index view
 2020-04-22 13:38:04.792 -07:00 [INF] Inside the Pre-postlog Controler Method!
+2020-04-22 13:44:45.934 -07:00 [INF] Starting up
+2020-04-22 13:44:47.159 -07:00 [INF] Hello, world!
+2020-04-22 13:44:47.172 -07:00 [INF] Starting DummyData
+2020-04-22 13:44:50.182 -07:00 [WRN] User b93a1c5e-6bc8-4b13-917e-388f7a9150f6 validation failed: DuplicateUserName.
+2020-04-22 13:44:50.232 -07:00 [WRN] User 1916b6f4-ae1c-406d-935b-7c6c44dacbaf validation failed: DuplicateUserName.
+2020-04-22 13:44:50.258 -07:00 [WRN] User dbd7d540-e5c2-4216-a827-0b5aac021ae6 validation failed: DuplicateUserName.
+2020-04-22 13:44:50.291 -07:00 [WRN] User a2e5ae56-a7e5-4ef5-b91b-22b788e2b8da validation failed: DuplicateUserName.
+2020-04-22 13:44:50.881 -07:00 [INF] Inside the Index view
+2020-04-22 13:44:56.720 -07:00 [INF] Inside the Pre-postlog Controler Method!

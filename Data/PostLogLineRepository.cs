@@ -31,53 +31,43 @@ namespace AspNetCoreIdentityCustomization.Data
             //{
             //   // connection.Open();
 
-             
-                    using (var connection = new SqlConnection(this.connection))
-                    {
+           
+
+            using (var connection = new SqlConnection(this.connection))
+            {
+                SqlTransaction transaction = connection.BeginTransaction("BulkCopy");
+                try
+                        {
+                       
                         await connection.ExecuteAsync(
-                            "INSERT INTO [PostLogLine] (NetworkName , DayPartDesc,SpotLen,Rate,Imp,SpotDate,SpotTime,MediaTypeCode,ISCI,SigmaProgramName,BuyType) VALUES (@NetworkName, @DayPartDesc)",
-                            postLogLines.Select(u => new { NetworkName = u.NetworkName, DayPartDesc =u.DayPartDesc,
-                                SpotLen =u.SpotLen,
-                                Rate=u.Rate,
-                                Imp=u.Imp,
-                                SpotDate=u.SpotDate,
-                                SpotTime=u.SpotTime,
-                                MediaTypeCode=u.MediaTypeCode,
-                                ISCI=u.ISCI,
-                                SigmaProgramName=u.SigmaProgramName,
-                                BuyType=u.BuyType
-                            })).ConfigureAwait(false);
-                   }
+                                "INSERT INTO [PostLogLine] (NetworkName , DayPartDesc,SpotLen,Rate,Imp,SpotDate,SpotTime,MediaTypeCode,ISCI,SigmaProgramName,BuyType) " +
+                                "VALUES (@NetworkName, @DayPartDesc,@SpotLen,@Rate,@Imp,@SpotDate,@SpotTime,@MediaTypeCode,@ISCI,@SigmaProgramName,@BuyType)",
+                                postLogLines.Select(u => new
+                                {
+                                    NetworkName = u.NetworkName,
+                                    DayPartDesc = u.DayPartDesc,
+                                    SpotLen = u.SpotLen,
+                                    Rate = u.Rate,
+                                    Imp = u.Imp,
+                                    SpotDate = u.SpotDate,
+                                    SpotTime = u.SpotTime,
+                                    MediaTypeCode = u.MediaTypeCode,
+                                    ISCI = u.ISCI,
+                                    SigmaProgramName = u.SigmaProgramName,
+                                    BuyType = u.BuyType
+                                })).ConfigureAwait(false);
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback("BulkCopy");
+                            connection.Close();
+                            throw ex;
+                        }
+
+                    }
+
                 
-                //SqlTransaction transaction = connection.BeginTransaction();
-                //using (var bulkCopy = new SqlBulkCopy(this.connection, SqlBulkCopyOptions.KeepIdentity))
-                //{
-                //    bulkCopy.BatchSize = 3000;
-                //    //bulkCopy.NotifyAfter = 1000;
-                //    //bulkCopy.SqlRowsCopied += (sender, eventArgs) => logger.Info($"Wrote { eventArgs.RowsCopied } records to target table.");
-                //    bulkCopy.DestinationTableName = "[" + resultTable.TableName + "]";
-                //    bulkCopy.BulkCopyTimeout = 0;
-                //    try
-                //    {
-                //        //AutoMapColumns(bulkCopy, resultTable, resultTable.TableName);
-                //        //if (bulkCopy.ColumnMappings.Count < 0)
-                //        //    throw new Exception($"No Column Mappings found for the API Datafeed. Please check the target table \"{ resultTable.TableName}\" existance.");
-
-                //        bulkCopy.WriteToServer(resultTable);
-                //        bulkCopy.Close();
-                //    }
-                //    catch (Exception ex)
-                //    {
-                //        //transaction.Rollback();
-                //        bulkCopy.Close();
-                //        connection.Close();
-                //        throw ex;
-                //    }
-                //}
-                ////transaction.Commit();
-                ////https://stackoverflow.com/questions/12521692/c-sharp-bulk-insert-sqlbulkcopy-update-if-exists/12535726return true;
-
-           // }
+              
         }
 
     }
