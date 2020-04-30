@@ -21,7 +21,7 @@ namespace AspNetCoreIdentityCustomization.Filters
 
         private readonly IConfiguration _config;
 
-        GlobalAPIAuthenticator(RequestDelegate next)
+        public GlobalAPIAuthenticator(RequestDelegate next)
 		{
 			this.next = next;
             //this._config = configuration;
@@ -37,7 +37,7 @@ namespace AspNetCoreIdentityCustomization.Filters
                 await context.Response.WriteAsync("Client Key does not found in request headers");
                 return;
             }
-            Guid customerGuidKey;
+          //  Guid customerGuidKey;
             var clientKey = requestHeaders[ApiKeyHeaderName];
             if (string.IsNullOrWhiteSpace(clientKey))
             {
@@ -48,9 +48,9 @@ namespace AspNetCoreIdentityCustomization.Filters
             try
             {
               //  var configuration = context.HttpContext.RequestServices.GetRequiredService<IConfiguration>();
-                var apiKey = configuration.GetValue<string>("ApiKey");
-                Guid.TryParse(clientKey, out customerGuidKey);
-                if (!apiKey.Equals(customerGuidKey))
+                var apiKey = configuration.GetValue<string>(ApiKeyHeaderName);
+               // Guid.TryParse(clientKey, out customerGuidKey);
+                if (!apiKey.Equals(clientKey))
                 {
                     await context.Response.WriteAsync("Invalid Client Key. No Customer listed with the Client Key in Request headers");
                     return;
