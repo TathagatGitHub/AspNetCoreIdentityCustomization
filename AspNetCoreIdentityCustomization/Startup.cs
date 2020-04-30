@@ -85,8 +85,13 @@ namespace AspNetCoreIdentityCustomization
                     RoleManager<ApplicationRole> roleManager,
                     UserManager<ApplicationUser> userManager)
         {
-         
-            if (env.IsDevelopment())
+            app.UseGlobalAPIAuthenticator();
+            //app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api/RestSharpPrePostLogBulkInsertAsync")), branch =>
+            //{
+            //    app.UseGlobalAPIAuthenticator();
+
+            //});
+                if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
@@ -96,7 +101,7 @@ namespace AspNetCoreIdentityCustomization
              app.UseExceptionHandler("/Error");
              app.UseHsts();
             }
-         
+          
             app.UseStatusCodePagesWithReExecute("/Error/{0}");
             app.UseHttpsRedirection();
             app.UseStaticFiles();

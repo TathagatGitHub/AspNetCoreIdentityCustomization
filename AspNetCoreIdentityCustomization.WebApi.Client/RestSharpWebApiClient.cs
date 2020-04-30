@@ -82,42 +82,42 @@ namespace AspNetCoreIdentityCustomization.WebApi.Client
            return  searchResponse;
         }
 
-        //public async Task<SearchResponse> RestSharpClientGetMethodAsync()
-        //{
-       
-        //    string jsonBody1 = "{" +
-        //                       "\"country\":\"US\"," +
-        //                       "\"networktype\":\"National Cable\"," +
-        //                       "\"LogType\":\"Prelog\"}";
-        
+        public async Task<SearchResponse> RestSharpClientGetMethodAsync()
+        {
 
-        //    _logger.LogInformation("Inside the Pre-postlog Controler Method!");
-        //    var searchResponse = new SearchResponse();
-        //    IRestClient restClient = new RestClient(_getUrl);
-        //    IRestRequest restRequest = new RestRequest(Method.POST);
+            string jsonBody1 = "{" +
+                               "\"country\":\"US\"," +
+                               "\"networktype\":\"National Cable\"," +
+                               "\"LogType\":\"Prelog\"}";
 
-        //    restRequest.AddHeader("Content-Type", "application/json");
-        //    restRequest.AddHeader("ClientKey", _clientId);
 
-        //    restRequest.AddJsonBody(jsonBody1);
-        //    TaskCompletionSource<IRestResponse> taskCompletion = new TaskCompletionSource<IRestResponse>();
-        //    restClient.ExecuteAsync<SearchResponse>(restRequest, r => taskCompletion.SetResult(r));
-        //    IRestResponse response = default(IRestResponse);
+            _logger.LogInformation("Inside the Pre-postlog Controler Method!");
+            var searchResponse = new SearchResponse();
+            IRestClient restClient = new RestClient(_getUrl);
+            IRestRequest restRequest = new RestRequest(Method.POST);
 
-        //    response = (IRestResponse)(await taskCompletion.Task);
-        //    if (response.StatusCode == HttpStatusCode.OK)
-        //    {
-        //        searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
-        //        //var dataTable = response.Schema.Fields.AsDataTable(searchResponse);
-        //       // _postlogLinerepository.InsertBulkPostLogLineAsync(searchResponse.Data);
-        //    }
-        //    else
-        //        searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
+            restRequest.AddHeader("Content-Type", "application/json");
+            restRequest.AddHeader("ClientKey", _clientId);
 
-        //    // Will output the HTML contents of the requested page
-        //    return searchResponse;
-        //}
-        //GAReport Client
+            restRequest.AddJsonBody(jsonBody1);
+            TaskCompletionSource<IRestResponse> taskCompletion = new TaskCompletionSource<IRestResponse>();
+            restClient.ExecuteAsync<SearchResponse>(restRequest, r => taskCompletion.SetResult(r));
+            IRestResponse response = default(IRestResponse);
+
+            response = (IRestResponse)(await taskCompletion.Task);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                searchResponse = JsonSerializer.Deserialize<SearchResponse>(response.Content);
+                //var dataTable = response.Schema.Fields.AsDataTable(searchResponse);
+                // _postlogLinerepository.InsertBulkPostLogLineAsync(searchResponse.Data);
+            }
+            else
+                searchResponse.ErrorResult.ErrorDescription = response.ErrorMessage;
+
+            // Will output the HTML contents of the requested page
+            return searchResponse;
+        }
+       // GAReport Client
         public async void RestClientGAReportPostMethod()
         {
             _logger.LogInformation("Inside the RestClientGAReportPostMethod!");

@@ -98,7 +98,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             throw new NotImplementedException();
         }
 
-        [ApiKeyAuth]
+       // [ApiKeyAuth]
         [HttpGet("RequestRestApiProjectweatherAPI")]
         public void RequestRestApiProjectweatherAPI()
         {
@@ -116,7 +116,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
 
 
-        [ApiKeyAuth]
+      //  [ApiKeyAuth]
         // Pre-Postlog Web API Testmethod
         [HttpGet("TestRestSharpClient")]
         public async Task<IActionResult> TestRestSharpClientAsync()
