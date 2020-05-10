@@ -11,7 +11,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomiza
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.WebApi.Client", "AspNetCoreIdentityCustomization.WebApi.Client\AspNetCoreIdentityCustomization.WebApi.Client.csproj", "{0F569EAD-24F1-4A8A-9428-BE96498E14D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreIdentityCustomization.RESPApiProject", "RESPApiProject\AspNetCoreIdentityCustomization.RESPApiProject.csproj", "{E8630D4E-C260-4001-A6F5-E66574E81BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreIdentityCustomization.RESPApiProject", "RESPApiProject\AspNetCoreIdentityCustomization.RESPApiProject.csproj", "{E8630D4E-C260-4001-A6F5-E66574E81BEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{59AFD24E-B0C7-4BC6-AD28-57D9A708B093}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebAndLoadTestProject1", "WebAndLoadTestProject1\WebAndLoadTestProject1.vbproj", "{ED736A67-97D7-40C7-B83C-D6A6CA9B84B1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UITestProject", "UITestProject\UITestProject.vbproj", "{D90C4D9E-8C42-46D6-B583-F8332DA32F6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +48,14 @@ Global
 		{E8630D4E-C260-4001-A6F5-E66574E81BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8630D4E-C260-4001-A6F5-E66574E81BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8630D4E-C260-4001-A6F5-E66574E81BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED736A67-97D7-40C7-B83C-D6A6CA9B84B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED736A67-97D7-40C7-B83C-D6A6CA9B84B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED736A67-97D7-40C7-B83C-D6A6CA9B84B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED736A67-97D7-40C7-B83C-D6A6CA9B84B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90C4D9E-8C42-46D6-B583-F8332DA32F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90C4D9E-8C42-46D6-B583-F8332DA32F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90C4D9E-8C42-46D6-B583-F8332DA32F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90C4D9E-8C42-46D6-B583-F8332DA32F6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

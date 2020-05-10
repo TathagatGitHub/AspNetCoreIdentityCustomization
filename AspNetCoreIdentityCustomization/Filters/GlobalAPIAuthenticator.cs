@@ -1,5 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.VisualBasic;
 using System;
@@ -12,8 +17,9 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreIdentityCustomization.Filters
 {
-	public class GlobalAPIAuthenticator
-	{
+
+    public class GlobalAPIAuthenticator 
+    {
 		private RequestDelegate next;
         private const string ApiKeyHeaderName = "ApiKey";
 
@@ -28,8 +34,13 @@ namespace AspNetCoreIdentityCustomization.Filters
 
 
         }
+
+       
+           
         public async Task Invoke(HttpContext context, IConfiguration configuration)
         {
+
+
             var requestHeaders = context.Request.Headers;
             if (!requestHeaders.ContainsKey(ApiKeyHeaderName))
             {
@@ -89,17 +100,37 @@ namespace AspNetCoreIdentityCustomization.Filters
             await next.Invoke(context);
         }
 
+     
+
     }
 	public static class GlobalAPIAuthExtensionHandler
 	{
 		public static IApplicationBuilder UseGlobalAPIAuthenticator(this IApplicationBuilder builder)
 		{
-			//return builder.UseMiddleware<APIKeyMessageHandler>(Constants.APIPlatforms.DCPDCM);
-			// If anaonymus return directly no need to call the handler
-			return builder.UseMiddleware<GlobalAPIAuthenticator>();
-		}
+            //return builder.UseMiddleware<APIKeyMessageHandler>(Constants.APIPlatforms.DCPDCM);
+            // If anaonymus return directly no need to call the handler
+            return builder.UseMiddleware<GlobalAPIAuthenticator>();
+            //return builder.UseMiddleware<AddAuthorizeFiltersControllerConvention>();
+        }
 		//public static IApplicationBuilder TradeDeskAuthHandler(this IApplicationBuilder builder) {
 		//    return builder.UseMiddleware<APIKeyMessageHandler>(Constants.APIPlatforms.DCPTradeDesk);
 		//}
 	}
+
+
+    public class AddAuthorizeFiltersControllerConvention : IControllerModelConvention
+    {
+        public void Apply(ControllerModel controller)
+        {
+            if (controller.ControllerName.Contains("Api"))
+            {
+                controller.Filters.Add(new AuthorizeFilter("apipolicy"));
+            }
+            //  else
+            //  {
+            //      controller.Filters.Add(new AuthorizeFilter("defaultpolicy"));
+            //  }
+        }
+    }
+
 }

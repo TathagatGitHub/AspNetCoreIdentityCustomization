@@ -46,7 +46,20 @@ namespace AspNetCoreIdentityCustomization
         {
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
             services.AddLogging(logBuilder => logBuilder.AddSerilog(dispose: true));
-                              
+            //services.AddMvc(o =>
+            //{
+            //    o.Conventions.Add(new AddAuthorizeFiltersControllerConvention());
+            //});
+            //services.AddAuthorization(o =>
+            //{
+            //    o.AddPolicy("apipolicy", b =>
+            //    {
+            //      b.RequireAuthenticatedUser();
+                    
+            //    });
+           
+            //});
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -85,13 +98,14 @@ namespace AspNetCoreIdentityCustomization
                     RoleManager<ApplicationRole> roleManager,
                     UserManager<ApplicationUser> userManager)
         {
-            app.UseGlobalAPIAuthenticator();
-            //app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api/RestSharpPrePostLogBulkInsertAsync")), branch =>
-            //{
-            //    app.UseGlobalAPIAuthenticator();
+          
+            app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api")), appBuilder =>
+            {
+               appBuilder.UseGlobalAPIAuthenticator();
 
-            //});
-                if (env.IsDevelopment())
+            });
+
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();

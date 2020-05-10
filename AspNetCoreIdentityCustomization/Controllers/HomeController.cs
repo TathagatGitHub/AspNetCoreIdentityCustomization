@@ -16,6 +16,7 @@ using RESPApiProject;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -43,6 +44,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _restSharpWebApiClientService = restSharpWebApiClientService;
         }
         //[HttpsOnly]
+        [AllowAnonymous]
         public IActionResult Index()
         {        
             _logger.LogInformation("Inside the Index view");
@@ -171,7 +173,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             return View();
         }
 
-        [HttpGet("RestSharpPrePostLogBulkInsertAsync")]
+        [HttpGet("api/RestSharpPrePostLogBulkInsertAsync")]
         public async Task<IActionResult> RestSharpPrePostLogBulkInsertAsync()
         {
            // var request = new RequestBodyModel() { Country = "US", LogType = "Prelog", NetworkType = "National Cable" };
