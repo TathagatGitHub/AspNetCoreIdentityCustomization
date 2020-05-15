@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -39,8 +40,10 @@ namespace AspNetCoreIdentityCustomization.Filters
            
         public async Task Invoke(HttpContext context, IConfiguration configuration)
         {
-
-
+           //Following two lines are to get thr Route Data/path from the request and take any decision, as per the Rooute Path, if needed.- Starts
+            var httpRequestFeature = context.Features[typeof(IHttpRequestFeature)] as IHttpRequestFeature;
+            var path = httpRequestFeature?.Path;
+            //Following two lines are to get thr Route Data/path from the request and take any decision, as per the Rooute Path, if needed.- Ends
             var requestHeaders = context.Request.Headers;
             if (!requestHeaders.ContainsKey(ApiKeyHeaderName))
             {
@@ -117,20 +120,5 @@ namespace AspNetCoreIdentityCustomization.Filters
 		//}
 	}
 
-
-    public class AddAuthorizeFiltersControllerConvention : IControllerModelConvention
-    {
-        public void Apply(ControllerModel controller)
-        {
-            if (controller.ControllerName.Contains("Api"))
-            {
-                controller.Filters.Add(new AuthorizeFilter("apipolicy"));
-            }
-            //  else
-            //  {
-            //      controller.Filters.Add(new AuthorizeFilter("defaultpolicy"));
-            //  }
-        }
-    }
 
 }

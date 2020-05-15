@@ -101,7 +101,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
         }
 
        // [ApiKeyAuth]
-        [HttpGet("RequestRestApiProjectweatherAPI")]
+        [HttpGet]//("RequestRestApiProjectweatherAPI")]
+        [Route("api/RequestRestApiProjectweatherAPI")]
         public void RequestRestApiProjectweatherAPI()
         {
 

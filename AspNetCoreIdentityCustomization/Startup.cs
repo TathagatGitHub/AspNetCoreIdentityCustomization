@@ -46,19 +46,7 @@ namespace AspNetCoreIdentityCustomization
         {
             Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
             services.AddLogging(logBuilder => logBuilder.AddSerilog(dispose: true));
-            //services.AddMvc(o =>
-            //{
-            //    o.Conventions.Add(new AddAuthorizeFiltersControllerConvention());
-            //});
-            //services.AddAuthorization(o =>
-            //{
-            //    o.AddPolicy("apipolicy", b =>
-            //    {
-            //      b.RequireAuthenticatedUser();
-                    
-            //    });
            
-            //});
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -98,12 +86,23 @@ namespace AspNetCoreIdentityCustomization
                     RoleManager<ApplicationRole> roleManager,
                     UserManager<ApplicationUser> userManager)
         {
-          
-            app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api")), appBuilder =>
-            {
-               appBuilder.UseGlobalAPIAuthenticator();
+            // Use when you want to use this middleware ALL the times
+            //   app.UseGlobalAPIAuthenticator(); 
 
-            });
+
+            //Use this middleware when want to use only for certain condition.
+            //app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api")), appBuilder =>
+            //{
+            //   appBuilder.UseGlobalAPIAuthenticator();
+
+            //});
+            //OR USE Branching like this, both works
+            app.UseWhen(context => context.Request.Path.StartsWithSegments(new PathString("/api")),  branch =>
+            {
+               // context.Items["tenant"] = tenant
+                branch.UseGlobalAPIAuthenticator();
+
+            }) ;
 
             if (env.IsDevelopment())
             {
