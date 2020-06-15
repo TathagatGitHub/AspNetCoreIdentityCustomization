@@ -1,0 +1,8 @@
+2020-06-15 15:54:40.864 -07:00 [INF] Starting service!!
+2020-06-15 15:57:53.773 -07:00 [INF] Starting service!!
+2020-06-15 16:38:53.121 -07:00 [INF] Starting service!!
+2020-06-15 16:38:55.268 -07:00 [INF] The website is up. Status code "OK"
+2020-06-15 16:39:00.394 -07:00 [INF] The website is up. Status code "OK"
+2020-06-15 16:39:05.492 -07:00 [INF] The website is up. Status code "OK"
+2020-06-15 16:39:10.597 -07:00 [INF] The website is up. Status code "OK"
+2020-06-15 16:39:15.710 -07:00 [INF] The website is up. Status code "OK"
