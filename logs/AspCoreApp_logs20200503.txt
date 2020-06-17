@@ -1,0 +1,7 @@
+2020-05-03 11:03:22.799 -07:00 [INF] Starting up
+2020-05-03 11:03:25.080 -07:00 [INF] Hello, world!
+2020-05-03 11:03:25.091 -07:00 [INF] Starting DummyData
+2020-05-03 11:03:28.429 -07:00 [WRN] User 750a9b70-413c-4883-ad6c-e6bb0dc5ef5b validation failed: DuplicateUserName.
+2020-05-03 11:03:28.474 -07:00 [WRN] User 69ce98a3-02d1-4072-9e57-6e8f597ab09f validation failed: DuplicateUserName.
+2020-05-03 11:03:28.496 -07:00 [WRN] User 3d376217-ab9d-4921-80a8-659a20b19d5e validation failed: DuplicateUserName.
+2020-05-03 11:03:28.518 -07:00 [WRN] User f0104fa0-13c7-4a45-918a-bc6758eed16e validation failed: DuplicateUserName.

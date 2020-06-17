@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using Serilog.Events;
 
 namespace WorkerService
 {
@@ -13,47 +13,39 @@ namespace WorkerService
     {
         public static void Main(string[] args)
         {
-            //Configure the Serilog to write to a file
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.FromLogContext()
-                .WriteTo.File(@"C:\Users\tathagat.dwivedi\source\repos\AspNetCoreIdentityCustomization-DevBranch\logs\workerLog.txt")
+                .WriteTo.File(@"C:\temp\workerservice\LogFile.txt")
                 .CreateLogger();
-
-            //  var configuration = new ConfigurationBuilder()
-            // .AddJsonFile("appsettings.json")
-            // .Build();
-            //Log.Logger = new LoggerConfiguration()
-            //      .ReadFrom.Configuration(configuration)
-            //      .CreateLogger();
-
 
             try
             {
-                //Log.Information("Starting service!");
-                Log.Information("Starting service!!");
+                Log.Information("Starting up the service");
                 CreateHostBuilder(args).Build().Run();
                 return;
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "Problem starting service!");
-
+                Log.Fatal(ex, "There was a problem starting the serivce");
+                return;
             }
             finally
             {
                 Log.CloseAndFlush();
             }
-            
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .UseWindowsService()
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
                 })
                 .UseSerilog();
+        }
     }
 }
