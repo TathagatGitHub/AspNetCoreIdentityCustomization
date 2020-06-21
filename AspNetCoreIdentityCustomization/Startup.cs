@@ -22,6 +22,7 @@ using AspNetCoreIdentityCustomization.WebApi.Client;
 using RESPApiProject.Controllers;
 using AspNetCoreIdentityCustomization.Filters;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
+using System.Net.Http;
 //using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
 
 
@@ -63,11 +64,14 @@ namespace AspNetCoreIdentityCustomization
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultUI()
                     .AddDefaultTokenProviders();
-         
+            services.AddHttpClient();
             services.AddTransient<PostLogRepository>();
              services.AddTransient<PostLogLineRepository>();
           //  services.AddScoped<DCMAdvertiserRepository>();
             services.AddScoped<IRestSharpWebApiClientService, RestSharpWebApiClientService>();
+            //HttpClientFacotry set up starts
+            //services.AddScoped<IHttpClientFactory>();
+            //HttpClientFacotry set up ends
             services.AddTransient<WeatherForecastController>();
           
             services.AddScoped<ServiceFilterExample>(); //ServiceFilterExample Need DI

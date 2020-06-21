@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace AspNetCoreIdentityCustomization.Controllers
 {
@@ -29,8 +31,13 @@ namespace AspNetCoreIdentityCustomization.Controllers
       private IRestSharpWebApiClientService _restSharpWebApiClientService;
         private WeatherForecastController _weatherForecastController;
         private const string ApiClientName = "Hims";
+
+        private readonly IHttpClientFactory _httpClientFactory;
+
         public IHttpContextAccessor _httpContext { get; set; }
-        public HomeController(IConfiguration configuration, ILogger<HomeController> logger, 
+        //private readonly IHttpClientFactory _httpClientFactory;
+        public HomeController(IConfiguration configuration, ILogger<HomeController> logger,
+            IHttpClientFactory httpClientFactory,
             PostLogRepository postLogRepository, 
             WeatherForecastController weatherForecastController, 
             IHttpContextAccessor httpContext, 
@@ -42,13 +49,46 @@ namespace AspNetCoreIdentityCustomization.Controllers
             _weatherForecastController = weatherForecastController;
             _httpContext = httpContext;
             _restSharpWebApiClientService = restSharpWebApiClientService;
+            _httpClientFactory = httpClientFactory;
         }
         //[HttpsOnly]
         [AllowAnonymous]
         public IActionResult Index()
-        {        
+        {
+            
+
             _logger.LogInformation("Inside the Index view");
+            //HttpClient Factory Set up
+          
+
+
             return View();
+        }
+
+      
+        [HttpGet("api/HttpClientFactoryExampleDirectly")]
+        public async Task <WeatherForecastModel> HttpClientFactoryExampleDirectly()
+        {
+            string uri = _config.GetValue<string>("MetaAPI");
+            WeatherForecastModel forecast = new WeatherForecastModel();
+            string errorString;
+          
+            try
+            {
+                var client = _httpClientFactory.CreateClient();
+                client.BaseAddress = new Uri(uri);
+
+                var responseString = await client.GetStringAsync("location/2471217/");
+                 forecast = JsonConvert.DeserializeObject<WeatherForecastModel>(responseString);
+               // forecast = await client.GetFromJsonAsync<WeatherForecastModel>("location/2471217/");
+                errorString = null;
+               // return forecast;
+            }
+            catch (Exception ex)
+            {
+                errorString = $"There was an error getting our forecast: { ex.Message }";
+            }
+            return forecast;
         }
 
         
