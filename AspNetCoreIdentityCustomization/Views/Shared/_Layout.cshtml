@@ -8,6 +8,8 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        @* Syncfusion Essential JS 2 Styles *@
+        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
         @*<link href="~/css/Custom/Submenu.css" rel="stylesheet" />*@
     </environment>
     <environment exclude="Development">
@@ -35,14 +37,14 @@
                 <ul class="nav navbar-nav">
                     <li class="nav-item dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exception Handling <span class="caret"></span></a>
-                     
-           
+
+
                         <ul class="dropdown-menu HeaderMenuAlign collapse">
 
                             <li><a asp-area="" asp-controller="Home" asp-action="ExceptionFilterMethod">Exception Filter</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="GlobalExceptionMethod">Global Exception</a></li>
                             <li><a asp-area="" asp-controller="Home" asp-action="StatusCode">Status Code Exception</a></li>
-                        
+
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -67,8 +69,8 @@
                         </ul>
                     </li>
 
-                   
-                   
+
+
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -92,6 +94,9 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
 
+        @* Syncfusion Essential JS 2 Scripts *@
+        <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+
     </environment>
     <environment exclude="Development">
 
@@ -114,5 +119,6 @@
     @*// For all Environment*@
     <script src="~/js/Custom/Submenu.js"></script>
     @RenderSection("Scripts", required: false)
+    <ejs-scripts></ejs-scripts>
 </body>
 </html>
