@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel;
 
 namespace AspNetCoreIdentityCustomization.Core
 {
@@ -17,25 +17,34 @@ namespace AspNetCoreIdentityCustomization.Core
         [ForeignKey("Schedule")]
         public int SchedId { get; set; }
 
-        public virtual Schedule Schedule { get; set; }
+     //   public virtual Schedule Schedule { get; set; }
 
-        [NotMapped]
+       // [NotMapped]
         public string ScheduleName { get; set; }
 
         [Required]
         public int WeekNbr { get; set; }
 
         [Required]
+        [DisplayName("Week Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime WeekDate { get; set; }
 
         [Required]
+        [DisplayName("Create Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CreateDt { get; set; }
 
         [Required]
+        [DisplayName("Update Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime UpdateDt { get; set; }
 
-        [Required]
-        public User UpdatedBy { get; set; }
+        //[Required]
+        //public string UpdatedBy { get; set; }
     }
 
 

@@ -1,0 +1,99 @@
+2020-08-31 16:34:14.740 -07:00 [INF] Starting up
+2020-08-31 16:34:16.799 -07:00 [INF] Hello, world!
+2020-08-31 16:34:16.812 -07:00 [INF] Starting DummyData
+2020-08-31 16:34:19.859 -07:00 [WRN] User 86ba5741-95cb-4721-9ee1-84b27a032c71 validation failed: DuplicateUserName.
+2020-08-31 16:34:19.904 -07:00 [WRN] User 8de8ca63-2f7b-4034-8377-f4d2efe51bb0 validation failed: DuplicateUserName.
+2020-08-31 16:34:19.933 -07:00 [WRN] User 04532999-4953-4e65-a5cd-1a87b6e6cd6d validation failed: DuplicateUserName.
+2020-08-31 16:34:19.981 -07:00 [WRN] User 93976b43-10e1-4f7a-b9c2-ffee990e5f3b validation failed: DuplicateUserName.
+2020-08-31 16:34:20.636 -07:00 [INF] Inside the Index view
+2020-08-31 16:37:50.989 -07:00 [INF] Starting up
+2020-08-31 16:37:52.692 -07:00 [INF] Hello, world!
+2020-08-31 16:37:52.701 -07:00 [INF] Starting DummyData
+2020-08-31 16:37:54.450 -07:00 [WRN] User 9b39b2c5-5ab1-424d-8adf-9cf695d08343 validation failed: DuplicateUserName.
+2020-08-31 16:37:54.489 -07:00 [WRN] User e85d870f-67f2-4477-a052-5ca3741721c9 validation failed: DuplicateUserName.
+2020-08-31 16:37:54.522 -07:00 [WRN] User a0c03bcb-6ee7-4048-892b-b997de4c5918 validation failed: DuplicateUserName.
+2020-08-31 16:37:54.553 -07:00 [WRN] User 7f5e9b90-064d-403e-8de1-2520ec7c88c1 validation failed: DuplicateUserName.
+2020-08-31 16:37:55.164 -07:00 [INF] Inside the Index view
+2020-08-31 16:39:20.468 -07:00 [INF] Starting up
+2020-08-31 16:39:22.898 -07:00 [INF] Hello, world!
+2020-08-31 16:39:22.909 -07:00 [INF] Starting DummyData
+2020-08-31 16:39:25.036 -07:00 [WRN] User 97a56e37-e539-43c0-a14c-9c7006528b36 validation failed: DuplicateUserName.
+2020-08-31 16:39:25.085 -07:00 [WRN] User ade92b1a-62d3-4804-9981-6921d50b7b42 validation failed: DuplicateUserName.
+2020-08-31 16:39:25.121 -07:00 [WRN] User 24df0523-cdd0-401a-b6b7-95773c093738 validation failed: DuplicateUserName.
+2020-08-31 16:39:25.161 -07:00 [WRN] User 920463fd-c037-4063-88cb-7ebb6f6e76e0 validation failed: DuplicateUserName.
+2020-08-31 16:39:25.939 -07:00 [INF] Inside the Index view
+2020-08-31 16:41:35.413 -07:00 [INF] Starting up
+2020-08-31 16:41:37.591 -07:00 [INF] Hello, world!
+2020-08-31 16:41:37.600 -07:00 [INF] Starting DummyData
+2020-08-31 16:41:39.383 -07:00 [WRN] User a5d17497-85a4-45ed-9ec1-09317f5ba0e8 validation failed: DuplicateUserName.
+2020-08-31 16:41:39.445 -07:00 [WRN] User 73fe5fcf-955f-47e6-a716-dc20905b3171 validation failed: DuplicateUserName.
+2020-08-31 16:41:39.477 -07:00 [WRN] User 46a5df5f-0510-44d5-bac1-a100536f0ce5 validation failed: DuplicateUserName.
+2020-08-31 16:41:39.505 -07:00 [WRN] User 2384ac6c-4d5f-4334-b7da-0f26fa724f56 validation failed: DuplicateUserName.
+2020-08-31 16:41:40.073 -07:00 [INF] Inside the Index view
+2020-08-31 16:42:53.923 -07:00 [INF] Starting up
+2020-08-31 16:42:55.828 -07:00 [INF] Hello, world!
+2020-08-31 16:42:55.842 -07:00 [INF] Starting DummyData
+2020-08-31 16:42:57.478 -07:00 [WRN] User 0690152d-1fda-40b6-80e1-fe632c8e48a3 validation failed: DuplicateUserName.
+2020-08-31 16:42:57.520 -07:00 [WRN] User a846efee-3f3b-40be-8ebc-9cc718246546 validation failed: DuplicateUserName.
+2020-08-31 16:42:57.549 -07:00 [WRN] User 967802bb-1636-4bf3-bb6e-d20ac7e2eafe validation failed: DuplicateUserName.
+2020-08-31 16:42:57.573 -07:00 [WRN] User 9492639d-eb69-44b6-8892-7931fab876a1 validation failed: DuplicateUserName.
+2020-08-31 16:42:58.173 -07:00 [INF] Inside the Index view
+2020-08-31 16:44:02.708 -07:00 [INF] Starting up
+2020-08-31 16:44:05.131 -07:00 [INF] Hello, world!
+2020-08-31 16:44:05.144 -07:00 [INF] Starting DummyData
+2020-08-31 16:44:07.123 -07:00 [WRN] User 26959221-6a69-4e89-b987-98048c51cae3 validation failed: DuplicateUserName.
+2020-08-31 16:44:07.168 -07:00 [WRN] User 8e8b3ae9-3260-4d94-9479-318d47ab8050 validation failed: DuplicateUserName.
+2020-08-31 16:44:07.206 -07:00 [WRN] User 6dafde2c-afc8-43cd-9228-95fcdcfdf443 validation failed: DuplicateUserName.
+2020-08-31 16:44:07.237 -07:00 [WRN] User 04eda3d0-b4f0-4383-945d-836d59457177 validation failed: DuplicateUserName.
+2020-08-31 16:44:07.888 -07:00 [INF] Inside the Index view
+2020-08-31 16:45:58.962 -07:00 [INF] Starting up
+2020-08-31 16:46:01.296 -07:00 [INF] Hello, world!
+2020-08-31 16:46:01.307 -07:00 [INF] Starting DummyData
+2020-08-31 16:46:03.730 -07:00 [WRN] User 8cd0cc5e-30f8-4051-be14-51d4fb049054 validation failed: DuplicateUserName.
+2020-08-31 16:46:03.782 -07:00 [WRN] User 8ac642e7-4ae2-4ba3-8fde-d32c476dfbd6 validation failed: DuplicateUserName.
+2020-08-31 16:46:03.814 -07:00 [WRN] User 83dd1266-294a-4db3-bc30-4aeac87f5444 validation failed: DuplicateUserName.
+2020-08-31 16:46:03.853 -07:00 [WRN] User c9bfe169-60b4-48cc-bfe4-27ce032982df validation failed: DuplicateUserName.
+2020-08-31 16:46:04.551 -07:00 [INF] Inside the Index view
+2020-08-31 16:49:53.322 -07:00 [INF] Starting up
+2020-08-31 16:49:55.291 -07:00 [INF] Hello, world!
+2020-08-31 16:49:55.302 -07:00 [INF] Starting DummyData
+2020-08-31 16:49:57.281 -07:00 [WRN] User f9d3d449-5a27-4466-9805-8c9a8ac65b46 validation failed: DuplicateUserName.
+2020-08-31 16:49:57.327 -07:00 [WRN] User 0fecc27d-3950-4d14-8d8b-bb8129a130f9 validation failed: DuplicateUserName.
+2020-08-31 16:49:57.354 -07:00 [WRN] User b9fe5ee6-2cb5-49e3-976d-4d86474006b3 validation failed: DuplicateUserName.
+2020-08-31 16:49:57.381 -07:00 [WRN] User 8891c425-97e7-4a76-8030-bc5603aac270 validation failed: DuplicateUserName.
+2020-08-31 16:49:57.991 -07:00 [INF] Inside the Index view
+2020-08-31 16:50:43.286 -07:00 [INF] InsertPostlog
+2020-08-31 16:52:29.443 -07:00 [INF] Starting up
+2020-08-31 16:52:32.004 -07:00 [INF] Hello, world!
+2020-08-31 16:52:32.015 -07:00 [INF] Starting DummyData
+2020-08-31 16:52:34.096 -07:00 [WRN] User becdc877-3451-44c8-8af8-90aa927ce05f validation failed: DuplicateUserName.
+2020-08-31 16:52:34.139 -07:00 [WRN] User ad5a2985-8ef8-424a-b1c3-eac21bc07ccf validation failed: DuplicateUserName.
+2020-08-31 16:52:34.181 -07:00 [WRN] User 7828fa60-486f-43b6-8cdf-ec6e7d077945 validation failed: DuplicateUserName.
+2020-08-31 16:52:34.214 -07:00 [WRN] User eb4aaf2a-401d-4dca-a5f7-763106dfc43f validation failed: DuplicateUserName.
+2020-08-31 16:52:34.976 -07:00 [INF] Inside the Index view
+2020-08-31 16:53:38.478 -07:00 [INF] Starting up
+2020-08-31 16:53:41.206 -07:00 [INF] Hello, world!
+2020-08-31 16:53:41.218 -07:00 [INF] Starting DummyData
+2020-08-31 16:53:43.578 -07:00 [WRN] User f739b75c-37ed-4720-9ff7-94b58e149a23 validation failed: DuplicateUserName.
+2020-08-31 16:53:43.632 -07:00 [WRN] User ada399df-cb17-41cf-88b0-ebff49d43f96 validation failed: DuplicateUserName.
+2020-08-31 16:53:43.658 -07:00 [WRN] User e94b9bab-5f0a-4436-87f4-dec77c95b3ea validation failed: DuplicateUserName.
+2020-08-31 16:53:43.690 -07:00 [WRN] User 46b7b981-eade-4e03-b333-238d3011f333 validation failed: DuplicateUserName.
+2020-08-31 16:53:44.459 -07:00 [INF] Inside the Index view
+2020-08-31 16:55:04.328 -07:00 [INF] InsertPostlog
+2020-08-31 22:07:21.228 -07:00 [INF] Starting up
+2020-08-31 22:07:25.936 -07:00 [INF] Hello, world!
+2020-08-31 22:07:26.034 -07:00 [INF] Starting DummyData
+2020-08-31 22:07:40.901 -07:00 [WRN] User 22e65395-31fb-44d6-9d70-cc0b8eb843e8 validation failed: DuplicateUserName.
+2020-08-31 22:07:41.518 -07:00 [WRN] User 4293aa82-e953-4659-b491-d75bc2b86edf validation failed: DuplicateUserName.
+2020-08-31 22:07:41.880 -07:00 [WRN] User 41596ea8-361a-40b3-8c67-59ab618ea5ff validation failed: DuplicateUserName.
+2020-08-31 22:07:42.265 -07:00 [WRN] User 4e61c585-ad25-44fa-b866-2a042bc79b24 validation failed: DuplicateUserName.
+2020-08-31 22:07:48.243 -07:00 [INF] Inside the Index view
+2020-08-31 22:08:58.843 -07:00 [INF] Starting up
+2020-08-31 22:09:27.441 -07:00 [INF] Hello, world!
+2020-08-31 22:09:27.486 -07:00 [INF] Starting DummyData
+2020-08-31 22:09:36.158 -07:00 [WRN] User 6b9cbe83-cae4-4bbe-a32a-08e24090d89a validation failed: DuplicateUserName.
+2020-08-31 22:09:36.265 -07:00 [WRN] User c4f1f581-7abb-47b3-8c7e-8770797b817a validation failed: DuplicateUserName.
+2020-08-31 22:09:36.324 -07:00 [WRN] User d49f348e-9d7b-4a8c-808d-693e048837f0 validation failed: DuplicateUserName.
+2020-08-31 22:09:36.372 -07:00 [WRN] User 5b12ab64-9a71-4f8d-a6cd-0f2d2c9d3bcd validation failed: DuplicateUserName.
+2020-08-31 22:09:38.837 -07:00 [INF] Inside the Index view
+2020-08-31 22:10:39.065 -07:00 [INF] InsertPostlog

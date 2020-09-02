@@ -1,0 +1,59 @@
+2020-08-25 14:41:44.163 -07:00 [INF] Starting up
+2020-08-25 14:41:48.344 -07:00 [INF] Hello, world!
+2020-08-25 14:41:48.365 -07:00 [INF] Starting DummyData
+2020-08-25 14:41:51.729 -07:00 [WRN] User 005b1f95-55c2-44eb-b62c-ec652bb87483 validation failed: DuplicateUserName.
+2020-08-25 14:41:51.781 -07:00 [WRN] User 43062754-3cd3-43ca-91c2-022bde2bfae0 validation failed: DuplicateUserName.
+2020-08-25 14:41:51.793 -07:00 [WRN] User 1d27e605-61ab-493a-be68-e6e642c1ea25 validation failed: DuplicateUserName.
+2020-08-25 14:41:51.812 -07:00 [WRN] User 3cb6b53c-3f32-42db-98f8-756386c756b7 validation failed: DuplicateUserName.
+2020-08-25 14:41:52.677 -07:00 [INF] Inside the Index view
+2020-08-25 14:42:37.980 -07:00 [ERR] The view 'RequireHttpsOnly' was not found. Searched locations: ["/Views/Home/RequireHttpsOnly.cshtml","/Views/Shared/RequireHttpsOnly.cshtml","/Pages/Shared/RequireHttpsOnly.cshtml"]
+2020-08-25 14:42:38.001 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The view 'RequireHttpsOnly' was not found. The following locations were searched:
+/Views/Home/RequireHttpsOnly.cshtml
+/Views/Shared/RequireHttpsOnly.cshtml
+/Pages/Shared/RequireHttpsOnly.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-25 14:47:24.067 -07:00 [INF] Inside the Index view
+2020-08-25 14:47:29.868 -07:00 [INF] Inside the Index view
+2020-08-25 14:47:33.531 -07:00 [INF] Inside the Index view
+2020-08-25 14:50:26.691 -07:00 [INF] Starting up
+2020-08-25 14:50:28.923 -07:00 [INF] Hello, world!
+2020-08-25 14:50:28.943 -07:00 [INF] Starting DummyData
+2020-08-25 14:50:31.577 -07:00 [WRN] User 98c6ef63-1d2e-43ab-97b0-a6f5154c25a9 validation failed: DuplicateUserName.
+2020-08-25 14:50:31.600 -07:00 [WRN] User d34680e7-a75e-45d4-8acc-55f6c576ea4a validation failed: DuplicateUserName.
+2020-08-25 14:50:31.612 -07:00 [WRN] User 4503920a-cd27-433f-b57b-12734fa9e6ee validation failed: DuplicateUserName.
+2020-08-25 14:50:31.625 -07:00 [WRN] User 410dc217-c11e-4cfc-9dd5-33b76aa8feda validation failed: DuplicateUserName.
+2020-08-25 14:50:32.243 -07:00 [INF] Inside the Index view
+2020-08-25 16:04:22.899 -07:00 [INF] Starting up
+2020-08-25 16:04:25.438 -07:00 [INF] Hello, world!
+2020-08-25 16:04:25.451 -07:00 [INF] Starting DummyData
+2020-08-25 16:04:27.710 -07:00 [WRN] User 456a4c86-6f94-4f7f-99ab-5e13266605be validation failed: DuplicateUserName.
+2020-08-25 16:04:27.735 -07:00 [WRN] User 4ae486a4-3f74-476a-ac2c-2a476ded3cdf validation failed: DuplicateUserName.
+2020-08-25 16:04:27.745 -07:00 [WRN] User 564307f6-a587-4a99-8efc-699dd9aae420 validation failed: DuplicateUserName.
+2020-08-25 16:04:27.753 -07:00 [WRN] User ab87b215-b9d3-49d0-8a10-a5c96f63ca3e validation failed: DuplicateUserName.
+2020-08-25 16:04:28.483 -07:00 [INF] Inside the Index view
+2020-08-25 16:06:09.722 -07:00 [INF] Starting up
+2020-08-25 16:06:12.029 -07:00 [INF] Hello, world!
+2020-08-25 16:06:12.039 -07:00 [INF] Starting DummyData
+2020-08-25 16:06:13.671 -07:00 [WRN] User 68143b33-97b3-4197-9566-1817c3134499 validation failed: DuplicateUserName.
+2020-08-25 16:06:13.692 -07:00 [WRN] User 8d71a05c-20d9-464a-b9ee-05eca392f637 validation failed: DuplicateUserName.
+2020-08-25 16:06:13.698 -07:00 [WRN] User cd4ca0eb-f05d-4be2-a454-0db4556f2b74 validation failed: DuplicateUserName.
+2020-08-25 16:06:13.706 -07:00 [WRN] User 82b432bb-fa24-4eb2-8223-2dcc1d02699f validation failed: DuplicateUserName.
+2020-08-25 16:06:14.359 -07:00 [INF] Inside the Index view

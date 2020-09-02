@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 using Microsoft.Extensions.Logging;
+using System.Globalization;
+
 namespace AspNetCoreIdentityCustomization.Data
 {
     public class PostLogRepository: IPosLogRepository
@@ -87,6 +89,41 @@ namespace AspNetCoreIdentityCustomization.Data
             return log; // only object
             
         }
+
+        public IEnumerable<string> GetScheduleList()
+        {
+            _logger.LogInformation("GetScheduleList");
+
+            IEnumerable<string> scheduleList;
+            using (var connection = new SqlConnection(this.connection))
+            {
+                string sql = "select schedid, scheduleName from dbo.[schedule]";
+
+                scheduleList = connection.Query<string>(sql);
+
+            }
+            //return logs; // only object
+            return scheduleList; // list of obejctst
+        }
+        public string InsertPostLog(PostLog postLog)
+        {
+            _logger.LogInformation("InsertPostlog");
+
+            IEnumerable<string> scheduleList;
+          // DateTime dt=new DateTime(postLog.WeekDate);
+            var connection = new SqlConnection(this.connection) ;
+            string stm = "INSERT INTO [PostLog] ([PostLogId],[SchedId],[ScheduleName],[WeekNbr],[WeekDate],[CreateDt],[UpdateDt])VALUES(";
+            stm = stm + postLog.PostLogId + "," + postLog.SchedId + ",'" + postLog.ScheduleName + "'," + postLog.WeekNbr + ",'" + postLog.WeekDate + "','" + postLog.CreateDt + "','" + postLog.UpdateDt + "')";
+            //connection.Execute("INSERT INTO Event (EventLocationId, EventName, EventDate, DateCreated) VALUES(1, 'InsertedEvent', '2019-01-01', GETUTCDATE())");
+            connection.Execute(stm);
+
+           
+            return "Success"; // list of obejctst
+        }
+
+        
+
+
 
     }
 }

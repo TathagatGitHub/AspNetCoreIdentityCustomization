@@ -1,0 +1,178 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model AspNetCoreIdentityCustomization.Core.PostLog
+@{
+    ViewData["Title"] = "Add new Postlog";
+}
+<div class="container">
+    <h3 class="display-4">Add new postlog</h3>
+    <hr />
+    @if (ViewBag.IsSuccess == true)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations</strong> You have added new log successfully. <br />
+            Click <a asp-controller="PostLog" asp-action="GetPostLog" asp-route-id="@ViewBag.PostLogId">here</a> to view the details
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @*<div class="spinner-grow text-primary" role="status" id="myLoader" style="display:none;">
+            <span class="sr-only">Loading...</span>
+        </div>*@
+
+    <span id="spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i></span>
+    <div id="panel"></div>
+
+    <form method="post" enctype="multipart/form-data" asp-action="Create" asp-controller="PostLog"
+          data-ajax="true"
+               data-ajax-method="POST"
+          data-ajax-loading="#spinner"
+               data-ajax-mode="replace"
+               data-ajax-update="#ajaxresult"  data-ajax-success="mySucess" data-ajax-failure="myFailure"
+          data-ajax-complete="myComplete">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        @*<input name="Postlogid" type="hidden" value="<removed for brevity>">*@
+        @*Hidden Asp Core Field*@
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.PostLogId, "PostLogId", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input name="Postlogid" type="hidden">
+                    @Html.ValidationMessageFor(model => model.PostLogId)
+                </div>
+            </div>*@
+        @Html.HiddenFor(model => model.PostLogId)
+        <div class="form-group">
+            <label asp-for="SchedId" class="control-label"></label>
+            <select asp-for="SchedId" class="form-control" asp-items="ViewBag.SchedId">
+                <option value="">Please choose your Scheudle</option>
+            </select>
+            @*@Html.DropDownList("SchedId", ViewBag.SchedId as IEnumerable<SelectListItem>)*@
+            @*@Html.DropDownList("SchedId", new SelectList(ViewBag.SchedId, "Value", "Text", ViewBag.SelectedItem))*@
+
+            <span asp-validation-for="SchedId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScheduleName" class="control-label"></label>
+            <input asp-for="ScheduleName" class="form-control" />
+            <span asp-validation-for="ScheduleName" class="text-danger"></span>
+        </div>
+
+        @*<div class="form-group">
+                <label asp-for="UpdatedBy" class="control-label"></label>
+                <input asp-for="UpdatedBy" class="form-control" />
+                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+            </div>*@
+
+        <div class="form-group">
+            <label asp-for="WeekNbr" class="control-label"></label>
+            <input asp-for="WeekNbr" class="form-control" />
+            <span asp-validation-for="WeekNbr" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="WeekDate" class="control-label"></label>
+            <input asp-for="WeekDate" class="form-control"></input>
+            <span asp-validation-for="WeekDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CreateDt" class="control-label"></label>
+            <input asp-for="CreateDt" class="form-control" />
+            <span asp-validation-for="CreateDt" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UpdateDt" class="control-label"></label>
+            <input asp-for="UpdateDt" class="form-control" />
+            <span asp-validation-for="UpdateDt" class="text-danger"></span>
+        </div>
+        @*<div class="form-group">
+                <label asp-for="UpdateDt" class="control-label"></label>
+                <div class="custom-file">
+                    <input asp-for="UpdateDt" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <span asp-validation-for="UpdateDt" class="text-danger"></span>
+            </div>*@
+
+        @*<div class="form-group">
+                <label asp-for="UpdatedBy" class="control-label"></label>
+                <div class="custom-file">
+                    <input asp-for="UpdatedBy" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
+            </div>*@
+
+
+        <div class="form-group">
+            <input type="submit" value="Add Postlog" class="btn btn-primary" />
+        </div>
+
+    </form>
+    <div id="ajaxresult">
+        Result will show here
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script>
+        myComplete = function (xhr) {
+            alert(`Hi ${xhr.responseText}!`);
+            $("#ajaxresult").prepend(' Record Inserted Successfully! ');
+        };
+        myFailure = function (xhr) {
+            alert(`Status: {xhr.status}, Status Text: {xhr.statusText}`);
+            $("#ajaxresult").html(data);
+        };
+        mySucess = function (result) {
+            if (result.success) {
+                swal({
+                    title: "Success",
+                    text: 'Row successfully added.  ',
+                    type: 'success',
+                });
+            }
+            else {
+                swal({
+                    title: "Error",
+                    text: result.responseText,
+                    type: 'error',
+                });
+            }
+            //alert(`Status: {xhr.status}, Status Text: {xhr.statusText}`);
+            var respHtml=' ';
+            $.each(result.data, function (index, it) {
+                respHtml = respHtml +' - Field: ' + index + ' - Value: ' + it;
+                //alert(respHtml);
+            })
+            $("#ajaxresult").text(respHtml);
+
+        };
+        $(document).ready(function () {
+            alert("document ready");
+            $("#ajaxresult").html("Data being sent!");
+        });
+
+
+    </script>
+}
+
+
+
+

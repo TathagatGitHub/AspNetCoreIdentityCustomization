@@ -1,0 +1,415 @@
+2020-08-28 15:35:15.824 -07:00 [INF] Starting up
+2020-08-28 15:35:17.593 -07:00 [INF] Hello, world!
+2020-08-28 15:35:17.605 -07:00 [INF] Starting DummyData
+2020-08-28 15:35:21.494 -07:00 [WRN] User 1fbc5999-73c1-44db-a4b4-83de53c9c709 validation failed: DuplicateUserName.
+2020-08-28 15:35:21.567 -07:00 [WRN] User e02408f3-b2e7-4617-bf41-8e1772ff8297 validation failed: DuplicateUserName.
+2020-08-28 15:35:21.628 -07:00 [WRN] User 431dca93-db56-42d9-b593-014589627944 validation failed: DuplicateUserName.
+2020-08-28 15:35:21.701 -07:00 [WRN] User fafdc5eb-eafc-4ef8-be5d-f6a0fb204eb5 validation failed: DuplicateUserName.
+2020-08-28 15:35:22.658 -07:00 [INF] Inside the Index view
+2020-08-28 15:36:23.613 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 49
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 15:39:16.527 -07:00 [INF] Starting up
+2020-08-28 15:39:17.977 -07:00 [INF] Hello, world!
+2020-08-28 15:39:17.985 -07:00 [INF] Starting DummyData
+2020-08-28 15:39:19.211 -07:00 [WRN] User 13fa498d-ccfc-4fe3-b0ec-d38c2bcc98fe validation failed: DuplicateUserName.
+2020-08-28 15:39:19.243 -07:00 [WRN] User f40d11c1-e5e7-4d57-84a0-3bcae5f7affb validation failed: DuplicateUserName.
+2020-08-28 15:39:19.277 -07:00 [WRN] User c296c743-d1bc-43e2-9e24-6a73eaae194d validation failed: DuplicateUserName.
+2020-08-28 15:39:19.303 -07:00 [WRN] User 57d055b8-1c68-49bc-9bd8-15d38eefb7d6 validation failed: DuplicateUserName.
+2020-08-28 15:39:19.652 -07:00 [INF] Inside the Index view
+2020-08-28 15:42:30.705 -07:00 [INF] Starting up
+2020-08-28 15:42:32.135 -07:00 [INF] Hello, world!
+2020-08-28 15:42:32.145 -07:00 [INF] Starting DummyData
+2020-08-28 15:42:33.492 -07:00 [WRN] User 3e89c916-e5ce-4ca3-aa3b-cdf7a8d67265 validation failed: DuplicateUserName.
+2020-08-28 15:42:33.531 -07:00 [WRN] User 8551851b-36c5-4557-b1a4-e19be659f277 validation failed: DuplicateUserName.
+2020-08-28 15:42:33.584 -07:00 [WRN] User 3a0fde83-0edd-4b42-975d-c46bf91d4817 validation failed: DuplicateUserName.
+2020-08-28 15:42:33.628 -07:00 [WRN] User 09409388-e8aa-4511-a625-5155ed8d9da0 validation failed: DuplicateUserName.
+2020-08-28 15:42:33.969 -07:00 [INF] Inside the Index view
+2020-08-28 15:43:48.223 -07:00 [INF] Starting up
+2020-08-28 15:43:50.494 -07:00 [INF] Hello, world!
+2020-08-28 15:43:50.506 -07:00 [INF] Starting DummyData
+2020-08-28 15:43:52.222 -07:00 [WRN] User 91207983-cfd0-42a8-bc11-972481242891 validation failed: DuplicateUserName.
+2020-08-28 15:43:52.268 -07:00 [WRN] User bb71c76b-1be1-4a95-a0c9-8b81a0adb220 validation failed: DuplicateUserName.
+2020-08-28 15:43:52.294 -07:00 [WRN] User 1b2a33e1-a743-4b50-b2b5-dd96eaa09889 validation failed: DuplicateUserName.
+2020-08-28 15:43:52.325 -07:00 [WRN] User d088cdab-1c8c-4c7e-aecc-08c575fe1d58 validation failed: DuplicateUserName.
+2020-08-28 15:43:52.909 -07:00 [INF] Inside the Index view
+2020-08-28 15:44:36.775 -07:00 [INF] InsertPostlog
+2020-08-28 15:45:24.709 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 49
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 15:45:57.022 -07:00 [INF] InsertPostlog
+2020-08-28 15:52:57.745 -07:00 [INF] Starting up
+2020-08-28 15:52:59.902 -07:00 [INF] Hello, world!
+2020-08-28 15:52:59.913 -07:00 [INF] Starting DummyData
+2020-08-28 15:53:01.842 -07:00 [WRN] User 5999b9cf-3bce-43d1-a17c-3d73e49cdad3 validation failed: DuplicateUserName.
+2020-08-28 15:53:01.897 -07:00 [WRN] User d13140fd-3f15-48f0-a2c6-d03433e47929 validation failed: DuplicateUserName.
+2020-08-28 15:53:01.963 -07:00 [WRN] User 9ccef4ab-6ed9-4cfc-99a5-2f0ce4a8eb5b validation failed: DuplicateUserName.
+2020-08-28 15:53:02.009 -07:00 [WRN] User 4e80a50c-84f3-4f07-954e-0b76cc471318 validation failed: DuplicateUserName.
+2020-08-28 15:53:02.642 -07:00 [INF] Inside the Index view
+2020-08-28 15:53:37.670 -07:00 [INF] InsertPostlog
+2020-08-28 15:55:30.907 -07:00 [INF] Starting up
+2020-08-28 15:55:32.798 -07:00 [INF] Hello, world!
+2020-08-28 15:55:32.808 -07:00 [INF] Starting DummyData
+2020-08-28 15:55:34.637 -07:00 [WRN] User 148055bd-f75c-4be5-a230-2b287791b635 validation failed: DuplicateUserName.
+2020-08-28 15:55:34.682 -07:00 [WRN] User fceaea67-e39e-48be-a819-b6b867f4d98d validation failed: DuplicateUserName.
+2020-08-28 15:55:34.722 -07:00 [WRN] User d6fb123d-921d-4b7f-9126-0efea2d66501 validation failed: DuplicateUserName.
+2020-08-28 15:55:34.752 -07:00 [WRN] User 705f4247-3a4a-4196-9655-aaa4399fd328 validation failed: DuplicateUserName.
+2020-08-28 15:55:35.389 -07:00 [INF] Inside the Index view
+2020-08-28 15:56:06.073 -07:00 [INF] InsertPostlog
+2020-08-28 15:56:23.206 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 49
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 16:18:51.534 -07:00 [INF] Starting up
+2020-08-28 16:18:53.441 -07:00 [INF] Hello, world!
+2020-08-28 16:18:53.451 -07:00 [INF] Starting DummyData
+2020-08-28 16:18:55.047 -07:00 [WRN] User 7ff1714a-bc6f-42d8-9a66-95b70e382207 validation failed: DuplicateUserName.
+2020-08-28 16:18:55.090 -07:00 [WRN] User 5642717a-2e67-4075-b319-c4ac2e34589c validation failed: DuplicateUserName.
+2020-08-28 16:18:55.151 -07:00 [WRN] User de4af941-a8c5-4ddf-9591-8cfc8f886d33 validation failed: DuplicateUserName.
+2020-08-28 16:18:55.184 -07:00 [WRN] User ba3adab4-f2c8-4d31-89b5-607804a48c61 validation failed: DuplicateUserName.
+2020-08-28 16:18:55.722 -07:00 [INF] Inside the Index view
+2020-08-28 16:19:21.912 -07:00 [INF] InsertPostlog
+2020-08-28 16:23:25.716 -07:00 [INF] Starting up
+2020-08-28 16:23:27.375 -07:00 [INF] Hello, world!
+2020-08-28 16:23:27.382 -07:00 [INF] Starting DummyData
+2020-08-28 16:23:28.639 -07:00 [WRN] User a02d8eec-b69b-4a2b-b802-3db2c8f0bf6e validation failed: DuplicateUserName.
+2020-08-28 16:23:28.671 -07:00 [WRN] User 1e2af60b-8484-43ab-96b3-8710ad59297f validation failed: DuplicateUserName.
+2020-08-28 16:23:28.699 -07:00 [WRN] User a8e2b569-ddd7-4367-b11c-5d9a46b189cd validation failed: DuplicateUserName.
+2020-08-28 16:23:28.724 -07:00 [WRN] User 513b8b32-497d-4a51-9f21-f18e88cff7cd validation failed: DuplicateUserName.
+2020-08-28 16:23:29.088 -07:00 [INF] Inside the Index view
+2020-08-28 16:23:53.066 -07:00 [INF] InsertPostlog
+2020-08-28 16:29:26.981 -07:00 [INF] Starting up
+2020-08-28 16:29:29.020 -07:00 [INF] Hello, world!
+2020-08-28 16:29:29.030 -07:00 [INF] Starting DummyData
+2020-08-28 16:29:30.674 -07:00 [WRN] User 8b793d68-8a97-4c0f-8dad-fe33aa59a8bb validation failed: DuplicateUserName.
+2020-08-28 16:29:30.713 -07:00 [WRN] User 57afe06f-265e-434e-9559-e8bc9574f4d3 validation failed: DuplicateUserName.
+2020-08-28 16:29:30.746 -07:00 [WRN] User 1e57e804-e978-4767-8634-748fae73a7ec validation failed: DuplicateUserName.
+2020-08-28 16:29:30.779 -07:00 [WRN] User 8fd3a842-6d93-47ef-9075-aeb070be9614 validation failed: DuplicateUserName.
+2020-08-28 16:29:31.350 -07:00 [INF] Inside the Index view
+2020-08-28 16:29:53.965 -07:00 [INF] InsertPostlog
+2020-08-28 16:30:06.685 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 49
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 16:42:25.558 -07:00 [INF] Starting up
+2020-08-28 16:42:27.509 -07:00 [INF] Hello, world!
+2020-08-28 16:42:27.517 -07:00 [INF] Starting DummyData
+2020-08-28 16:42:29.234 -07:00 [WRN] User 2825ddfe-05f6-49a0-8ca7-c99dd620ed85 validation failed: DuplicateUserName.
+2020-08-28 16:42:29.281 -07:00 [WRN] User f1900472-9b91-4f2b-8138-807a6f78a82f validation failed: DuplicateUserName.
+2020-08-28 16:42:29.307 -07:00 [WRN] User e615c511-2688-4a6a-9b4a-c2a5b18eb2f7 validation failed: DuplicateUserName.
+2020-08-28 16:42:29.342 -07:00 [WRN] User 17efe3ac-9c63-4fbd-b718-754fd32e75a4 validation failed: DuplicateUserName.
+2020-08-28 16:42:29.941 -07:00 [INF] Inside the Index view
+2020-08-28 16:42:46.182 -07:00 [INF] InsertPostlog
+2020-08-28 16:42:46.500 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 49
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 16:46:53.499 -07:00 [INF] Starting up
+2020-08-28 16:46:56.029 -07:00 [INF] Hello, world!
+2020-08-28 16:46:56.042 -07:00 [INF] Starting DummyData
+2020-08-28 16:46:58.031 -07:00 [WRN] User bc24f4f6-d205-4629-8f43-ce39c2196907 validation failed: DuplicateUserName.
+2020-08-28 16:46:58.106 -07:00 [WRN] User d1b8b1be-bdcc-4374-9977-c0d6d549eb8e validation failed: DuplicateUserName.
+2020-08-28 16:46:58.149 -07:00 [WRN] User 4eb93e65-3d63-4a1b-b037-285145a08797 validation failed: DuplicateUserName.
+2020-08-28 16:46:58.185 -07:00 [WRN] User 4a6f6ff6-8622-4fa7-95cd-7142984bc75a validation failed: DuplicateUserName.
+2020-08-28 16:46:59.065 -07:00 [INF] Inside the Index view
+2020-08-28 16:47:16.086 -07:00 [INF] InsertPostlog
+2020-08-28 16:47:16.414 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'items')
+   at Microsoft.AspNetCore.Mvc.Rendering.MultiSelectList..ctor(IEnumerable items, String dataValueField, String dataTextField, IEnumerable selectedValues, String dataGroupField)
+   at Microsoft.AspNetCore.Mvc.Rendering.SelectList..ctor(IEnumerable items, String dataValueField, String dataTextField, Object selectedValue)
+   at CallSite.Target(Closure , CallSite , Type , Object , String , String , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute5[T0,T1,T2,T3,T4,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 50
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 16:50:05.963 -07:00 [INF] Starting up
+2020-08-28 16:50:08.252 -07:00 [INF] Hello, world!
+2020-08-28 16:50:08.263 -07:00 [INF] Starting DummyData
+2020-08-28 16:50:10.712 -07:00 [WRN] User 83e9fa65-6845-4e59-aa69-3f20a08996e0 validation failed: DuplicateUserName.
+2020-08-28 16:50:10.755 -07:00 [WRN] User 701d77bd-08e3-4aba-b387-ad073bfbd3b6 validation failed: DuplicateUserName.
+2020-08-28 16:50:10.788 -07:00 [WRN] User de1fe29c-5321-443c-bf52-773080632a5c validation failed: DuplicateUserName.
+2020-08-28 16:50:10.824 -07:00 [WRN] User 64649bc4-5d42-4e60-b89a-2142ad2070c5 validation failed: DuplicateUserName.
+2020-08-28 16:50:11.418 -07:00 [INF] Inside the Index view
+2020-08-28 16:50:27.297 -07:00 [INF] InsertPostlog
+2020-08-28 16:50:27.650 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: There is no ViewData item of type 'IEnumerable<SelectListItem>' that has the key 'SchedId'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GetSelectListItems(ViewContext viewContext, String expression)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, ICollection`1 currentValues, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.DefaultHtmlGenerator.GenerateSelect(ViewContext viewContext, ModelExplorer modelExplorer, String optionLabel, String expression, IEnumerable`1 selectList, Boolean allowMultiple, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.GenerateDropDown(ModelExplorer modelExplorer, String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.DropDownList(String expression, IEnumerable`1 selectList, String optionLabel, Object htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperSelectExtensions.DropDownList(IHtmlHelper htmlHelper, String expression, IEnumerable`1 selectList)
+   at AspNetCore.Views_PostLog_Create.<ExecuteAsync>b__28_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 51
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCore.Views_PostLog_Create.ExecuteAsync() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\PostLog\Create.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2020-08-28 17:22:29.306 -07:00 [INF] Starting up
+2020-08-28 17:22:32.847 -07:00 [INF] Hello, world!
+2020-08-28 17:22:32.864 -07:00 [INF] Starting DummyData
+2020-08-28 17:22:37.854 -07:00 [WRN] User eb4860f5-6af4-4eb7-ad85-2f465661af0d validation failed: DuplicateUserName.
+2020-08-28 17:22:37.924 -07:00 [WRN] User dd667a0c-4590-46f6-ab1a-8ef09f254515 validation failed: DuplicateUserName.
+2020-08-28 17:22:37.990 -07:00 [WRN] User bca9bd29-4627-4cbd-a77c-c34ab0e4618d validation failed: DuplicateUserName.
+2020-08-28 17:22:38.037 -07:00 [WRN] User 5638880d-2384-43db-af20-a0b728472281 validation failed: DuplicateUserName.
+2020-08-28 17:22:39.123 -07:00 [INF] Inside the Index view
+2020-08-28 17:23:54.990 -07:00 [INF] InsertPostlog
+2020-08-28 17:26:06.835 -07:00 [INF] Starting up
+2020-08-28 17:26:08.985 -07:00 [INF] Hello, world!
+2020-08-28 17:26:08.998 -07:00 [INF] Starting DummyData
+2020-08-28 17:26:11.966 -07:00 [WRN] User ee58c1ff-61bd-41af-9b06-61afb49e87aa validation failed: DuplicateUserName.
+2020-08-28 17:26:12.029 -07:00 [WRN] User 0edf5c8b-e251-4262-aeb4-80fba8ac975d validation failed: DuplicateUserName.
+2020-08-28 17:26:12.066 -07:00 [WRN] User cbe33624-9360-48f1-93ef-4da71510db05 validation failed: DuplicateUserName.
+2020-08-28 17:26:12.097 -07:00 [WRN] User cba2ffc3-df88-4280-ab73-cb63863dba51 validation failed: DuplicateUserName.
+2020-08-28 17:26:12.966 -07:00 [INF] Inside the Index view
+2020-08-28 17:26:58.022 -07:00 [INF] InsertPostlog
+2020-08-28 17:27:38.301 -07:00 [INF] InsertPostlog
+2020-08-28 17:30:37.666 -07:00 [INF] Starting up
+2020-08-28 17:30:40.438 -07:00 [INF] Hello, world!
+2020-08-28 17:30:40.470 -07:00 [INF] Starting DummyData
+2020-08-28 17:30:43.866 -07:00 [WRN] User f49bdf9a-126d-417c-bc79-bc6a4644391e validation failed: DuplicateUserName.
+2020-08-28 17:30:43.942 -07:00 [WRN] User e380f08e-e931-466a-8552-7ad9f045b22e validation failed: DuplicateUserName.
+2020-08-28 17:30:43.991 -07:00 [WRN] User 307b17df-b0f8-4aff-b015-4af210a7af88 validation failed: DuplicateUserName.
+2020-08-28 17:30:44.035 -07:00 [WRN] User ae2d9d9c-d7fa-4750-b562-0dcf98712c3b validation failed: DuplicateUserName.
+2020-08-28 17:30:45.244 -07:00 [INF] Inside the Index view
+2020-08-28 17:31:26.834 -07:00 [INF] InsertPostlog
+2020-08-28 17:39:52.325 -07:00 [INF] Starting up
+2020-08-28 17:39:55.584 -07:00 [INF] Hello, world!
+2020-08-28 17:39:55.611 -07:00 [INF] Starting DummyData
+2020-08-28 17:39:59.613 -07:00 [WRN] User d25415fa-3c40-4364-8673-471b90ecc6bb validation failed: DuplicateUserName.
+2020-08-28 17:39:59.680 -07:00 [WRN] User a0a26b20-af95-40ec-807d-34de7290745c validation failed: DuplicateUserName.
+2020-08-28 17:39:59.752 -07:00 [WRN] User 4128f8f9-d28b-4242-b106-b3c365d0f91d validation failed: DuplicateUserName.
+2020-08-28 17:39:59.812 -07:00 [WRN] User 5b0b8140-f3d6-43a0-bc69-54758684f387 validation failed: DuplicateUserName.
+2020-08-28 17:40:00.793 -07:00 [INF] Inside the Index view
+2020-08-28 17:41:18.871 -07:00 [INF] InsertPostlog
+2020-08-28 17:42:40.558 -07:00 [INF] InsertPostlog
+2020-08-28 17:42:45.241 -07:00 [INF] Inside the Index view
+2020-08-28 17:47:41.903 -07:00 [INF] Starting up
+2020-08-28 17:47:45.168 -07:00 [INF] Hello, world!
+2020-08-28 17:47:45.213 -07:00 [INF] Starting DummyData
+2020-08-28 17:47:48.835 -07:00 [WRN] User 5cc451ba-5427-4b71-8963-7fa7d6a04f08 validation failed: DuplicateUserName.
+2020-08-28 17:47:48.893 -07:00 [WRN] User 1c6996fd-e8ff-414f-ade1-bac6ecd12dcd validation failed: DuplicateUserName.
+2020-08-28 17:47:48.918 -07:00 [WRN] User 9a049623-4fde-44a3-a444-7991b9059ed1 validation failed: DuplicateUserName.
+2020-08-28 17:47:48.943 -07:00 [WRN] User 03bc65a0-37a8-4e35-b5f5-cff4a47ada4b validation failed: DuplicateUserName.
+2020-08-28 17:47:49.922 -07:00 [INF] Inside the Index view
+2020-08-28 17:48:25.685 -07:00 [INF] InsertPostlog
+2020-08-28 17:52:11.097 -07:00 [INF] Starting up
+2020-08-28 17:52:14.785 -07:00 [INF] Hello, world!
+2020-08-28 17:52:14.804 -07:00 [INF] Starting DummyData
+2020-08-28 17:52:18.491 -07:00 [WRN] User 84f8e94d-fc79-4295-86a1-1242a7d194c7 validation failed: DuplicateUserName.
+2020-08-28 17:52:18.543 -07:00 [WRN] User e631d0a1-11df-4853-9b9a-efb02faf196b validation failed: DuplicateUserName.
+2020-08-28 17:52:18.569 -07:00 [WRN] User 8db1f5b5-b1ec-4a0e-85ec-a83cc63462a4 validation failed: DuplicateUserName.
+2020-08-28 17:52:18.598 -07:00 [WRN] User ac61a7ff-982f-4cd5-a461-88a5566c1c57 validation failed: DuplicateUserName.
+2020-08-28 17:52:19.725 -07:00 [INF] Inside the Index view
+2020-08-28 17:52:48.130 -07:00 [INF] InsertPostlog
+2020-08-28 17:57:29.984 -07:00 [INF] Starting up
+2020-08-28 17:57:33.257 -07:00 [INF] Hello, world!
+2020-08-28 17:57:33.276 -07:00 [INF] Starting DummyData
+2020-08-28 17:57:36.681 -07:00 [WRN] User 7d1d3dd5-9dc8-406b-a18b-9a9112b2a995 validation failed: DuplicateUserName.
+2020-08-28 17:57:36.735 -07:00 [WRN] User c12dffca-16a5-4abb-a63a-b5d317ba7eef validation failed: DuplicateUserName.
+2020-08-28 17:57:36.760 -07:00 [WRN] User 3e1aaf6b-066d-4d93-b896-c4eb0c205113 validation failed: DuplicateUserName.
+2020-08-28 17:57:36.785 -07:00 [WRN] User 0824df49-03ab-45e9-891a-3bac8b9fe057 validation failed: DuplicateUserName.
+2020-08-28 17:57:37.791 -07:00 [INF] Inside the Index view
+2020-08-28 17:58:06.239 -07:00 [INF] InsertPostlog
