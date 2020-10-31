@@ -1,0 +1,578 @@
+2020-10-31 09:13:51.687 -07:00 [INF] Starting up
+2020-10-31 09:13:55.252 -07:00 [INF] Hello, world!
+2020-10-31 09:13:55.275 -07:00 [INF] Starting DummyData
+2020-10-31 15:33:59.980 -07:00 [INF] Starting up
+2020-10-31 15:34:01.870 -07:00 [INF] Hello, world!
+2020-10-31 15:34:01.882 -07:00 [INF] Starting DummyData
+2020-10-31 15:34:04.798 -07:00 [WRN] User 23bd7b30-8b3b-44f1-886d-06c50210d483 validation failed: DuplicateUserName.
+2020-10-31 15:34:04.845 -07:00 [WRN] User 16a11199-b958-4c3b-ab6a-4ed0fb54f085 validation failed: DuplicateUserName.
+2020-10-31 15:34:04.876 -07:00 [WRN] User d76a2209-141f-4947-82a6-c5299e5ae1d2 validation failed: DuplicateUserName.
+2020-10-31 15:34:04.902 -07:00 [WRN] User 737e8058-62e2-4767-979c-22c65ec135bf validation failed: DuplicateUserName.
+2020-10-31 15:34:05.705 -07:00 [INF] Inside the Index view
+2020-10-31 15:40:00.587 -07:00 [INF] Starting up
+2020-10-31 15:40:02.163 -07:00 [INF] Hello, world!
+2020-10-31 15:40:02.172 -07:00 [INF] Starting DummyData
+2020-10-31 15:40:04.019 -07:00 [WRN] User 71114702-9598-45b9-8f2f-89686f6c9446 validation failed: DuplicateUserName.
+2020-10-31 15:40:04.054 -07:00 [WRN] User 45776dd6-7918-47a4-a3d4-ce74e3093dfd validation failed: DuplicateUserName.
+2020-10-31 15:40:04.078 -07:00 [WRN] User 2fd79dfd-5f8b-40c6-a4b2-269924710bfb validation failed: DuplicateUserName.
+2020-10-31 15:40:04.102 -07:00 [WRN] User 08100261-5855-489c-91f8-727b25c0a7d6 validation failed: DuplicateUserName.
+2020-10-31 15:40:04.610 -07:00 [INF] Inside the Index view
+2020-10-31 15:40:05.001 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 106
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:41:23.799 -07:00 [INF] Starting up
+2020-10-31 15:41:25.469 -07:00 [INF] Hello, world!
+2020-10-31 15:41:25.482 -07:00 [INF] Starting DummyData
+2020-10-31 15:41:27.366 -07:00 [WRN] User 7d6df252-ad59-4ba9-8fd2-a78de8d64c8e validation failed: DuplicateUserName.
+2020-10-31 15:41:27.406 -07:00 [WRN] User c47815cf-3b53-4989-87f7-b808428f7a15 validation failed: DuplicateUserName.
+2020-10-31 15:41:27.428 -07:00 [WRN] User 1d1c757c-7c2f-4829-8b19-6540c97d3dcb validation failed: DuplicateUserName.
+2020-10-31 15:41:27.451 -07:00 [WRN] User 03d848ff-1457-4a34-97b5-9d65e83f6e5f validation failed: DuplicateUserName.
+2020-10-31 15:41:27.932 -07:00 [INF] Inside the Index view
+2020-10-31 15:41:28.295 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 106
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:42:45.726 -07:00 [INF] Starting up
+2020-10-31 15:42:48.168 -07:00 [INF] Hello, world!
+2020-10-31 15:42:48.180 -07:00 [INF] Starting DummyData
+2020-10-31 15:42:50.197 -07:00 [WRN] User df811082-8d04-417f-99f5-da04a763e972 validation failed: DuplicateUserName.
+2020-10-31 15:42:50.248 -07:00 [WRN] User 39e41b8e-8c46-49ac-af9f-3c96acfa1dd3 validation failed: DuplicateUserName.
+2020-10-31 15:42:50.281 -07:00 [WRN] User 2e74e318-4069-475f-8c8e-38f90d332a31 validation failed: DuplicateUserName.
+2020-10-31 15:42:50.319 -07:00 [WRN] User c5b69a68-e0ea-4e05-b33c-c8df38af5aaf validation failed: DuplicateUserName.
+2020-10-31 15:42:50.883 -07:00 [INF] Inside the Index view
+2020-10-31 15:42:51.365 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 105
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:43:31.441 -07:00 [INF] Inside the Index view
+2020-10-31 15:43:31.509 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 105
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:43:53.394 -07:00 [INF] Starting up
+2020-10-31 15:43:55.341 -07:00 [INF] Hello, world!
+2020-10-31 15:43:55.351 -07:00 [INF] Starting DummyData
+2020-10-31 15:43:57.185 -07:00 [WRN] User 832a9aed-e1a8-4d00-9dca-fce9325c4a7f validation failed: DuplicateUserName.
+2020-10-31 15:43:57.234 -07:00 [WRN] User e165a1d6-726c-4bc2-ba46-2e0e78f6e6dd validation failed: DuplicateUserName.
+2020-10-31 15:43:57.269 -07:00 [WRN] User ce6bbd2a-094a-4599-a84f-3fe0ac01d9bc validation failed: DuplicateUserName.
+2020-10-31 15:43:57.295 -07:00 [WRN] User 3617efa8-6c70-4bfa-b441-bc2ee81fbe3f validation failed: DuplicateUserName.
+2020-10-31 15:43:57.754 -07:00 [INF] Inside the Index view
+2020-10-31 15:43:58.177 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 105
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__62_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:48:03.222 -07:00 [INF] Starting up
+2020-10-31 15:48:05.171 -07:00 [INF] Hello, world!
+2020-10-31 15:48:05.181 -07:00 [INF] Starting DummyData
+2020-10-31 15:48:07.438 -07:00 [WRN] User b6fdd00c-6104-4eca-a8a0-4feac1452375 validation failed: DuplicateUserName.
+2020-10-31 15:48:07.501 -07:00 [WRN] User 1145cbfd-5b6d-4305-9efb-cb7ff7c8fb3f validation failed: DuplicateUserName.
+2020-10-31 15:48:07.528 -07:00 [WRN] User 2b9bd85f-2ab9-489a-bccb-f15899e9e1c5 validation failed: DuplicateUserName.
+2020-10-31 15:48:07.554 -07:00 [WRN] User 7697932a-0e8a-4878-b105-b9ee674f547f validation failed: DuplicateUserName.
+2020-10-31 15:48:08.058 -07:00 [INF] Inside the Index view
+2020-10-31 15:48:08.422 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_25()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:49:13.638 -07:00 [INF] Starting up
+2020-10-31 15:49:15.209 -07:00 [INF] Hello, world!
+2020-10-31 15:49:15.218 -07:00 [INF] Starting DummyData
+2020-10-31 15:49:17.187 -07:00 [WRN] User 915205c9-635a-49bc-b9cd-81a4e213db24 validation failed: DuplicateUserName.
+2020-10-31 15:49:17.224 -07:00 [WRN] User 91fc85ac-2ee3-4507-bd71-b0a3fdc683c2 validation failed: DuplicateUserName.
+2020-10-31 15:49:17.282 -07:00 [WRN] User 8eb4dcd6-5a10-4596-bacb-54b3e3a84355 validation failed: DuplicateUserName.
+2020-10-31 15:49:17.309 -07:00 [WRN] User cab9db49-1fe4-406b-b570-f8517103c993 validation failed: DuplicateUserName.
+2020-10-31 15:49:17.776 -07:00 [INF] Inside the Index view
+2020-10-31 15:50:41.145 -07:00 [INF] Starting up
+2020-10-31 15:50:42.834 -07:00 [INF] Hello, world!
+2020-10-31 15:50:42.844 -07:00 [INF] Starting DummyData
+2020-10-31 15:50:45.469 -07:00 [WRN] User 68b2e1cf-9c16-4dc3-8aba-78c50e62e937 validation failed: DuplicateUserName.
+2020-10-31 15:50:45.501 -07:00 [WRN] User b29c5c8e-9011-4e9d-bd05-aa01ee65ee76 validation failed: DuplicateUserName.
+2020-10-31 15:50:45.524 -07:00 [WRN] User 230e381e-cfaa-43a1-a767-9600457f5d8b validation failed: DuplicateUserName.
+2020-10-31 15:50:45.549 -07:00 [WRN] User cc1c5bfa-8830-48b9-a808-36e715025ff5 validation failed: DuplicateUserName.
+2020-10-31 15:50:46.040 -07:00 [INF] Inside the Index view
+2020-10-31 15:50:46.398 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_25()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:52:32.205 -07:00 [INF] Starting up
+2020-10-31 15:52:33.852 -07:00 [INF] Hello, world!
+2020-10-31 15:52:33.865 -07:00 [INF] Starting DummyData
+2020-10-31 15:52:35.646 -07:00 [WRN] User 2e4e7501-bd92-4939-9721-3d607dc921a8 validation failed: DuplicateUserName.
+2020-10-31 15:52:35.684 -07:00 [WRN] User 88ac206d-9471-49f9-9964-114cbae68b23 validation failed: DuplicateUserName.
+2020-10-31 15:52:35.704 -07:00 [WRN] User c4f52f6b-800c-4b3a-8efc-8ff8a9fee022 validation failed: DuplicateUserName.
+2020-10-31 15:52:35.728 -07:00 [WRN] User 2f71703b-8953-44e9-936f-18bdf7af1a34 validation failed: DuplicateUserName.
+2020-10-31 15:52:36.226 -07:00 [INF] Inside the Index view
+2020-10-31 15:52:36.589 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_25()
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__61_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 15:55:42.565 -07:00 [INF] Starting up
+2020-10-31 15:55:44.242 -07:00 [INF] Hello, world!
+2020-10-31 15:55:44.252 -07:00 [INF] Starting DummyData
+2020-10-31 15:55:46.931 -07:00 [WRN] User 8691ef06-d54d-408a-823d-d0fd3b8eab65 validation failed: DuplicateUserName.
+2020-10-31 15:55:46.978 -07:00 [WRN] User f34d1d5d-ef33-4bf4-ac48-f5b87661bc62 validation failed: DuplicateUserName.
+2020-10-31 15:55:47.022 -07:00 [WRN] User 5354dfa0-23e3-444b-a60a-645f03e2cf18 validation failed: DuplicateUserName.
+2020-10-31 15:55:47.045 -07:00 [WRN] User 9c8b8159-e4f0-4748-8fd4-39fdc70eab70 validation failed: DuplicateUserName.
+2020-10-31 15:55:47.518 -07:00 [INF] Inside the Index view
+2020-10-31 15:55:47.880 -07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path in 'value' must start with '/'. (Parameter 'value')
+   at Microsoft.AspNetCore.Http.PathString..ctor(String value)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.StartsWithBasePath(String subpath, PathString& rest)
+   at Microsoft.AspNetCore.Hosting.StaticWebAssets.StaticWebAssetsFileProvider.GetDirectoryContents(String subpath)
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureDirectoriesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.EnsureFilesAreInitialized()
+   at Microsoft.Extensions.FileProviders.Composite.CompositeDirectoryContents.GetEnumerator()
+   at Microsoft.AspNetCore.Mvc.TagHelpers.FileProviderGlobbingDirectory.EnumerateFileSystemInfos()+MoveNext()
+   at System.Linq.Enumerable.OfTypeIterator[TResult](IEnumerable source)+MoveNext()
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Match(DirectoryInfoBase directory, String parentRelativePath)
+   at Microsoft.Extensions.FileSystemGlobbing.Internal.MatcherContext.Execute()
+   at Microsoft.Extensions.FileSystemGlobbing.Matcher.Execute(DirectoryInfoBase directoryInfo)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.FindFiles(Matcher matcher)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.ExpandGlobbedUrl(String include, String exclude)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.GlobbingUrlBuilder.BuildUrlList(String staticUrl, String includePattern, String excludePattern)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.BuildGlobbedScriptTags(TagHelperAttributeList attributes, TagHelperContent builder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__60_25() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 106
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.<ExecuteAsync>b__60_1() in C:\Users\Tathagat.Dwivedi\source\repos\AspNetCoreIdentityCustomization\AspNetCoreIdentityCustomization\Views\Shared\_Layout.cshtml:line 90
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-31 16:02:06.178 -07:00 [INF] Starting up
+2020-10-31 16:02:07.936 -07:00 [INF] Hello, world!
+2020-10-31 16:02:07.945 -07:00 [INF] Starting DummyData
+2020-10-31 16:02:09.678 -07:00 [WRN] User 03229508-8229-4daf-ab5e-8a4103f5e434 validation failed: DuplicateUserName.
+2020-10-31 16:02:09.715 -07:00 [WRN] User 19f895be-409d-4caf-8c55-6d82f2555781 validation failed: DuplicateUserName.
+2020-10-31 16:02:09.742 -07:00 [WRN] User 561be03b-4dcb-44e8-902f-fb35bc508684 validation failed: DuplicateUserName.
+2020-10-31 16:02:09.771 -07:00 [WRN] User 377595c7-7516-4777-8ae2-2e8690329d65 validation failed: DuplicateUserName.
+2020-10-31 16:02:10.353 -07:00 [INF] Inside the Index view
+2020-10-31 16:06:25.671 -07:00 [INF] InsertPostlog
+2020-10-31 16:09:12.805 -07:00 [INF] Starting up
+2020-10-31 16:09:14.760 -07:00 [INF] Hello, world!
+2020-10-31 16:09:14.772 -07:00 [INF] Starting DummyData
+2020-10-31 16:09:16.685 -07:00 [WRN] User f0c2795b-b40e-4c14-8d5e-ae665a2bcc13 validation failed: DuplicateUserName.
+2020-10-31 16:09:16.726 -07:00 [WRN] User 8ff5e464-8ce1-48f0-87e8-79bd1b2932f6 validation failed: DuplicateUserName.
+2020-10-31 16:09:16.757 -07:00 [WRN] User 491d8e45-8a3e-45b8-ba64-9ccf39c02dd8 validation failed: DuplicateUserName.
+2020-10-31 16:09:16.784 -07:00 [WRN] User c97c8c9c-9644-4de5-a3be-8b96512b1070 validation failed: DuplicateUserName.
+2020-10-31 16:09:17.301 -07:00 [INF] Inside the Index view
+2020-10-31 16:09:59.599 -07:00 [INF] Starting up
+2020-10-31 16:10:01.875 -07:00 [INF] Hello, world!
+2020-10-31 16:10:01.886 -07:00 [INF] Starting DummyData
+2020-10-31 16:10:03.831 -07:00 [WRN] User 69d7e063-aa6d-4cd2-977b-62e00ca86a70 validation failed: DuplicateUserName.
+2020-10-31 16:10:03.871 -07:00 [WRN] User 238b1a9b-eb86-4ecc-b21e-b3c6340cb42c validation failed: DuplicateUserName.
+2020-10-31 16:10:03.896 -07:00 [WRN] User 62f374b2-d846-49fe-92e5-d628d7d49009 validation failed: DuplicateUserName.
+2020-10-31 16:10:03.925 -07:00 [WRN] User 4cc18e82-fc11-485e-ad39-e29e8ef38a35 validation failed: DuplicateUserName.
+2020-10-31 16:10:04.517 -07:00 [INF] Inside the Index view
+2020-10-31 16:10:39.804 -07:00 [INF] InsertPostlog
