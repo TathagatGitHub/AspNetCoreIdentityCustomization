@@ -39,7 +39,7 @@ namespace WorkerService
 
                    // This section for Hosted Service, uncomment the below region to run
                    #region snippet1
-                   services.AddHostedService<Worker>();
+                   //services.AddHostedService<Worker>();
                    #endregion
 
                    // This section for Scoped Hosted Service, uncomment the below region to run

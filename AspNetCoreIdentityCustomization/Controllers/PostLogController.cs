@@ -36,7 +36,9 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
         public IActionResult Index()
         {
-            return View();
+             IEnumerable <PostLog> postlog  =  _postlogrepository.GetPostLogList();
+
+            return View("PostLogList", postlog);
         }
         public IActionResult Create()
         {
