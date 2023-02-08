@@ -22,25 +22,25 @@ namespace AspNetCoreIdentityCustomization.Core
        // [NotMapped]
         public string ScheduleName { get; set; }
 
-        [Required]
+       // [Required]
         public int WeekNbr { get; set; }
 
-        [Required]
-        [DisplayName("Week Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+       // [Required]
+       // [DisplayName("Week Date")]
+       // [DataType(DataType.Date)]
+       // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime WeekDate { get; set; }
 
-        [Required]
-        [DisplayName("Create Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+       // [Required]
+      //  [DisplayName("Create Date")]
+       // [DataType(DataType.Date)]
+       // [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CreateDt { get; set; }
 
-        [Required]
-        [DisplayName("Update Date")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        //[Required]
+      //  [DisplayName("Update Date")]
+       // [DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime UpdateDt { get; set; }
 
         //[Required]

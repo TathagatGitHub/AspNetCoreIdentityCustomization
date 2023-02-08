@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using System.Globalization;
 using System.Security.Cryptography;
 using System.Threading;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,9 +37,24 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
         public IActionResult Index()
         {
-             IEnumerable <PostLog> postlog  =  _postlogrepository.GetPostLogList();
+            //return View("PostLogList");
+            //var data = _postlogrepository.GetPostLogList();
+            //return Json(data);
+            // IEnumerable <PostLog>  postlog= _postlogrepository.GetPostLogList();
 
-            return View("PostLogList", postlog);
+            return View( );
+        }
+        public IActionResult LoadPostlogList()
+        {
+            var data = _postlogrepository.GetPostLogList();
+
+            //var res = _mtlService.GetMtlByWeekOf(weekOf).Result;
+            // return new JsonResult(JsonConvert.SerializeObject(data.to));
+            //return Json(data);
+            //   return _postlogrepository.GetPostLogList();
+
+            //return View("PostLogList", postlog);
+            return Json(new { data = data.ToList(), success = true });
         }
         public IActionResult Create()
         {
