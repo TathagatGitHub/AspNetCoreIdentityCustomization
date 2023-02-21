@@ -41,109 +41,91 @@ function loadPostlogList() {
 
 
             usersTable = $("#dataTableId").dataTable({
+               
+                
+                data: data.data,
+        columns: [
+                    
+                    {
+
+                        data: "postLogId"
+
+                    },
+                    {
+
+                        data: "schedId"
+
+                    },
+                    {
+
+                        data: "scheduleName"
+
+                    },
+                    {
+
+                        data: "createDt"
+
+                    },
+                    {
+
+                        data: "weekDate"
+
+            },
+            {
+
+                data: "UpdateDt"
+
+            },
+                    {
+
+                        data: "weekNbr"
+
+                    },
+                ],
+                columnDefs: [
+                    
+                    {
+                        targets: 0,
+                        data: "postLogId"
+
+                    },
+                    {
+                        targets: 1,
+                        data: "schedId",
+                    },
+                    {
+                        targets: 2,
+                        data: "scheduleName",
+                    },
+                    {
+                        targets: 3,
+                        data: "createDt",
+                    },
+                    {
+                        targets: 4,
+                        data: "weekDate"
+
+                    },
+                    {
+                        targets: 5,
+                        data: "UpdateDt"
+
+                    },
+                    {
+                        targets: 6,
+                        data: "weekNbr"
+
+                    },
+
+
+
+                ],
                 paging: false,
                 searching: true,
                 info: false,
                 ordering: false,
                 autoWidth: false,
                 dom: 'lrtip',
-                
-                data: data.data,
-                
-                columns: [
-                    {
-
-                        data: 'createdt',
-
-
-                    },
-                    {
-                        
-                        data: 'postLogid',
-                        
-
-                    },
-                    {
-                      
-                        data: 'schedid',
-                        
-
-                    },
-                    {
-                        
-                        data: 'schedulename',
-                        
-
-                    },
-                    {
-                       
-                        data: 'updatedt',
-                       
-
-                    },
-                    {
-                       
-                        data: 'weeknbr',
-                        
-
-                    },
-                    {
-                        
-                        data: 'weekdate',
-                        
-
-                    }
-
-
-
-                ],
-                columnsDefs: [
-                    {
-                        target: 0,
-                        data: 'createdt',
-
-
-                    },
-                    {
-                        target: 1,
-                        data: 'postLogid',
-                        
-
-                    },
-                    {
-                        target: 2,
-                        data: 'schedid',
-                        
-
-                    },
-                    {
-                        target: 3,
-                        data: 'schedulename',
-                        
-
-                    },
-                    {
-                        target: 4,
-                        data: 'updatedt',
-                        
-
-                    },
-                    {
-                        target: 5,
-                        data: 'weeknbr',
-                       
-
-                    },
-                    {
-                        target: 6,
-                        data: 'weekdate',
-                       
-
-                    }
-
-
-
-                ]
 
 
 

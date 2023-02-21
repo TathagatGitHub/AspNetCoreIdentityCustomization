@@ -44,6 +44,12 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             return View( );
         }
+        public IActionResult IndexModel()
+        {            
+            var data = _postlogrepository.GetPostLogList();
+          
+            return View("IndexModel", data);
+        }
         public IActionResult LoadPostlogList()
         {
             var data = _postlogrepository.GetPostLogList();
@@ -72,23 +78,20 @@ namespace AspNetCoreIdentityCustomization.Controllers
             ViewBag.SchedId = SchedId;
             return View();
 
-            //return View();
-
             
         }
         [HttpPost]
-        //public ActionResult Create(PostLog postLogModel)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        _postlogrepository.InsertPostLog(postLogModel);
-               
-        //    }
+        public JsonResult modelDatatableListPost(string postlogObjList)
+        {
+            PostLog pl = new PostLog();
+            var obj = JsonConvert.DeserializeObject<List<PostLog>>(postlogObjList);
+            foreach (var item in obj)
+            {
+                pl.ScheduleName = item.ScheduleName;
+            }
 
-            
-
-        //    return View();
-        //}
+             return new JsonResult(new { Status="Success" });
+        }
         // POST: PostLog2/Create
         [HttpPost]
         [ValidateAntiForgeryToken]

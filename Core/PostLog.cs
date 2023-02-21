@@ -9,12 +9,12 @@ namespace AspNetCoreIdentityCustomization.Core
 {
     public class PostLog
     {
-        [Key]
+        //[Key]
         public int PostLogId { get; set; }
 
  
-        [Required]
-        [ForeignKey("Schedule")]
+       // [Required]
+       // [ForeignKey("Schedule")]
         public int SchedId { get; set; }
 
      //   public virtual Schedule Schedule { get; set; }

@@ -70,7 +70,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Postlog<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             
-                            <li><a asp-area="" asp-controller="PostLog" asp-action="Index">Postlog List</a></li>
+                            <li><a asp-area="" asp-controller="PostLog" asp-action="Index">Postlog List-JqueryDtatable</a></li>
+                            <li><a asp-area="" asp-controller="PostLog" asp-action="IndexModel">Postlog List-Model</a></li>
                             <li><a asp-area="" asp-controller="PostLog" asp-action="Create">Form Submission</a></li>
                             
                             
@@ -110,9 +111,10 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
 
         <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
-
-        <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js"></script>
+    <link href="~/lib/datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+        @*<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js"></script>*@
    @* </environment>*@
    @* <environment exclude="Development">
 

@@ -1,0 +1,155 @@
+﻿@model IEnumerable<AspNetCoreIdentityCustomization.Core.PostLog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+
+
+<table class="table" id="dataTableId">
+    <thead>
+        <tr>
+            <th>
+            Select
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostLogId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchedId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScheduleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeekNbr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeekDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdateDt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+
+                    <input id="@item.PostLogId" type="checkbox" name="PostLogIdCheckbox" value="@item.PostLogId" />
+
+                   
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostLogId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SchedId)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.ScheduleName)*@
+                    @Html.TextBoxFor(modelItem => item.ScheduleName)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.WeekNbr)*@
+                    @Html.TextBoxFor(modelItem => item.WeekNbr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeekDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdateDt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    <input type="button" value="Save" id="btnSave">
+
+
+@section Scripts {
+    <script src="~/js/modeldatatable-postloglist.js"></script>
+    @*<script>    
+        $(document).ready(function () {
+            alert("first time");
+            calldatatable();
+            $('body').on("click", "#btnSave", function (e) {
+                alert("button clicked");
+                var btnClicked = $(this);
+
+                $("#dataTableId tr.item").each(function () {
+                    debugger
+                    var row= this;
+                });
+
+                var sList = "";
+               
+                $('input[type=checkbox]').each(function () {
+                    var sThisVal = (this.checked ? "1" : "0");
+                    if (sThisVal==='1')
+                    {
+                        var row = $(this).closest("tr")[0];
+                        debugger
+                        var xx = row.cells[1].innerHTML;
+
+                        
+                        $('input[type=text]').each(function () {
+                            debugger
+                            var inputval = this.value;
+                            var inputname = this.name;
+                           
+                        });
+                    }
+
+                    sList += (sList=="" ? sThisVal : "," + sThisVal);
+                  // debugger
+
+                });
+                console.log (sList);
+               
+                
+                //$("#dataTableId tr input[type = checkbox]").each(function (index, val){
+                //    var clickelement=$(this);
+                //    debugger
+                //   alert(index, val);
+                // })
+                
+                 
+                 
+                 
+                 //$(".targetCheckbox").each(function () {
+                //    if ($(this).is(":checked")) {
+                //        alert("checked");
+                //    }
+                //}
+                                     
+                
+            });
+                
+        });
+        var calldatatable = function ()
+        {
+            $('#dataTableId').DataTable();
+        }
+    </script>*@
+}
