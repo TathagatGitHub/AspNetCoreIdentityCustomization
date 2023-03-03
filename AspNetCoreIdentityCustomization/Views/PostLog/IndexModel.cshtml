@@ -88,68 +88,8 @@
 
 
 @section Scripts {
-    <script src="~/js/modeldatatable-postloglist.js"></script>
-    @*<script>    
-        $(document).ready(function () {
-            alert("first time");
-            calldatatable();
-            $('body').on("click", "#btnSave", function (e) {
-                alert("button clicked");
-                var btnClicked = $(this);
-
-                $("#dataTableId tr.item").each(function () {
-                    debugger
-                    var row= this;
-                });
-
-                var sList = "";
+ @*   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>*@
+    <script src="~/js/modeldatatable-postloglist.js"></script>     
                
-                $('input[type=checkbox]').each(function () {
-                    var sThisVal = (this.checked ? "1" : "0");
-                    if (sThisVal==='1')
-                    {
-                        var row = $(this).closest("tr")[0];
-                        debugger
-                        var xx = row.cells[1].innerHTML;
-
-                        
-                        $('input[type=text]').each(function () {
-                            debugger
-                            var inputval = this.value;
-                            var inputname = this.name;
-                           
-                        });
-                    }
-
-                    sList += (sList=="" ? sThisVal : "," + sThisVal);
-                  // debugger
-
-                });
-                console.log (sList);
-               
-                
-                //$("#dataTableId tr input[type = checkbox]").each(function (index, val){
-                //    var clickelement=$(this);
-                //    debugger
-                //   alert(index, val);
-                // })
-                
-                 
-                 
-                 
-                 //$(".targetCheckbox").each(function () {
-                //    if ($(this).is(":checked")) {
-                //        alert("checked");
-                //    }
-                //}
-                                     
-                
-            });
-                
-        });
-        var calldatatable = function ()
-        {
-            $('#dataTableId').DataTable();
-        }
-    </script>*@
+       
 }

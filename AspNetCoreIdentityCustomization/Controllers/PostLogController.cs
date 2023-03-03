@@ -81,17 +81,37 @@ namespace AspNetCoreIdentityCustomization.Controllers
             
         }
         [HttpPost]
-        public JsonResult modelDatatableListPost(string postlogObjList)
+       // public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
+            public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
         {
+
             PostLog pl = new PostLog();
-            var obj = JsonConvert.DeserializeObject<List<PostLog>>(postlogObjList);
-            foreach (var item in obj)
+            if (postlogs != null)
             {
-                pl.ScheduleName = item.ScheduleName;
+                //foreach (var item in postlogObjList)
+
+                //{
+
+                //    // pl.ScheduleName = item.ScheduleName;
+
+                //}
             }
 
-             return new JsonResult(new { Status="Success" });
+
+            return new JsonResult(new { Status = "Success" });
+
         }
+        //public IActionResult modelDatatableListPost(string postlogs)
+        //{
+        //    PostLog pl = new PostLog();
+        //   // var obj = JsonConvert.DeserializeObject<List<PostLog>>(postlogObjList);
+        //    foreach (var item in postlogs)
+        //    {
+        //        pl.ScheduleName = item.ScheduleName;
+        //    }
+
+        //     return new JsonResult(new { Status="Success" });
+        //}
         // POST: PostLog2/Create
         [HttpPost]
         [ValidateAntiForgeryToken]

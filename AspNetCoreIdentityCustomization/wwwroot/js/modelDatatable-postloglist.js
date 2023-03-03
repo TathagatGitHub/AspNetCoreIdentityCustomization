@@ -2,54 +2,38 @@
     alert("first time");
     calldatatable();
     $('body').on("click", "#btnSave", function (e) {
-       // alert("button clicked");
-       // var btnClicked = $(this);
-
-        //$("#dataTableId tr.item").each(function () {
-        //    //debugger
-        //    var row = this;
-        //});
-
-       // var sList = "";
-        var postlogObjList = new Array();
-        var postlogObj = {};
+   
+       var postlogs = new Array();
+       var postlogObj = {};
 
         $('input[type=checkbox]').each(function () {
             var sThisVal = (this.checked ? "1" : "0");
             var row = $(this).closest("tr")[0];
 
             if (sThisVal === '1') {
-                var PostLogId = row.cells[1].innerText;
-                var SchedId = row.cells[2].innerText;
-                var ScheduleName = row.cells[3].children[0].value;
-                var WeekNbr = row.cells[4].children[0].value;
-                var WeekDate = row.cells[5].innerText;
-                var CreateDt = row.cells[6].innerText;
-                var UpdateDt = row.cells[7].innerText;
-                postlogObj.PostLogId = PostLogId;
-                postlogObj.SchedId = SchedId;
-                postlogObj.ScheduleName = ScheduleName;
-                postlogObj.WeekNbr = WeekNbr;
-                postlogObj.WeekDate = WeekDate;
-                postlogObj.CreateDt = CreateDt;
-                postlogObj.UpdateDt = UpdateDt;
-                postlogObjList.push(postlogObj);
+           
+                postlogObj.PostLogId = parseInt(row.cells[1].innerText) //1;
+                postlogObj.SchedId = parseInt(row.cells[2].innerText) //1;
+                postlogObj.ScheduleName = row.cells[3].children[0].value; //"TEst";
+                postlogObj.WeekNbr = parseInt(row.cells[4].children[0].value);//1;
+                postlogObj.WeekDate = new Date(row.cells[5].innerText);//"2023-02-20";
+                postlogObj.CreateDt = new Date(row.cells[6].innerText);//"2023-02-20";
+                postlogObj.UpdateDt = new Date(row.cells[7].innerText);//"2023-02-20";
+                postlogs.push(postlogObj);
+                
 
             }
 
         });
-        //var serializedData = $(postlogObjList).serializeArray();
-        //var paramData = $.param(serializedData);
+ 
         $.ajax({
-            //async: true,
+         
             type: 'POST',
-           dataType: 'json',
-           //contentType: 'application/json; charset=utf-8',
-            url: '/Postlog/modelDatatableListPost/',
-           /* url: '@Url.Action("/Postlog/modelDatatableListPost", "postlogObjList")',*/
-           /* data: JSON.stringify(postlogObjList),*/
-            data: { postlogObjList: JSON.stringify(postlogObjList) },
-            
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+             url: '/Postlog/modelDatatableListPost/',
+           data: JSON.stringify(postlogs),
+           
             success: function (r) {
                 alert(r + " record(s) updated.");
             }
