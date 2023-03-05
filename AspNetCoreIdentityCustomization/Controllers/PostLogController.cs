@@ -13,6 +13,7 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Threading;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -35,6 +36,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
           
         }
 
+        
         public IActionResult Index()
         {
             //return View("PostLogList");
@@ -86,8 +88,10 @@ namespace AspNetCoreIdentityCustomization.Controllers
         {
 
             PostLog pl = new PostLog();
+            Stopwatch BulkUpdateStopWatch = Stopwatch.StartNew();
             if (postlogs != null)
             {
+                Console.WriteLine("Starting the Bulk Update Method");
                 //foreach (var item in postlogObjList)
 
                 //{
@@ -95,6 +99,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
                 //    // pl.ScheduleName = item.ScheduleName;
 
                 //}
+                Console.WriteLine("Completing the Bulk Update Method");
             }
 
 

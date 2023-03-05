@@ -2,23 +2,24 @@
 
   <PropertyGroup>
     <!--<TargetFramework>netstandard2.1</TargetFramework>-->
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <!--<TargetFramework>netcoreapp3.1</TargetFramework>-->
+    <TargetFramework>net7.0</TargetFramework>
     <UserSecretsId>aspnet-AspNetCoreIdentityCustomization-051EE2CA-3960-453B-9841-BF1F7C25A806</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <!--<PackageReference Include="Microsoft.AspNetCore.App" />-->
     <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.2.0-preview2.20160.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
     
     
@@ -32,6 +33,7 @@
     <PackageReference Include="serilog.sinks.file" Version="4.1.0" />
     <PackageReference Include="Syncfusion.EJ2.AspNet.Core" Version="18.1.0.59" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Z.EntityFramework.Extensions" Version="7.18.5" />
   </ItemGroup>
 
   <ItemGroup>
