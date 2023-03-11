@@ -14,6 +14,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using EFCore.BulkExtensions;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,14 +26,15 @@ namespace AspNetCoreIdentityCustomization.Controllers
         private PostLogRepository _postlogrepository;
         private readonly ILogger<PostLogController> _logger;
         private readonly IConfiguration _config;
-
+        private readonly ApplicationModelDbContext _dbContext;
         public PostLogController(IConfiguration configuration, ILogger<PostLogController> logger,
-          PostLogRepository postLogRepository
+          PostLogRepository postLogRepository, ApplicationModelDbContext dbContext
        )
         {
             _config = configuration;
             _logger = logger;
             _postlogrepository = postLogRepository;
+            _dbContext = dbContext;
           
         }
 
@@ -87,19 +89,30 @@ namespace AspNetCoreIdentityCustomization.Controllers
             public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
         {
 
-            PostLog pl = new PostLog();
+            //List <PostLog> postlogList = new List <PostLog>();
             Stopwatch BulkUpdateStopWatch = Stopwatch.StartNew();
+
+          //  var listofIds = postlogs.Select(x => x.PostLogId).ToList();
+
+        //    postlogList= _dbContext.PostLog.ToList();
+
+            
             if (postlogs != null)
             {
                 Console.WriteLine("Starting the Bulk Update Method");
-                //foreach (var item in postlogObjList)
-
-                //{
-
-                //    // pl.ScheduleName = item.ScheduleName;
-
-                //}
-                Console.WriteLine("Completing the Bulk Update Method");
+                try
+                {
+                    _dbContext.BulkUpdate(postlogs);
+                    //_dbContext.SaveChanges();
+                    BulkUpdateStopWatch.Stop();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+                    
+              
+                Console.WriteLine("Completing the Bulk Update Method elapsed time:"+ BulkUpdateStopWatch.ElapsedMilliseconds);
             }
 
 

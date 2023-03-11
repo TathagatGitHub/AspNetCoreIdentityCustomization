@@ -23,6 +23,7 @@ using RESPApiProject.Controllers;
 using AspNetCoreIdentityCustomization.Filters;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 using System.Net.Http;
+using AspNetCoreIdentityCustomization.Controllers;
 //using AspNetCoreIdentityCustomization.RESPApiProject.Filters;
 
 
@@ -59,12 +60,22 @@ namespace AspNetCoreIdentityCustomization
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationModelDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+            //services.AddDefaultIdentity<IdentityUser>()
+            //      .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
             services.AddIdentity<ApplicationUser, ApplicationRole>(
                 options => options.Stores.MaxLengthForKeys = 128)
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultUI()
                     .AddDefaultTokenProviders();
             services.AddHttpClient();
+            services.AddTransient<ApplicationDbContext, ApplicationDbContext>();
+            services.AddTransient<PostLogController>();
             services.AddTransient<PostLogRepository>();
              services.AddTransient<PostLogLineRepository>();
           //  services.AddScoped<DCMAdvertiserRepository>();

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
+using AspNetCoreIdentityCustomization.Data;
 
 namespace AspNetCoreIdentityCustomization.Data
 {
@@ -15,6 +16,7 @@ namespace AspNetCoreIdentityCustomization.Data
         private readonly string connection;
         private readonly ILogger<PostLogRepository> _logger;
         private readonly IConfiguration _config;
+        
         public PostLogRepository(IConfiguration configuration, ILogger<PostLogRepository> logger)
         {
             connection = configuration.GetConnectionString("DefaultConnection");
@@ -121,7 +123,10 @@ namespace AspNetCoreIdentityCustomization.Data
             return "Success"; // list of obejctst
         }
 
-        
+        public int UpdatePostLog(List<PostLog> postlog)
+        {
+            return 1;
+        }
 
 
 

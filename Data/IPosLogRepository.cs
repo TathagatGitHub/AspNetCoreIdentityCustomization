@@ -15,7 +15,7 @@ namespace AspNetCoreIdentityCustomization.Data
 
         //PostLog AddPostLog(PostLog postLog);
         //IEnumerable<PostLog> GetListPostLog();
-        //PostLog UpdatePostLog(PostLog postlog);
+        int UpdatePostLog(List <PostLog> postlog);
         //PostLog DeletePostLog(int PostLogId);
 
     }

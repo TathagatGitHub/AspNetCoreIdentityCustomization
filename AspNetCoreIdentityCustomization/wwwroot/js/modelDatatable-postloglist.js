@@ -3,15 +3,15 @@
     calldatatable();
     $('body').on("click", "#btnSave", function (e) {
    
-       var postlogs = new Array();
-       var postlogObj = {};
+       var postlogs = [];
+       //var postlogObj = {};
 
         $('input[type=checkbox]').each(function () {
             var sThisVal = (this.checked ? "1" : "0");
             var row = $(this).closest("tr")[0];
 
             if (sThisVal === '1') {
-           
+                var postlogObj = {};
                 postlogObj.PostLogId = parseInt(row.cells[1].innerText) //1;
                 postlogObj.SchedId = parseInt(row.cells[2].innerText) //1;
                 postlogObj.ScheduleName = row.cells[3].children[0].value; //"TEst";
