@@ -88,14 +88,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
        // public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
             public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
         {
-
-            //List <PostLog> postlogList = new List <PostLog>();
+                       
             Stopwatch BulkUpdateStopWatch = Stopwatch.StartNew();
-
-          //  var listofIds = postlogs.Select(x => x.PostLogId).ToList();
-
-        //    postlogList= _dbContext.PostLog.ToList();
-
             
             if (postlogs != null)
             {
@@ -103,7 +97,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
                 try
                 {
                     _dbContext.BulkUpdate(postlogs);
-                    //_dbContext.SaveChanges();
+                    
                     BulkUpdateStopWatch.Stop();
                 }
                 catch (Exception ex)
