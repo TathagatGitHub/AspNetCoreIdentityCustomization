@@ -15,6 +15,9 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using EFCore.BulkExtensions;
+using Microsoft.AspNetCore.DataProtection;
+using System.Security.Claims;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -71,8 +74,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             List<SelectListItem> SchedId = new List<SelectListItem>()
             {
-                new SelectListItem() { Value="1",Text="Alabama"},
-                new SelectListItem() {Value = "2",Text ="West Virginia"}
+                new SelectListItem() { Value="1",Text="sched1"},
+                new SelectListItem() {Value = "2",Text ="Schedule_2"}
 
             };
 
@@ -93,6 +96,7 @@ namespace AspNetCoreIdentityCustomization.Controllers
             
             if (postlogs != null)
             {
+                
                 Console.WriteLine("Starting the Bulk Update Method");
                 try
                 {
@@ -105,26 +109,16 @@ namespace AspNetCoreIdentityCustomization.Controllers
                     Console.WriteLine(ex.ToString());
                 }
                     
-              
+            
                 Console.WriteLine("Completing the Bulk Update Method elapsed time:"+ BulkUpdateStopWatch.ElapsedMilliseconds);
             }
 
-
-            return new JsonResult(new { Status = "Success" });
+            int rows = postlogs.Count();
+            return new JsonResult(rows);
+           // return new JsonResult(new { Status = "Success", data = rows });
 
         }
-        //public IActionResult modelDatatableListPost(string postlogs)
-        //{
-        //    PostLog pl = new PostLog();
-        //   // var obj = JsonConvert.DeserializeObject<List<PostLog>>(postlogObjList);
-        //    foreach (var item in postlogs)
-        //    {
-        //        pl.ScheduleName = item.ScheduleName;
-        //    }
-
-        //     return new JsonResult(new { Status="Success" });
-        //}
-        // POST: PostLog2/Create
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(IFormCollection collection)
@@ -140,9 +134,9 @@ namespace AspNetCoreIdentityCustomization.Controllers
                 postLog.ScheduleName = collection["ScheduleName"];
                 postLog.WeekNbr = Int32.Parse(collection["WeekNbr"]);
                 //DateTime.TryParseExact(validDate, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                postLog.WeekDate = DateTime.ParseExact(collection["WeekDate"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
-                postLog.CreateDt = DateTime.ParseExact(collection["CreateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
-                postLog.UpdateDt = DateTime.ParseExact(collection["UpdateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
+                //postLog.WeekDate = DateTime.ParseExact(collection["WeekDate"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
+                //postLog.CreateDt = DateTime.ParseExact(collection["CreateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
+               // postLog.UpdateDt = DateTime.ParseExact(collection["UpdateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture); 
 
                 _postlogrepository.InsertPostLog(postLog);
 
@@ -169,6 +163,48 @@ namespace AspNetCoreIdentityCustomization.Controllers
                     responseCode = -1
                 });
             }
+        }
+
+        public IActionResult CreateUsingFormSerialization(PostLog postlog)
+        {
+            try
+            {
+                
+                if (postlog is not null)
+                {
+                    System.Random random = new System.Random();
+                    postlog.PostLogId = random.Next();
+                  //  postlog.WeekDate = postlog.WeekDate.Date;
+                  //  postlog.CreateDt = postlog.CreateDt.Date;//DateTime.ParseExact(collection["CreateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture);
+                   // postlog.UpdateDt = postlog.UpdateDt.Date;//DateTime.ParseExact(collection["UpdateDt"], "yyyy-mm-dd", CultureInfo.InvariantCulture);
+
+
+                    _postlogrepository.InsertPostLog(postlog);
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return Json(new { Message = ex.Message, Status = "Fail" });
+            }
+            return Json(new { Data = new { Controller = "Queue", Action = "Index" }, Status = "Success" });
+        }
+
+        public IActionResult CreateUsingFormSerializationIndex()
+        {
+            List<SelectListItem> SchedId = new List<SelectListItem>()
+            {
+                new SelectListItem() { Value="1",Text="sched1"},
+                new SelectListItem() {Value = "2",Text ="Schedule_2"}
+
+            };
+
+
+
+
+            ViewBag.SchedId = SchedId;
+            return View();
         }
     }
 }

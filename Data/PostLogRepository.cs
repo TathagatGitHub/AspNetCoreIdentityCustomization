@@ -63,7 +63,7 @@ namespace AspNetCoreIdentityCustomization.Data
             IEnumerable<PostLog> postLogs;
             using (var connection = new SqlConnection(this.connection))
             {
-                string sql = "select PostLogId ,SchedId ,ScheduleName ,WeekNbr ,WeekDate,CreateDt,UpdateDt from dbo.PostLog";
+                string sql = "select PostLogId ,SchedId ,ScheduleName ,WeekNbr ,convert (date,WeekDate),convert(date,CreateDt),convert(date,UpdateDt) from dbo.PostLog";
                 
                 postLogs = connection.Query<PostLog>(sql);
                 

@@ -54,7 +54,7 @@ namespace AspNetCoreIdentityCustomization.Core
         public string ScheduleName { get; set; }
         public int WeekNbr { get; set; }
         public DateTime WeekDate { get; set; }
-        public DateTime? CreateDt { get; set; }
+        public DateTime CreateDt { get; set; }
         public DateTime UpdateDt { get; set; }
     }
 
