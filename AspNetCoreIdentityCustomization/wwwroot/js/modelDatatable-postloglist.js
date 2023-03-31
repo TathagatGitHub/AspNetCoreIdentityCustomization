@@ -35,17 +35,17 @@
            data: JSON.stringify(postlogs),
            
             success: function (data) {
-                alert(data + " record(s) updated.");
+                alert(data.rows + " record(s) updated.");
 
-                //var table = $('#example').DataTable();
+                var table = $('#dataTableId').DataTable();
 
-                //// #column3_search is a <input type="text"> element
-                //$('#column3_search').on('keyup', function () {
-                //    table
-                //        .columns(3)
-                //        .search(this.value)
-                //        .draw();
-                //});
+                // #column3_search is a <input type="text"> element
+               // $('#column3_search').on('keyup', function () {
+                    table
+                        .columns(2)
+                        .search(data.rows)
+                        .draw();
+              //  });
             }
         });
 

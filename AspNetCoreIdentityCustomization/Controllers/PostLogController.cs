@@ -113,8 +113,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
                 Console.WriteLine("Completing the Bulk Update Method elapsed time:"+ BulkUpdateStopWatch.ElapsedMilliseconds);
             }
 
-            int rows = postlogs.Count();
-            return new JsonResult(rows);
+            int rows = postlogs[0].PostLogId;
+            return new JsonResult(new { Status = "Success", Rows = rows });
            // return new JsonResult(new { Status = "Success", data = rows });
 
         }
