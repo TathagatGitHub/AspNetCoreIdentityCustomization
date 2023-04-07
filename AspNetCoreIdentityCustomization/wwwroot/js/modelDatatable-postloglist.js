@@ -42,7 +42,7 @@
                 // #column3_search is a <input type="text"> element
                // $('#column3_search').on('keyup', function () {
                     table
-                        .columns(2)
+                        .columns(1) ///ID column works for filter, not the editable. Use the id for filter.
                         .search(data.rows)
                         .draw();
               //  });
@@ -55,4 +55,59 @@
 });
 var calldatatable = function () {
     $('#dataTableId').DataTable();
+  //var api = new $.fn.dataTable.Api();
+    var table = $('#dataTableId').DataTable();
+    table.columns().eq(0).each(function (index) {
+        //var tblCellIndex = $(api.column(index).header()).index();
+        var filterHeader = $('#dataTableId thead tr:eq(1) th:eq(' + index + ')');
+        if ($(filterHeader).hasClass("noFilter") && $(filterHeader).is(":visible"))
+            return true;
+        var column = table.column(index);
+        filterHeader.html('');
+        var drpMultiselect = $("<select class='form-control'>").attr("id", "drpDownHeader_" + index.toString());
+        //<select class="form-control" id="drpMarkets"></select>
+        //var data = column.data().unique;
+
+        column.data().unique().sort().each(function (d, j) {
+            var option = $('<option/>');
+            option.attr({ 'value': d }).text(d);
+            drpMultiselect.append(option);
+            //var dr = ("#drpDownHeader_0");
+            //dr.html('');
+            //dr.append(option);
+        });
+        filterHeader.append(drpMultiselect);
+
+
+        //filterHeader.find("#drpDownHeader_" + index.toString()).multiselect({
+        //    maxHeight: 200,
+        //    //buttonWidth: '100%',
+        //    search: true,
+        //    includeSelectAllOption: true,
+        //    enableFiltering: true,
+        //    autoclose: true,
+        //    nonSelectedText: "Select filter",
+        //    allSelectedText: "Selected all",
+        //    nSelectedText: "Selected",
+        //    numberDisplayed: -1,
+        //    enableCaseInsensitiveFiltering: true,
+        //    dropDown: true
+        //}).change(function () {
+        //    var vals = $(this).find('option:selected').map(function (index, element) {
+        //        return $.fn.dataTable.util.escapeRegex($(element).val());
+        //        //return $(element).val();
+        //    }).toArray().join('|');
+
+        //    dtTable.column(filterHeader)
+        //        .search(vals.length > 0 ? '^' + vals + '$' : '', true, false)
+        //        .draw();
+            
+
+
+        //});
+
+    });
+
+
+   
 }

@@ -25,9 +25,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.SchedId)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ScheduleName)
-            </th>
+           @* <th> @Html.DisplayNameFor(model => model.ScheduleName)
+            </th>*@
+
+            <th scope="col">ScheduleName</th>
             <th>
                 @Html.DisplayNameFor(model => model.WeekNbr)
             </th>
@@ -41,6 +42,19 @@
                 @Html.DisplayNameFor(model => model.UpdateDt)
             </th>
             <th></th>
+        </tr>
+        <tr>
+            <th class="noFilter"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th class="noFilter"></th>
+            <th class="noFilter"></th>
+            <th class="noFilter"></th>
+            <th class="noFilter"></th>
+           
+        
         </tr>
     </thead>
     <tbody>
