@@ -70,7 +70,16 @@ var calldatatable = function () {
 
         column.data().unique().sort().each(function (d, j) {
             var option = $('<option/>');
-            option.attr({ 'value': d }).text(d);
+            let first = d.search("value") + 7;
+            let last = d.search(">")-1;
+            let len = last - first;
+            let valueofoptio = d.substr(first, len).trim();
+            if (len <= 0) { option.attr({ 'value': d }).text(d); }
+            else { option.attr({ 'value': d.substr(first, len) }).text(d.substr(first, len)); }
+            //option.attr({ 'value': d }).text(d);
+            
+           // option.attr({ 'value': d.substr(64, d.search(">") - 1) }).text(d.substr(64, d.search(">") - 1));
+           // d.substr(64, 1)
             drpMultiselect.append(option);
             //var dr = ("#drpDownHeader_0");
             //dr.html('');
