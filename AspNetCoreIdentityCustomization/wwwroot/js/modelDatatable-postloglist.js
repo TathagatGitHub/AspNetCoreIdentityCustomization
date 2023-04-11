@@ -65,8 +65,7 @@ var calldatatable = function () {
         var column = table.column(index);
         filterHeader.html('');
         var drpMultiselect = $("<select class='form-control'>").attr("id", "drpDownHeader_" + index.toString());
-        //<select class="form-control" id="drpMarkets"></select>
-        //var data = column.data().unique;
+        
 
         column.data().unique().sort().each(function (d, j) {
             var option = $('<option/>');
@@ -74,20 +73,37 @@ var calldatatable = function () {
             let last = d.search(">")-1;
             let len = last - first;
             let valueofoptio = d.substr(first, len).trim();
-            if (len <= 0) { option.attr({ 'value': d }).text(d); }
-            else { option.attr({ 'value': d.substr(first, len) }).text(d.substr(first, len)); }
-            //option.attr({ 'value': d }).text(d);
+            if (len <= 0) { option.attr({ 'value': d }).text(d); } // For ID columns, there is no Value field
+            else { option.attr({ 'value': d.substr(first, len) }).text(d.substr(first, len)); }// For input columns, there is Value field
+            
             
            // option.attr({ 'value': d.substr(64, d.search(">") - 1) }).text(d.substr(64, d.search(">") - 1));
            // d.substr(64, 1)
             drpMultiselect.append(option);
-            //var dr = ("#drpDownHeader_0");
-            //dr.html('');
-            //dr.append(option);
+            
+            
         });
         filterHeader.append(drpMultiselect);
 
+        filterHeader.change(function () {
+            alert("change event");
+            var vals = $(this).find('option:selected').map(function (index, element) {
+                return $.fn.dataTable.util.escapeRegex($(element).val());
+                //return $(element).val();
+            }).toArray().join('|');
+            var col = $(this).parent().children().index($(this));
+            alert(vals);
 
+            var table = $('#dataTableId').DataTable();
+
+            // #column3_search is a <input type="text"> element
+            // $('#column3_search').on('keyup', function () {
+            table
+                .columns(col) ///ID column works for filter, not the editable. Use the id for filter.
+                .search(vals)
+                .draw();
+
+        });
         //filterHeader.find("#drpDownHeader_" + index.toString()).multiselect({
         //    maxHeight: 200,
         //    //buttonWidth: '100%',
