@@ -66,7 +66,7 @@ var calldatatable = function () {
         filterHeader.html('');
         //multiselect change -1
         if (index === 2) {
-            var drpMultiselect = $("<select class='form-control' multiple>").attr("id", "drpmulti_" + index.toString());
+            var drpMultiselect = $("<select class='form-control' multiple>").attr("id", "drpDownHeader_" + index.toString());
         }
             
         else {
@@ -111,10 +111,8 @@ var calldatatable = function () {
                     return $.fn.dataTable.util.escapeRegex($(element).val());
                     //return $(element).val();
                 }).toArray().join('|');
-            var col = index
-            var table = $('#dataTableId').DataTable();
-            table.column(col)
-                    //.search(vals)
+
+                dtTable.column(filterHeader)
                     .search(vals.length > 0 ? '^' + vals + '$' : '', true, false)
                     .draw();
                 //var txt = (vals.length == 0 ? 'None selected' : val.length + ' selected');
