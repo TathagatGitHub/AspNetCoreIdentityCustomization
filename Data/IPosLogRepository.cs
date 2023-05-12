@@ -8,7 +8,7 @@ namespace AspNetCoreIdentityCustomization.Data
     interface IPosLogRepository
     {
         IEnumerable<PostLog> GetPostLog(int PostLogId);
-        IEnumerable<PostLog> GetPostLogList();
+        IEnumerable<PostLog> GetPostLogList(string whereClause = null);
 
         PostLog GetOnePostLog(int PostLogId);
 

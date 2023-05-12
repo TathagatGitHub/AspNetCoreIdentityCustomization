@@ -129,49 +129,47 @@ var calldatatable = function () {
        // filterHeader.change(function () {
         filterHeader.find("#drpDownHeader_" + index.toString()).change(function () {
             //alert("change event");
-            var vals = $(this).find('option:selected').map(function (index, element) {
+            var whereClause = $(this).find('option:selected').map(function (index, element) {
                 return $.fn.dataTable.util.escapeRegex($(element).val());
                 //return $(element).val();
             }).toArray().join('|');
             var col = index;// $(this).parent().children().index($(this));
-           // alert(vals);
+            whereClause = "ScheduleName=" +"'"+whereClause.trim()+"'";
+            //Start - Reload with where clasue dataset
+                
+            $.ajax({
 
-            var table = $('#dataTableId').DataTable();
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                url: '/Postlog/IndexModelFromBody/',
+                data: JSON.stringify(whereClause),
+                //data: { whereClause: $("#vals").val() },
+              //  data: { whereClause: whereClause },
 
-            // #column3_search is a <input type="text"> element
-            // $('#column3_search').on('keyup', function () {
-            table
-                .columns(col) ///ID column works for filter, not the editable. Use the id for filter.
-                .search(vals)
-                .draw();
+                success: function () {
+                   // alert(data.rows + " record(s) updated.");
+                    location.reload();
+                    //var table = $('#dataTableId').DataTable();
+
+                    // #column3_search is a <input type="text"> element
+                    // $('#column3_search').on('keyup', function () {
+                   // table
+                   //     .draw();
+                    //  });
+                }
+            });
+
+            //var table = $('#dataTableId').DataTable();
+                        
+            //table
+            //    .columns(col) 
+            //    .search(vals)
+            //    .draw();
+            /// End - Reload with where clasue dataset
 
         });
-        //filterHeader.find("#drpDownHeader_" + index.toString()).multiselect({
-        //    maxHeight: 200,
-        //    //buttonWidth: '100%',
-        //    search: true,
-        //    includeSelectAllOption: true,
-        //    enableFiltering: true,
-        //    autoclose: true,
-        //    nonSelectedText: "Select filter",
-        //    allSelectedText: "Selected all",
-        //    nSelectedText: "Selected",
-        //    numberDisplayed: -1,
-        //    enableCaseInsensitiveFiltering: true,
-        //    dropDown: true
-        //}).change(function () {
-        //    var vals = $(this).find('option:selected').map(function (index, element) {
-        //        return $.fn.dataTable.util.escapeRegex($(element).val());
-        //        //return $(element).val();
-        //    }).toArray().join('|');
-
-        //    dtTable.column(filterHeader)
-        //        .search(vals.length > 0 ? '^' + vals + '$' : '', true, false)
-        //        .draw();
-            
-
-
-        //});
+       
 
     });
 

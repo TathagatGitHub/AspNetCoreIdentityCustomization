@@ -51,11 +51,34 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             return View( );
         }
-        public IActionResult IndexModel()
-        {            
-            var data = _postlogrepository.GetPostLogList();
+        public IActionResult IndexModel(string whereClause = null)
+        {
+            //whereClause = "ScheduleName='ddd'";
+            var data = _postlogrepository.GetPostLogList(whereClause);
           
             return View("IndexModel", data);
+        }
+
+        public IActionResult IndexModelReload(List <PostLog>  data)
+        {
+            //whereClause = "ScheduleName='ddd'";
+           // var data = _postlogrepository.GetPostLogList(whereClause);
+
+            return View("IndexModel", data);
+        }
+
+        public ActionResult IndexModelFromBody([FromBody] string whereClause = null)
+        {
+            //   return IndexModel(whereClause);
+
+            //return RedirectToAction("IndexModel", new { whereClause = whereClause });
+          
+                var data = _postlogrepository.GetPostLogList(whereClause).ToList();
+            
+           // catch (Exception ex) { _logger.LogError(ex.Message); }
+           // return View("IndexModel", data);
+
+            return RedirectToAction("IndexModelReload", "PostLog",  data );
         }
         public IActionResult LoadPostlogList()
         {
@@ -87,6 +110,8 @@ namespace AspNetCoreIdentityCustomization.Controllers
 
             
         }
+
+       
         [HttpPost]
        // public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)
             public IActionResult modelDatatableListPost([FromBody] List<PostLog> postlogs)

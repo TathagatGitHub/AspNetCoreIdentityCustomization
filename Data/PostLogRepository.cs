@@ -56,16 +56,23 @@ namespace AspNetCoreIdentityCustomization.Data
 
         }
 
-        public IEnumerable<PostLog> GetPostLogList()
+        public IEnumerable<PostLog> GetPostLogList(string whereClause = null)
         {
             _logger.LogInformation("GetPostLogList");
                   
             IEnumerable<PostLog> postLogs;
             using (var connection = new SqlConnection(this.connection))
             {
-                string sql = "select PostLogId ,SchedId ,ScheduleName ,WeekNbr ,convert (date,WeekDate),convert(date,CreateDt),convert(date,UpdateDt) from dbo.PostLog";
-                
-                postLogs = connection.Query<PostLog>(sql);
+                string sql;
+                if (string.IsNullOrWhiteSpace(whereClause))
+                {
+                    sql = "select PostLogId ,SchedId ,ScheduleName ,WeekNbr ,convert (date,WeekDate),convert(date,CreateDt),convert(date,UpdateDt) from dbo.PostLog";
+                }
+                else
+                {
+                    sql = "select PostLogId ,SchedId ,ScheduleName ,WeekNbr ,convert (date,WeekDate),convert(date,CreateDt),convert(date,UpdateDt) from dbo.PostLog where "+ whereClause;
+                }
+                    postLogs = connection.Query<PostLog>(sql);
                 
             }
             //return logs; // only object
